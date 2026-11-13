@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight, Compass, MapPin, TrainFront } from "lucide-react";
+import { ArrowLeft, ArrowRight, Compass, Copy, MapPin, TrainFront } from "lucide-react";
 import { europaBucketList2027 } from "@/content/europaBucketList2027";
 import { bucketList2027Images } from "@/content/bucketList2027Images";
 import { MilanMagazine } from "./MilanMagazine";
@@ -62,6 +62,16 @@ export function BucketListOverview() {
   };
   const openTrip = (slug: string) => navigateToTrip(slug);
   const selected = europaBucketList2027.find((trip) => trip.slug === selectedSlug);
+  const selectedIndex = europaBucketList2027.findIndex((trip) => trip.slug === selectedSlug);
+  const [linkCopied, setLinkCopied] = useState(false);
+  const copyTripLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setLinkCopied(true);
+    } catch {
+      setLinkCopied(false);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-[var(--mwg-paper)] text-[var(--mwg-ink)]">
@@ -81,6 +91,12 @@ export function BucketListOverview() {
               className="inline-flex items-center gap-2 text-sm font-medium text-[var(--mwg-accent)] hover:underline">
               <ArrowLeft size={16} /> Alle neun Reisen
             </button>
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-b border-[var(--mwg-line)] pb-5">
+              <span className="font-mono text-xs text-[var(--mwg-accent)]">REISE {String(selectedIndex + 1).padStart(2, "0")} / 09</span>
+              <button type="button" onClick={copyTripLink} className="inline-flex items-center gap-2 border border-[var(--mwg-line)] px-4 py-2 text-sm hover:bg-white">
+                <Copy size={15} /> {linkCopied ? "Link kopiert" : "Diese Reise teilen"}
+              </button>
+            </div>
             <div className="mt-8 border-t border-[var(--mwg-line)] pt-8">
               {bucketList2027Images[selected.slug] && <div className="mb-8 aspect-[16/7] overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={bucketList2027Images[selected.slug]!.src} alt={bucketList2027Images[selected.slug]!.alt} className="h-full w-full object-cover" /></div>}
               <p className="mwg-eyebrow text-[var(--mwg-accent)]">{selected.duration}</p>
@@ -180,6 +196,16 @@ export function BucketListOverview() {
                 </div>
               )}
             </div>
+            <nav aria-label="Weitere Reisen" className="mt-14 grid gap-3 border-t border-[var(--mwg-line)] pt-7 sm:grid-cols-2">
+              {[-1, 1].map((step) => {
+                const next = europaBucketList2027[(selectedIndex + step + europaBucketList2027.length) % europaBucketList2027.length];
+                return <button key={step} type="button" onClick={() => { setLinkCopied(false); navigateToTrip(next.slug); }} className="flex items-center justify-between gap-3 border border-[var(--mwg-line)] bg-white p-5 text-left hover:border-[var(--mwg-accent)]">
+                  {step === -1 && <ArrowLeft size={20} className="shrink-0 text-[var(--mwg-accent)]" />}
+                  <span><span className="block text-xs text-[var(--mwg-ink-70)]">{step === -1 ? "Vorherige Reise" : "Nächste Reise"}</span><span className="mt-1 block font-display text-lg">{next.title}</span></span>
+                  {step === 1 && <ArrowRight size={20} className="shrink-0 text-[var(--mwg-accent)]" />}
+                </button>;
+              })}
+            </nav>
           </section>
         ) : (
           <section className="mt-12" aria-label="Reiseideen vergleichen">
