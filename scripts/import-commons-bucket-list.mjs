@@ -17,6 +17,8 @@ const entries = [
   { trip: "rotterdam-unlimited", file: "Rotterdam Erasmusbrug seen from Willemsplein.jpg", slug: "rotterdam-erasmusbruecke" },
   { trip: "rotterdam-unlimited", file: "Rotterdam cubic houses.jpg", slug: "rotterdam-kubushaeuser" },
   { trip: "rotterdam-unlimited", file: "Markthal Rotterdam.jpg", slug: "rotterdam-markthal" },
+  { trip: "rotterdam-unlimited", file: "Canal in Delft.JPG", slug: "delft-gracht" },
+  { trip: "rotterdam-unlimited", file: "Windmills, Kinderdijk.jpg", slug: "kinderdijk-windmuehlen" },
   { trip: "preveza-lefkada", file: "Porto Katsiki Beach, Lefkada, Ionian Islands, Greece.jpg", slug: "lefkada-porto-katsiki" },
   { trip: "preveza-lefkada", file: "Wharf in Preveza, Greece.jpg", slug: "preveza-hafen-abend" },
   { trip: "preveza-lefkada", file: "Egremni beach.JPG", slug: "lefkada-egremni" },
