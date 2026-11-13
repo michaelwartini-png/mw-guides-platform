@@ -6,6 +6,27 @@ import { europaBucketList2027 } from "@/content/europaBucketList2027";
 import { bucketList2027Images } from "@/content/bucketList2027Images";
 import { MilanMagazine } from "./MilanMagazine";
 
+const featuredItineraries: Record<string, { label: string; description: string }[]> = {
+  "skandinavien-unlimited": [
+    { label: "Kopenhagen ankommen", description: "Altstadt, Hafen und erste Eindrücke; je nach Ankunftszeit." },
+    { label: "Kopenhagen entdecken", description: "Kanal, Architektur und Stadtviertel nach Lust und Wetter." },
+    { label: "Mit dem Zug nach Stockholm", description: "Reisetag mit Zeit für einen ersten Spaziergang." },
+    { label: "Stockholm & Inseln", description: "Altstadt, Museen oder eine Schärenfahrt als Alternative." },
+    { label: "Stockholm frei gestalten", description: "Lieblingsorte vertiefen; am Abend optional Einschiffung." },
+    { label: "Über die Ostsee nach Helsinki", description: "Nachtfähre nur bei passendem Fahrplan; Helsinki erkunden." },
+    { label: "Helsinki & Rückreise", description: "Markthalle, Uferpromenade oder freie Zeit je nach Abflug." },
+  ],
+  "norwegen-lofoten": [
+    { label: "Ankunft in Bodø", description: "Hafen und Küstenlandschaft kennenlernen." },
+    { label: "Überfahrt zu den Lofoten", description: "Fähre und Weiterreise nach tatsächlichem Fahrplan planen." },
+    { label: "Fischerdörfer entdecken", description: "Kleine Orte, Aussichtspunkte und Zeit am Wasser." },
+    { label: "Lofoten ganz flexibel", description: "Wanderung, Fotostopps oder ein ruhiger Inseltag." },
+    { label: "Weitere Inselerlebnisse", description: "Bootsausflug oder Landschaftstour je nach Wetter." },
+    { label: "Küstenpassage Richtung Tromsø", description: "Küstenschiff nur bei passender Verbindung; sonst Alternativtransfer." },
+    { label: "Tromsø & Rückreise", description: "Arktische Stadt erkunden, Abreise nach Flugverbindung." },
+  ],
+};
+
 /** Public, unlisted editorial travel preview. */
 export function BucketListOverview() {
   const [query, setQuery] = useState("");
@@ -88,6 +109,24 @@ export function BucketListOverview() {
                       ))}
                     </div>
                   </section>
+                  {featuredItineraries[selected.slug] && (
+                    <section aria-label="Sieben Tage Reiseideen">
+                      <p className="mwg-eyebrow text-[var(--mwg-accent)]">Inspiration, kein Stundenplan</p>
+                      <h3 className="mt-2 font-display text-3xl">Sieben Tage voller Möglichkeiten</h3>
+                      <p className="mt-3 max-w-[70ch] text-[var(--mwg-ink-70)]">Eine mögliche Reihenfolge, die wir je nach Wetter, Verbindungen und Interessen anpassen können.</p>
+                      <ol className="mt-6 grid gap-x-8 sm:grid-cols-2">
+                        {featuredItineraries[selected.slug].map((day, i) => (
+                          <li key={day.label} className="flex gap-4 border-b border-[var(--mwg-line)] py-5">
+                            <span className="font-mono text-sm text-[var(--mwg-accent)]">{String(i + 1).padStart(2, "0")}</span>
+                            <div>
+                              <h4 className="font-display text-lg">{day.label}</h4>
+                              <p className="mt-2 text-sm leading-relaxed text-[var(--mwg-ink-70)]">{day.description}</p>
+                            </div>
+                          </li>
+                        ))}
+                      </ol>
+                    </section>
+                  )}
                   <section className="border border-[var(--mwg-line)] p-6 sm:p-8">
                     <h3 className="font-display text-2xl">Gut zu wissen</h3>
                     <ul className="mt-5 space-y-3 text-[var(--mwg-ink-70)]">
