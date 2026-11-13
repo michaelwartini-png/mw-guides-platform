@@ -35,6 +35,7 @@ const entries = [
   { trip: "portugal-unlimited", file: "VIVA DOURO 5378.jpg", slug: "porto-douro-ausflugsboot" },
   { trip: "portugal-unlimited", file: "Porto, vista da Douro (01).jpg", slug: "porto-douro-vom-schiff" },
   { trip: "portugal-unlimited", file: "Tram at Rua de Santa Catarina in Porto (1).jpg", slug: "porto-historische-tram" },
+  { trip: "portugal-unlimited", file: "Tramway de Porto, ligne 1.jpg", slug: "porto-tram-linie-1" },
   { trip: "portugal-unlimited", file: "Lisboa, tranvía 28.jpg", slug: "lissabon-tram-28" },
   { trip: "portugal-unlimited", file: "A panoramic view of the Dom Luís I Bridge spanning the Douro River in Porto, Portugal, with a yellow tram crossing and the historic city skyline in the background. (55246746406).jpg", slug: "porto-douro-bruecke" },
 ];
