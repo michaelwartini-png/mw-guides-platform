@@ -176,6 +176,7 @@ export function BucketListOverview() {
           Neun außergewöhnliche Reisen, unzählige Möglichkeiten. Alles kann – nichts muss.
           Hier sammeln wir Ideen, besondere Erlebnisse und flexible Routen für unsere Reisegruppe.
         </p>
+        <p className="mt-3 text-sm"><a href="/bucket-list-2027/bildnachweise" className="text-[var(--mwg-accent)] underline underline-offset-4">Wikimedia-Fotos & Bildnachweise ansehen</a></p>
 
         {selected ? (
           <section className="mt-12" aria-label={selected.title}>
