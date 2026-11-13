@@ -5,10 +5,10 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 | Reise | Bereits eingebunden (Galerie) | Fehlende Motivgruppen / Priorität |
 |---|---:|---|
 | Mailand Unlimited | 5 (lokal) | Stresa/Lago Maggiore, Borromäische Inseln, Bologna/Arkaden, Modena oder Parma, Navigli, besondere Bahnfahrt |
-| Skandinavien Unlimited | 3 (Commons) | Kopenhagen Kanal/Hafen, Stockholm Fähre/Schären, Nachtfähre Stockholm–Helsinki, Helsinki Markthalle/Hafen, Innenräume/Details |
-| Norwegen & Lofoten | 3 (Commons) | Bodø Landschaft, Lofoten Fischerdörfer/Rorbuer, Küstenschiff, Tromsø Hafen, Nordlicht als optionale Saisonaufnahme |
+| Skandinavien Unlimited | 4 (Commons) | Kopenhagen Kanal/Hafen, Stockholm Schären, Helsinki Markthalle/Hafen, Innenräume/Details; Nachtfähre Stockholm–Helsinki eingebunden |
+| Norwegen & Lofoten | 5 (Commons) | Bodø Landschaft, Tromsø Hafen, Lofoten Küstenlandschaft, Nordlicht als optionale Saisonaufnahme; Rorbuer und Hurtigruten eingebunden |
 | Rotterdam Unlimited | 5 (Commons) | Hafenrundfahrt/Schiffe, Den Haag, Scheveningen Strand, Utrecht; Delft und Kinderdijk inzwischen eingebunden |
-| Portugal Unlimited | 4 (Commons) | Douro-Flussfahrt, Porto Tramlinie 1 (korrekte Linie prüfen), Lissabon Aussicht, Belém, Cascais |
+| Portugal Unlimited | 7 (Commons) | Lissabon Aussicht, Belém, Cascais, Porto Architekturdetails; Douro-Schiff und eindeutig zugeordnete Tramlinie 1 eingebunden |
 | Bratislava–Wien–Wachau | 4 (lokal) | Twin City Liner, Wiener Parlament, UNO City (Außenansicht), Wachau-Schiff, Bratislava Burg |
 | Preveza & Lefkada | 6 (Commons) | Nikopolis antike Ruinen (Museum bereits bebildert), Nidri Bootsausflug (Hafen bereits bebildert), Lefkada-Stadt, Preveza Altstadt |
 | Bodensee Unlimited | 4 (lokal) | Mainau, Reichenau, Stein am Rhein, Rheinfall, Lindau, Bregenz/Pfänder |
@@ -36,4 +36,4 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 - Norwegen: Küstenschiff/Hurtigruten- oder Havila-Schiff (nur korrekt zugeordnet), Rorbuer auf den Lofoten, Küstenlandschaft/Bootsfahrt; Nordlicht nur als saisonales Symbolbild kennzeichnen.
 - Portugal: Douro-Ausflugsschiff mit Weinberglandschaft, Porto-Straßenbahn **Linie 1** (Nummer am Fahrzeug verifizieren), Lissabon Aussichtspunkt und Ufer/Belém.
 
-**Beschaffungsstatus:** Motivliste fertig; zusätzliche Wikimedia-Dateien hierfür noch nicht verifiziert oder importiert. Keine Dateinamen auf Verdacht in den automatischen Import aufnehmen. Nach Recherche: zuerst Commons-Dateiseite und Lizenz kontrollieren, dann Import, anschließend Galerie und Bildnachweis, zuletzt Browserprüfung.
+**Beschaffungsstatus (13.11.2026):** Wikimedia-Importläufe 12, 13 und 14 erfolgreich; Portugal jetzt 7, Skandinavien 4, Norwegen 5 Galeriefotos. Verifiziert importiert und in Galerien eingetragen: Douro-Ausflugsschiff, Porto vom Douro, Hamnøya-Rorbuer, Stockholm–Helsinki-Nachtfähre, Hurtigruten-Schiffe und Porto-Tramlinie 1. Letzter Portugal-Deploy-Status erfolgreich; Playwright-Tests bislang nicht tatsächlich ausgeführt. Für weitere Fotos: Commons-Dateiseite und Lizenz kontrollieren, importieren, Galerie und Bildnachweis ergänzen, danach Browserprüfung.
