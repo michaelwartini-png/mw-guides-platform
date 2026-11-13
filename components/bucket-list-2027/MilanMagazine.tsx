@@ -46,8 +46,8 @@ export function MilanMagazine() {
 
     <section aria-label="Bilder aus Norditalien">
       <div className="mb-5 flex items-end justify-between gap-3"><div><p className="mwg-eyebrow text-[var(--mwg-accent)]">Impressionen</p><h3 className="mt-2 font-display text-3xl">Norditalien in Bildern</h3></div><span className="text-xs text-[var(--mwg-ink-70)]">MW Guides · vorhandene Bilddateien</span></div>
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        {photos.slice(1).map((p,i)=><figure key={p.src} className={i===0?"col-span-2":""}><div className="aspect-[4/3] overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={p.src} alt={p.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" /></div><figcaption className="mt-2 text-xs text-[var(--mwg-ink-70)]">{p.caption}</figcaption></figure>)}
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        {photos.slice(1).map((p)=><figure key={p.src} className="min-w-0"><div className="aspect-video w-full overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={p.src} alt={p.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" /></div><figcaption className="mt-2 text-xs text-[var(--mwg-ink-70)]">{p.caption}</figcaption></figure>)}
       </div>
     </section>
 
