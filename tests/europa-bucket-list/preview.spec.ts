@@ -39,6 +39,8 @@ test.describe("Europa Bucket List 2027 – unlisted preview", () => {
     { slug: "preveza-lefkada", galleryCount: 6 },
     { slug: "rotterdam-unlimited", galleryCount: 5 },
     { slug: "hydra-unlimited", galleryCount: 3 },
+    { slug: "portugal-unlimited", galleryCount: 6 },
+    { slug: "norwegen-lofoten", galleryCount: 4 },
   ]) {
     test(`loads every licensed gallery image for ${trip.slug}`, async ({ page }) => {
       await page.goto(previewPath + "?reise=" + trip.slug);
