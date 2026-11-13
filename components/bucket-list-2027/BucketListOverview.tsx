@@ -119,7 +119,7 @@ export function BucketListOverview() {
                     )}
                   </button>
                   <span className="font-mono text-xs text-[var(--mwg-accent)]">{String(europaBucketList2027.findIndex(t => t.slug === trip.slug) + 1).padStart(2, "0")} / 09</span>
-                  <h2 className="mt-4 font-display text-2xl">{trip.title}</h2>
+                  <h2 className="mt-4 font-display text-2xl"><button type="button" onClick={() => openTrip(trip.slug)} className="text-left hover:text-[var(--mwg-accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mwg-accent)]">{trip.title}</button></h2>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--mwg-ink-70)]">{trip.subtitle}</p>
                   <p className="mt-5 flex items-start gap-2 text-sm text-[var(--mwg-ink-70)]">
                     <MapPin size={16} className="mt-0.5 shrink-0" /> {trip.route.join(" · ")}
