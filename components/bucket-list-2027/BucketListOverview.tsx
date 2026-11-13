@@ -190,7 +190,7 @@ export function BucketListOverview() {
               </button>
             </div>
             <div className="mt-8 border-t border-[var(--mwg-line)] pt-8">
-              {bucketList2027Images[selected.slug] && <div className="mb-8 aspect-[16/7] overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={bucketList2027Images[selected.slug]!.src} alt={bucketList2027Images[selected.slug]!.alt} className="h-full w-full object-cover" /></div>}
+              {bucketList2027Images[selected.slug] && <figure className="mb-8"><div className="aspect-[16/7] overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={bucketList2027Images[selected.slug]!.src} alt={bucketList2027Images[selected.slug]!.alt} className="h-full w-full object-cover" /></div>{selected.slug === "norwegen-lofoten" && <figcaption className="mt-2 text-xs text-[var(--mwg-ink-70)]">Reine, Lofoten · Foto: Jakub Fryš · <a href="https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg" target="_blank" rel="noopener noreferrer" className="underline">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" className="underline">CC BY-SA 4.0</a> · unverändert, auf Anzeigegröße skaliert</figcaption>}</figure>}
               <p className="mwg-eyebrow text-[var(--mwg-accent)]">{selected.duration}</p>
               <h2 className="mwg-display-lg mt-3">{selected.title}</h2>
               <p className="mt-4 max-w-[65ch] text-lg text-[var(--mwg-ink-70)]">{selected.subtitle}</p>
