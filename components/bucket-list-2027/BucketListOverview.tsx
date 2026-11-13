@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Compass, Copy, MapPin, TrainFront } from "lucide
 import { europaBucketList2027 } from "@/content/europaBucketList2027";
 import { bucketList2027Images } from "@/content/bucketList2027Images";
 import { MilanMagazine } from "./MilanMagazine";
+import { TravelGallery } from "./TravelGallery";
 
 const featuredItineraries: Record<string, { label: string; description: string }[]> = {
   "rotterdam-unlimited": [
@@ -235,6 +236,7 @@ export function BucketListOverview() {
                       </div>
                     </section>
                   )}
+                  <TravelGallery slug={selected.slug} />
                   <section aria-label="Reiseroute">
                     <p className="mwg-eyebrow text-[var(--mwg-accent)]">Orientierung statt Stundenplan</p>
                     <h3 className="mt-2 font-display text-3xl">Unsere mögliche Route</h3>
