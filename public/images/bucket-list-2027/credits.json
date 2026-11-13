@@ -188,5 +188,25 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:0157_-_Hydra.jpg",
     "modifications": "Wikimedia thumbnail resized to max 1280px; no further editing"
+  },
+  {
+    "trip": "rotterdam-unlimited",
+    "src": "/images/bucket-list-2027/rotterdam-unlimited/delft-gracht.jpg",
+    "title": "Canal in Delft.JPG",
+    "author": "Jamesflomonosoff",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Canal_in_Delft.JPG",
+    "modifications": "Wikimedia thumbnail resized to max 1280px; no further editing"
+  },
+  {
+    "trip": "rotterdam-unlimited",
+    "src": "/images/bucket-list-2027/rotterdam-unlimited/kinderdijk-windmuehlen.jpg",
+    "title": "Windmills, Kinderdijk.jpg",
+    "author": "Aivin Gast",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Windmills,_Kinderdijk.jpg",
+    "modifications": "Wikimedia thumbnail resized to max 1280px; no further editing"
   }
 ]
