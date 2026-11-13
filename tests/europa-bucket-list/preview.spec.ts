@@ -1,46 +1,46 @@
 import { expect, test } from "@playwright/test";
 
-/**
- * These tests are intentionally opt-in: no private preview route is exposed
- * until the host-level access control has been configured and verified.
- *
- * PLAYWRIGHT_PREVIEW_PATH: path to protected preview, e.g. /bucket-list-2027
- * PLAYWRIGHT_PREVIEW_AUTH: Basic auth user:password, if host uses Basic auth.
- * PLAYWRIGHT_BASE_URL: protected preview origin.
- */
-const previewPath = process.env.PLAYWRIGHT_PREVIEW_PATH;
+const previewPath = process.env.PLAYWRIGHT_PREVIEW_PATH ?? "/bucket-list-2027";
 
-test.describe("Europa Bucket List 2027 – private preview", () => {
-  test.skip(!previewPath, "Private preview not deployed yet; no public route must be created for testing.");
-
-  test("renders nine trips and allows searching", async ({ page }) => {
-    await page.goto(previewPath!);
+test.describe("Europa Bucket List 2027 – unlisted preview", () => {
+  test("shows nine photo cards and searches Hydra", async ({ page }) => {
+    await page.goto(previewPath);
     await expect(page.getByRole("heading", { name: "Europa Bucket List 2027" })).toBeVisible();
     await expect(page.getByRole("article")).toHaveCount(9);
+    const photos = page.locator("article button img");
+    await expect(photos).toHaveCount(9);
+    await expect.poll(async () => photos.evaluateAll(images => images.every(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0))).toBe(true);
     await page.getByPlaceholder("Reiseziel, Stadt oder Erlebnis").fill("Hydra");
     await expect(page.getByRole("article")).toHaveCount(1);
-    await expect(page.getByRole("heading", { name: "Hydra Unlimited" })).toBeVisible();
-    await page.getByRole("button", { name: "Reise entdecken" }).click();
-    await expect(page.getByRole("heading", { name: "Mögliche Route" })).toBeVisible();
+    await page.getByRole("button", { name: "Hydra Unlimited öffnen" }).click();
+    await expect(page.getByRole("heading", { name: "Unsere mögliche Route" })).toBeVisible();
     await page.getByRole("button", { name: "Alle neun Reisen" }).click();
     await page.getByPlaceholder("Reiseziel, Stadt oder Erlebnis").fill("");
     await expect(page.getByRole("article")).toHaveCount(9);
   });
 
-  test("filters transport and has no horizontal overflow", async ({ page }) => {
-    await page.goto(previewPath!);
+  test("filters night ferry and has no horizontal overflow", async ({ page }) => {
+    await page.goto(previewPath);
     await page.getByLabel("Verkehrsmittel").selectOption("Nachtfähre");
     await expect(page.getByRole("article")).toHaveCount(1);
-    await expect(page.getByRole("heading", { name: "Skandinavien Unlimited" })).toBeVisible();
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
-    expect(overflow).toBe(false);
+    await expect(page.getByRole("article").getByRole("heading", { name: "Skandinavien Unlimited" })).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
   });
 
-  test("does not leak browser errors", async ({ page }) => {
+  test("opens Portugal direct link and displays four gallery photos", async ({ page }) => {
+    await page.goto(previewPath + "?reise=portugal-unlimited");
+    await expect(page.getByRole("heading", { name: "Portugal Unlimited" })).toBeVisible();
+    const images = page.locator('img[src*="/images/bucket-list-2027/portugal-unlimited/"]');
+    await expect(images).toHaveCount(5); // hero + four gallery images
+    await expect.poll(async () => images.evaluateAll(items => items.every(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0))).toBe(true);
+  });
+
+  test("has no JavaScript exceptions or horizontal overflow", async ({ page }) => {
     const errors: string[] = [];
-    page.on("pageerror", (error) => errors.push(error.message));
-    await page.goto(previewPath!);
+    page.on("pageerror", error => errors.push(error.message));
+    await page.goto(previewPath);
     await expect(page.getByRole("heading", { name: "Europa Bucket List 2027" })).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
     expect(errors).toEqual([]);
   });
 });
