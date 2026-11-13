@@ -3,7 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-const collections: Record<string, { src: string; alt: string; caption: string }[]> = {
+const collections: Record<string, { src: string; alt: string; caption: string; credit?: { author: string; source: string; license: string; licenseUrl: string } }[]> = {
+  "skandinavien-unlimited": [
+    { src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nyhavn%2C%20Copenhague.jpg?width=1280", alt: "Nyhavn mit farbigen Häusern am Hafen von Kopenhagen", caption: "Kopenhagen · Nyhavn", credit: { author: "Bene Riobó", source: "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhague.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+  ],
+  "norwegen-lofoten": [
+    { src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Reine%20-%20Lofoten.jpg?width=1280", alt: "Fischerdorf Reine auf den Lofoten in Norwegen", caption: "Lofoten · Reine", credit: { author: "Jakub Fryš", source: "https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+  ],
   "bodensee-unlimited": [
     { src: "/images/explore-trips/bodensee-konstanz.jpg", alt: "Konstanz am Bodensee", caption: "Konstanz" },
     { src: "/images/explore-trips/bodensee-schifffahrt.jpg", alt: "Schifffahrt auf dem Bodensee", caption: "Auf dem Wasser" },
@@ -46,14 +52,14 @@ export function TravelGallery({ slug }: { slug: string }) {
         <button type="button" onClick={(event)=>{ lastTrigger.current=event.currentTarget; setActive(i); }} aria-label={photo.caption+" vergrößern"} className="block aspect-video w-full overflow-hidden rounded-sm bg-[var(--mwg-line)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mwg-accent)]">
           <img src={photo.src} alt={photo.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-300 hover:scale-105" />
         </button>
-        <figcaption className="mt-2 text-sm text-[var(--mwg-ink-70)]">{photo.caption}</figcaption>
+        <figcaption className="mt-2 text-sm text-[var(--mwg-ink-70)]">{photo.caption}{photo.credit && <span className="mt-1 block text-xs">Foto: {photo.credit.author} · <a href={photo.credit.source} target="_blank" rel="noopener noreferrer" className="underline">Wikimedia Commons</a> · <a href={photo.credit.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">{photo.credit.license}</a> · unverändert, auf Anzeigegröße skaliert</span>}</figcaption>
       </figure>)}
     </div>
     {current && <div role="dialog" aria-modal="true" aria-label={current.caption} className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4" onClick={close}>
       <div className="relative flex max-h-full w-full max-w-5xl flex-col items-center gap-3" onClick={e=>e.stopPropagation()}>
         <button ref={closeButton} type="button" onClick={close} aria-label="Bild schließen" className="absolute right-0 top-0 rounded-full bg-white p-2 text-black"><X size={22}/></button>
         <img src={current.src} alt={current.alt} className="max-h-[76vh] w-auto max-w-full object-contain" />
-        <p className="text-sm text-white">{current.caption} · {(active ?? 0)+1} / {photos.length}</p>
+        <p className="text-sm text-white">{current.caption} · {(active ?? 0)+1} / {photos.length}{current.credit && <span className="block text-center text-xs">Foto: {current.credit.author} · <a href={current.credit.source} target="_blank" rel="noopener noreferrer" className="underline">Quelle</a> · <a href={current.credit.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">{current.credit.license}</a></span>}</p>
         <div className="flex gap-3">
           <button type="button" aria-label="Vorheriges Bild" onClick={()=>setActive(((active ?? 0)+photos.length-1)%photos.length)} className="rounded-full bg-white p-3 text-black"><ChevronLeft size={20}/></button>
           <button type="button" aria-label="Nächstes Bild" onClick={()=>setActive(((active ?? 0)+1)%photos.length)} className="rounded-full bg-white p-3 text-black"><ChevronRight size={20}/></button>
