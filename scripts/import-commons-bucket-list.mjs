@@ -4,18 +4,28 @@
  * Usage: node scripts/import-commons-bucket-list.mjs
  * Requires outbound network access. Never silently accepts unknown licenses.
  */
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const entries = [
   { trip: "skandinavien-unlimited", file: "Nyhavn, Copenhague.jpg", slug: "kopenhagen-nyhavn" },
   { trip: "norwegen-lofoten", file: "Reine - Lofoten.jpg", slug: "lofoten-reine" },
+  { trip: "norwegen-lofoten", file: "Bodø Hafen lub 2025-07-24 img01.jpg", slug: "bodo-hafen" },
+  { trip: "norwegen-lofoten", file: "09512 Tromsdalen church and bridge - Tromso, Norway - V-P.jpg", slug: "tromso-eismeerkathedrale" },
   { trip: "skandinavien-unlimited", file: "Stockholm-Gamla-Stan-panorama.jpg", slug: "stockholm-gamla-stan" },
   { trip: "skandinavien-unlimited", file: "Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg", slug: "helsinki-dom-senatsplatz" },
 ];
 const allowed = new Set(["CC BY 4.0", "CC BY-SA 4.0", "CC0", "Public domain"]);
 const root = path.resolve("public/images/bucket-list-2027");
 const credits = [];
+// Preserve previously imported credits when expanding the selection.
+let previousCredits = [];
+try {
+  previousCredits = JSON.parse(await readFile(path.join(root, "credits.json"), "utf8"));
+  if (!Array.isArray(previousCredits)) throw new Error("Invalid credits manifest");
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
 const agent = "MWGuidesTravelMagazine/0.1 (Wikimedia image attribution research)";
 function plain(s = "") { return s.replace(/<[^>]*>/g, "").replace(/&amp;/g, "&").replace(/&quot;/g, '"').trim(); }
 for (const entry of entries) {
@@ -62,5 +72,7 @@ for (const entry of entries) {
   });
   process.stdout.write("Saved " + destination + "\n");
 }
-await writeFile(path.join(root, "credits.json"), JSON.stringify(credits, null, 2) + "\n");
-process.stdout.write("Saved attribution manifest: " + credits.length + " images\n");
+const importedSources = new Set(credits.map((entry) => entry.source));
+const mergedCredits = [...previousCredits.filter((entry) => !importedSources.has(entry.source)), ...credits];
+await writeFile(path.join(root, "credits.json"), JSON.stringify(mergedCredits, null, 2) + "\n");
+process.stdout.write("Saved attribution manifest: " + mergedCredits.length + " images\n");
