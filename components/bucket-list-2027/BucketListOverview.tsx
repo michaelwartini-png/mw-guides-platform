@@ -127,6 +127,15 @@ const commonsCandidates: Record<string, { title: string; author: string; license
     { title: "Reine, Lofoten", author: "Jakub Fryš", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg" },
   ],
 };
+const commonsSearchTerms: Record<string, string[]> = {
+  "skandinavien-unlimited": ["Nyhavn Copenhagen", "Stockholm Gamla Stan", "Helsinki Cathedral", "Stockholm Helsinki ferry"],
+  "norwegen-lofoten": ["Reine Lofoten", "Bodo Norway harbor", "Tromso Norway", "Lofoten fishing village"],
+  "rotterdam-unlimited": ["Rotterdam Erasmusbrug", "Port of Rotterdam", "Delft Netherlands", "Kinderdijk windmills"],
+  "portugal-unlimited": ["Porto tram 1", "Douro Porto", "Lisbon tram 28", "Belem Lisbon"],
+  "preveza-lefkada": ["Preveza Greece", "Nicopolis Greece", "Nydri Lefkada", "Porto Katsiki Lefkada"],
+  "hydra-unlimited": ["Hydra island Greece harbor", "Hydra Greece streets", "Hydra island coast", "Hydra Greece water taxi"],
+};
+const commonsSearchUrl = (term: string) => "https://commons.wikimedia.org/w/index.php?search=" + encodeURIComponent(term) + "&title=Special:MediaSearch&type=image";
 /** Public, unlisted editorial travel preview. */
 export function BucketListOverview() {
   const [query, setQuery] = useState("");
@@ -245,6 +254,21 @@ export function BucketListOverview() {
                     </section>
                   )}
                   <TravelGallery slug={selected.slug} />
+                  {commonsSearchTerms[selected.slug] && (
+                    <section aria-label="Wikimedia Motivsuche" className="border border-[var(--mwg-line)] p-6 sm:p-8">
+                      <p className="mwg-eyebrow text-[var(--mwg-accent)]">Wikimedia Commons</p>
+                      <h3 className="mt-2 font-display text-2xl">Bildmotive recherchieren</h3>
+                      <p className="mt-3 text-sm text-[var(--mwg-ink-70)]">Diese Suchlinks öffnen passende Wikimedia-Bildsuchen. Die Ergebnisse sind noch nicht ausgewählt oder lizenzgeprüft. Für jede Verwendung müssen Originaldatei, Urheber und Lizenz kontrolliert werden.</p>
+                      <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                        {commonsSearchTerms[selected.slug].map((term) => (
+                          <a key={term} href={commonsSearchUrl(term)} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 bg-white p-4 text-sm hover:text-[var(--mwg-accent)]">
+                            <span>{term}</span><ArrowRight size={16} className="shrink-0" />
+                          </a>
+                        ))}
+                      </div>
+                    </section>
+                  )}
+
                   {commonsCandidates[selected.slug] && (
                     <section aria-label="Wikimedia Bildrecherche" className="border border-[var(--mwg-line)] bg-white p-6 sm:p-8">
                       <p className="mwg-eyebrow text-[var(--mwg-accent)]">Wikimedia Commons · Bildrecherche</p>
