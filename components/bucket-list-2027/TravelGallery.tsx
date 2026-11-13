@@ -22,12 +22,18 @@ const collections: Record<string, { src: string; alt: string; caption: string; c
   ],
   "rotterdam-unlimited": [
     { src: "/images/bucket-list-2027/rotterdam-unlimited/rotterdam-erasmusbruecke.jpg", alt: "Erasmusbrücke in Rotterdam", caption: "Rotterdam · Erasmusbrücke", credit: { author: "Ymblanter", source: "https://commons.wikimedia.org/wiki/File:Rotterdam_Erasmusbrug_seen_from_Willemsplein.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/rotterdam-unlimited/rotterdam-kubushaeuser.jpg", alt: "Kubushäuser in Rotterdam", caption: "Rotterdam · Kubushäuser", credit: { author: "ClaudiCK", source: "https://commons.wikimedia.org/wiki/File:Rotterdam_cubic_houses.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/rotterdam-unlimited/rotterdam-markthal.jpg", alt: "Markthal in Rotterdam", caption: "Rotterdam · Markthal", credit: { author: "Jorge Franganillo", source: "https://commons.wikimedia.org/wiki/File:Markthal_Rotterdam.jpg", license: "CC BY 4.0", licenseUrl: "https://creativecommons.org/licenses/by/4.0/" } },
   ],
   "preveza-lefkada": [
     { src: "/images/bucket-list-2027/preveza-lefkada/lefkada-porto-katsiki.jpg", alt: "Porto-Katsiki-Strand auf Lefkada", caption: "Lefkada · Porto Katsiki", credit: { author: "Dimitra Papadimitriou", source: "https://commons.wikimedia.org/wiki/File:Porto_Katsiki_Beach,_Lefkada,_Ionian_Islands,_Greece.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/preveza-lefkada/preveza-hafen-abend.jpg", alt: "Hafenpromenade von Preveza", caption: "Preveza · Hafenpromenade", credit: { author: "Annatsach", source: "https://commons.wikimedia.org/wiki/File:Wharf_in_Preveza,_Greece.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/preveza-lefkada/lefkada-egremni.jpg", alt: "Egremni-Strand auf Lefkada", caption: "Lefkada · Egremni", credit: { author: "Neda Glisovic", source: "https://commons.wikimedia.org/wiki/File:Egremni_beach.JPG", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/preveza-lefkada/lefkada-kueste.jpg", alt: "Strand und Küste von Lefkada", caption: "Lefkada · Küstenlandschaft", credit: { author: "Tanopoulou", source: "https://commons.wikimedia.org/wiki/File:Lefkada_Beach.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
   ],
   "hydra-unlimited": [
     { src: "/images/bucket-list-2027/hydra-unlimited/hydra-hafen.jpg", alt: "Hafenpanorama der Insel Hydra", caption: "Hydra · Hafen", credit: { author: "Νικόλαος Κυριακάκης", source: "https://commons.wikimedia.org/wiki/File:Hydra_harbour,_Greece.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/hydra-unlimited/hydra-inselblick.jpg", alt: "Inselansicht von Hydra", caption: "Hydra · Inselblick", credit: { author: "Misa.stefanovic.07", source: "https://commons.wikimedia.org/wiki/File:0157_-_Hydra.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
   ],
   "bodensee-unlimited": [
     { src: "/images/explore-trips/bodensee-konstanz.jpg", alt: "Konstanz am Bodensee", caption: "Konstanz" },
