@@ -21,6 +21,7 @@ export function BucketListOverview() {
     return haystack.includes(query.trim().toLocaleLowerCase("de")) &&
       (transport === "alle" || trip.transport.includes(transport));
   }), [query, transport]);
+  const openTrip = (slug: string) => { setSelectedSlug(slug); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const selected = europaBucketList2027.find((trip) => trip.slug === selectedSlug);
 
   return (
@@ -101,7 +102,7 @@ export function BucketListOverview() {
             <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {filtered.map((trip, i) => (
                 <article key={trip.slug} className="flex flex-col rounded-sm border border-[var(--mwg-line)] bg-white p-6">
-                  <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden bg-[#173f49] relative">
+                  <button type="button" onClick={() => openTrip(trip.slug)} aria-label={`${trip.title} öffnen`} className="-mx-6 -mt-6 mb-5 block aspect-[16/9] w-[calc(100%+3rem)] overflow-hidden bg-[#173f49] relative cursor-pointer text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mwg-accent)]">
                     {bucketList2027Images[trip.slug] ? (
                       <img src={bucketList2027Images[trip.slug]!.src} alt={bucketList2027Images[trip.slug]!.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
                     ) : (
@@ -116,7 +117,7 @@ export function BucketListOverview() {
                         </div>
                       </div>
                     )}
-                  </div>
+                  </button>
                   <span className="font-mono text-xs text-[var(--mwg-accent)]">{String(europaBucketList2027.findIndex(t => t.slug === trip.slug) + 1).padStart(2, "0")} / 09</span>
                   <h2 className="mt-4 font-display text-2xl">{trip.title}</h2>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--mwg-ink-70)]">{trip.subtitle}</p>
@@ -126,7 +127,7 @@ export function BucketListOverview() {
                   <p className="mt-3 flex items-center gap-2 text-xs text-[var(--mwg-ink-70)]">
                     <TrainFront size={15} /> {trip.transport.join(" · ")}
                   </p>
-                  <button type="button" onClick={() => { setSelectedSlug(trip.slug); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                  <button type="button" onClick={() => openTrip(trip.slug)}
                     className="mt-6 inline-flex items-center gap-2 self-start font-medium text-[var(--mwg-accent)] hover:underline">
                     Reise entdecken <ArrowRight size={16} />
                   </button>
