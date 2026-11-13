@@ -7,7 +7,7 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 | Mailand Unlimited | 5 (lokal) | Stresa/Lago Maggiore, Borromäische Inseln, Bologna/Arkaden, Modena oder Parma, Navigli, besondere Bahnfahrt |
 | Skandinavien Unlimited | 3 (Commons) | Kopenhagen Kanal/Hafen, Stockholm Fähre/Schären, Nachtfähre Stockholm–Helsinki, Helsinki Markthalle/Hafen, Innenräume/Details |
 | Norwegen & Lofoten | 3 (Commons) | Bodø Landschaft, Lofoten Fischerdörfer/Rorbuer, Küstenschiff, Tromsø Hafen, Nordlicht als optionale Saisonaufnahme |
-| Rotterdam Unlimited | 3 (Commons) | Hafenrundfahrt/Schiffe, Delft Grachten, Den Haag, Scheveningen Strand, Kinderdijk Windmühlen, Utrecht |
+| Rotterdam Unlimited | 5 (Commons) | Hafenrundfahrt/Schiffe, Den Haag, Scheveningen Strand, Utrecht; Delft und Kinderdijk inzwischen eingebunden |
 | Portugal Unlimited | 4 (Commons) | Douro-Flussfahrt, Porto Tramlinie 1 (korrekte Linie prüfen), Lissabon Aussicht, Belém, Cascais |
 | Bratislava–Wien–Wachau | 4 (lokal) | Twin City Liner, Wiener Parlament, UNO City (Außenansicht), Wachau-Schiff, Bratislava Burg |
 | Preveza & Lefkada | 4 (Commons) | Nikopolis archäologische Stätte, Nidri Hafen/Bootsausflug, Lefkada-Stadt, Inselblick, Preveza Altstadt |
@@ -24,6 +24,6 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 
 ## Nächste Produktionswelle
 1. Preveza & Lefkada: Nikopolis, Nidri, Preveza Altstadt.
-2. Rotterdam: Hafen, Kinderdijk, Delft.
+2. Rotterdam: Hafenrundfahrt, Den Haag, Scheveningen (Kinderdijk und Delft bereits erledigt).
 3. Hydra: Gassen, Wassertaxi, Bucht.
 4. Danach die restlichen sechs Reisen entsprechend der Tabelle.
