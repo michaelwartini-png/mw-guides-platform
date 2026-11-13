@@ -10,7 +10,9 @@ const collections: Record<string, { src: string; alt: string; caption: string; c
     { src: "/images/bucket-list-2027/skandinavien-unlimited/helsinki-dom-senatsplatz.jpg", alt: "Dom von Helsinki über dem Senatsplatz", caption: "Helsinki · Dom und Senatsplatz", credit: { author: "JIP", source: "https://commons.wikimedia.org/wiki/File:Helsinki_Senate_Square_and_Helsinki_Cathedral_in_May_2026.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
   ],
   "norwegen-lofoten": [
+    { src: "/images/bucket-list-2027/norwegen-lofoten/bodo-hafen.jpg", alt: "Hafen von Bodø in Nordnorwegen", caption: "Bodø · Hafen", credit: { author: "Lukas Beck", source: "https://commons.wikimedia.org/wiki/File:Bod%C3%B8_Hafen_lub_2025-07-24_img01.jpg", license: "CC BY 4.0", licenseUrl: "https://creativecommons.org/licenses/by/4.0/" } },
     { src: "/images/bucket-list-2027/norwegen-lofoten/lofoten-reine.jpg", alt: "Fischerdorf Reine auf den Lofoten in Norwegen", caption: "Lofoten · Reine", credit: { author: "Jakub Fryš", source: "https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/norwegen-lofoten/tromso-eismeerkathedrale.jpg", alt: "Eismeerkathedrale und Brücke in Tromsø", caption: "Tromsø · Eismeerkathedrale", credit: { author: "Virtual-Pano", source: "https://commons.wikimedia.org/wiki/File:09512_Tromsdalen_church_and_bridge_-_Tromso,_Norway_-_V-P.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
   ],
   "bodensee-unlimited": [
     { src: "/images/explore-trips/bodensee-konstanz.jpg", alt: "Konstanz am Bodensee", caption: "Konstanz" },
