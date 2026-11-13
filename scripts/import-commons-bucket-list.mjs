@@ -14,6 +14,9 @@ const entries = [
   { trip: "norwegen-lofoten", file: "09512 Tromsdalen church and bridge - Tromso, Norway - V-P.jpg", slug: "tromso-eismeerkathedrale" },
   { trip: "skandinavien-unlimited", file: "Stockholm-Gamla-Stan-panorama.jpg", slug: "stockholm-gamla-stan" },
   { trip: "skandinavien-unlimited", file: "Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg", slug: "helsinki-dom-senatsplatz" },
+  { trip: "rotterdam-unlimited", file: "Rotterdam Erasmusbrug seen from Willemsplein.jpg", slug: "rotterdam-erasmusbruecke" },
+  { trip: "preveza-lefkada", file: "Porto Katsiki Beach, Lefkada, Ionian Islands, Greece.jpg", slug: "lefkada-porto-katsiki" },
+  { trip: "hydra-unlimited", file: "Hydra harbour, Greece.jpg", slug: "hydra-hafen" },
 ];
 const allowed = new Set(["CC BY 4.0", "CC BY-SA 4.0", "CC0", "Public domain"]);
 const root = path.resolve("public/images/bucket-list-2027");
