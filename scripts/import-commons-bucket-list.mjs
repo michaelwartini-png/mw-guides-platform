@@ -30,10 +30,12 @@ for (const entry of entries) {
   if (!info?.thumburl || !info.extmetadata) throw new Error("Missing file or metadata: " + entry.file);
   const meta = info.extmetadata;
   const license = plain(meta.LicenseShortName?.value);
+  if (!info.descriptionurl || !info.descriptionurl.includes("commons.wikimedia.org/wiki/File:")) throw new Error("Unexpected source page: " + entry.file);
   if (!allowed.has(license)) throw new Error("License requires manual review: " + entry.file + " (" + license + ")");
   const author = plain(meta.Artist?.value);
   const licenseUrl = meta.LicenseUrl?.value ?? "";
-  if (!author || !licenseUrl && license !== "Public domain") throw new Error("Missing attribution: " + entry.file);
+  if (!author || (!licenseUrl && license !== "Public domain")) throw new Error("Missing attribution: " + entry.file);
+  if (new URL(info.thumburl).hostname !== "upload.wikimedia.org") throw new Error("Unexpected image host: " + entry.file);
   const imageResponse = await fetch(info.thumburl, { headers: { "User-Agent": agent } });
   if (!imageResponse.ok) throw new Error("Image HTTP " + imageResponse.status);
   const contentType = imageResponse.headers.get("content-type") ?? "";
