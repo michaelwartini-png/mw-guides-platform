@@ -101,8 +101,23 @@ export function BucketListOverview() {
             <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {filtered.map((trip, i) => (
                 <article key={trip.slug} className="flex flex-col rounded-sm border border-[var(--mwg-line)] bg-white p-6">
-                  {bucketList2027Images[trip.slug] && <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden bg-[var(--mwg-line)]"><img src={bucketList2027Images[trip.slug]!.src} alt={bucketList2027Images[trip.slug]!.alt} loading="lazy" className="h-full w-full object-cover" /></div>}
-                  <span className="font-mono text-xs text-[var(--mwg-accent)]">{String(i + 1).padStart(2, "0")} / 09</span>
+                  <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden bg-[#173f49] relative">
+                    {bucketList2027Images[trip.slug] ? (
+                      <img src={bucketList2027Images[trip.slug]!.src} alt={bucketList2027Images[trip.slug]!.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
+                    ) : (
+                      <div className="relative flex h-full flex-col justify-between overflow-hidden bg-gradient-to-br from-[#123944] via-[#326c73] to-[#b6b19b] p-6 text-white">
+                        <div className="absolute -right-10 -top-20 h-56 w-56 rounded-full border border-white/20" aria-hidden="true" />
+                        <div className="absolute -right-20 -top-8 h-56 w-56 rounded-full border border-white/20" aria-hidden="true" />
+                        <div className="absolute bottom-0 left-1/3 h-44 w-44 rounded-full border border-white/10" aria-hidden="true" />
+                        <span className="relative text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">Europa · 2027</span>
+                        <div className="relative">
+                          <span className="text-[11px] uppercase tracking-[0.2em] text-white/75">Reiseidee {String(europaBucketList2027.findIndex(t => t.slug === trip.slug) + 1).padStart(2,"0")}</span>
+                          <p className="mt-2 max-w-[18ch] font-display text-3xl leading-tight text-white">{trip.title}</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <span className="font-mono text-xs text-[var(--mwg-accent)]">{String(europaBucketList2027.findIndex(t => t.slug === trip.slug) + 1).padStart(2, "0")} / 09</span>
                   <h2 className="mt-4 font-display text-2xl">{trip.title}</h2>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--mwg-ink-70)]">{trip.subtitle}</p>
                   <p className="mt-5 flex items-start gap-2 text-sm text-[var(--mwg-ink-70)]">
