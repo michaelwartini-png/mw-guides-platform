@@ -4,7 +4,7 @@
  * Usage: node scripts/import-commons-bucket-list.mjs
  * Requires outbound network access. Never silently accepts unknown licenses.
  */
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const entries = [
@@ -34,14 +34,41 @@ try {
   if (error.code !== "ENOENT") throw error;
 }
 const agent = "MWGuidesTravelMagazine/0.1 (Wikimedia image attribution research)";
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+async function fetchWithBackoff(url) {
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const response = await fetch(url, { headers: { "User-Agent": agent } });
+    if (response.status !== 429 && response.status < 500) return response;
+    if (attempt === 4) return response;
+    const retryAfter = Number(response.headers.get("retry-after"));
+    const delay = Number.isFinite(retryAfter) && retryAfter > 0
+      ? Math.min(retryAfter * 1000, 120000)
+      : Math.min(10000 * 2 ** attempt, 120000);
+    process.stdout.write("Wikimedia HTTP " + response.status + "; retry in " + Math.round(delay / 1000) + "s\n");
+    await wait(delay);
+  }
+}
+
 function plain(s = "") { return s.replace(/<[^>]*>/g, "").replace(/&amp;/g, "&").replace(/&quot;/g, '"').trim(); }
 for (const entry of entries) {
+  const prior = previousCredits.find((item) => item.trip === entry.trip && item.src?.split("/").pop()?.startsWith(entry.slug + "."));
+  if (prior) {
+    const localFile = path.resolve("public", prior.src.replace(/^\//, ""));
+    try {
+      if ((await stat(localFile)).size > 0) {
+        process.stdout.write("Already imported: " + entry.file + "\n");
+        continue;
+      }
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+  }
   const params = new URLSearchParams({
     action: "query", format: "json", prop: "imageinfo",
     titles: "File:" + entry.file, iiprop: "url|extmetadata",
     iiurlwidth: "1280",
   });
-  const response = await fetch("https://commons.wikimedia.org/w/api.php?" + params, { headers: { "User-Agent": agent } });
+  const response = await fetchWithBackoff("https://commons.wikimedia.org/w/api.php?" + params);
   if (!response.ok) throw new Error("Wikimedia API HTTP " + response.status);
   const json = await response.json();
   const page = Object.values(json.query?.pages ?? {})[0];
@@ -62,7 +89,7 @@ for (const entry of entries) {
   if (thumbnailUrl.protocol !== "https:" || !approvedHosts.has(thumbnailUrl.hostname)) {
     throw new Error("Unexpected image host " + thumbnailUrl.hostname + " for " + entry.file);
   }
-  const imageResponse = await fetch(info.thumburl, { headers: { "User-Agent": agent } });
+  const imageResponse = await fetchWithBackoff(info.thumburl);
   if (!imageResponse.ok) throw new Error("Image HTTP " + imageResponse.status);
   const contentType = imageResponse.headers.get("content-type") ?? "";
   if (!contentType.startsWith("image/")) throw new Error("Unexpected media type: " + contentType);
@@ -78,6 +105,7 @@ for (const entry of entries) {
     source: info.descriptionurl, modifications: "Wikimedia thumbnail resized to max 1280px; no further editing",
   });
   process.stdout.write("Saved " + destination + "\n");
+  await wait(1200);
 }
 const importedSources = new Set(credits.map((entry) => entry.source));
 const mergedCredits = [...previousCredits.filter((entry) => !importedSources.has(entry.source)), ...credits];
