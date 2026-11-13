@@ -27,11 +27,11 @@ test.describe("Europa Bucket List 2027 – unlisted preview", () => {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
   });
 
-  test("opens Portugal direct link and displays six gallery photos", async ({ page }) => {
+  test("opens Portugal direct link and displays seven gallery photos", async ({ page }) => {
     await page.goto(previewPath + "?reise=portugal-unlimited");
     await expect(page.getByRole("heading", { name: "Portugal Unlimited" })).toBeVisible();
     const images = page.locator('img[src*="/images/bucket-list-2027/portugal-unlimited/"]');
-    await expect(images).toHaveCount(7); // hero + six gallery images
+    await expect(images).toHaveCount(8); // hero + seven gallery images
     await expect.poll(async () => images.evaluateAll(items => items.every(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0))).toBe(true);
   });
 
@@ -39,7 +39,7 @@ test.describe("Europa Bucket List 2027 – unlisted preview", () => {
     { slug: "preveza-lefkada", galleryCount: 6 },
     { slug: "rotterdam-unlimited", galleryCount: 5 },
     { slug: "hydra-unlimited", galleryCount: 3 },
-    { slug: "portugal-unlimited", galleryCount: 6 },
+    { slug: "portugal-unlimited", galleryCount: 7 },
     { slug: "norwegen-lofoten", galleryCount: 5 },
     { slug: "skandinavien-unlimited", galleryCount: 4 },
   ]) {
