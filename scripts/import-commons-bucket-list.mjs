@@ -35,7 +35,14 @@ for (const entry of entries) {
   const author = plain(meta.Artist?.value);
   const licenseUrl = meta.LicenseUrl?.value ?? "";
   if (!author || (!licenseUrl && license !== "Public domain")) throw new Error("Missing attribution: " + entry.file);
-  if (new URL(info.thumburl).hostname !== "upload.wikimedia.org") throw new Error("Unexpected image host: " + entry.file);
+  const thumbnailUrl = new URL(info.thumburl);
+  // Wikimedia may return thumbnail URLs from multiple official media hosts.
+  // Log the hostname for diagnostics while rejecting untrusted hosts.
+  const approvedHosts = new Set(["upload.wikimedia.org", "commons.wikimedia.org"]);
+  process.stdout.write("Thumbnail host for " + entry.file + ": " + thumbnailUrl.hostname + "\\n");
+  if (thumbnailUrl.protocol !== "https:" || !approvedHosts.has(thumbnailUrl.hostname)) {
+    throw new Error("Unexpected image host " + thumbnailUrl.hostname + " for " + entry.file);
+  }
   const imageResponse = await fetch(info.thumburl, { headers: { "User-Agent": agent } });
   if (!imageResponse.ok) throw new Error("Image HTTP " + imageResponse.status);
   const contentType = imageResponse.headers.get("content-type") ?? "";
