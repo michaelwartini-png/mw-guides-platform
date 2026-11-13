@@ -14,6 +14,15 @@ const collections: Record<string, { src: string; alt: string; caption: string; c
     { src: "/images/bucket-list-2027/norwegen-lofoten/lofoten-reine.jpg", alt: "Fischerdorf Reine auf den Lofoten in Norwegen", caption: "Lofoten · Reine", credit: { author: "Jakub Fryš", source: "https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
     { src: "/images/bucket-list-2027/norwegen-lofoten/tromso-eismeerkathedrale.jpg", alt: "Eismeerkathedrale und Brücke in Tromsø", caption: "Tromsø · Eismeerkathedrale", credit: { author: "Virtual-Pano", source: "https://commons.wikimedia.org/wiki/File:09512_Tromsdalen_church_and_bridge_-_Tromso,_Norway_-_V-P.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
   ],
+  "rotterdam-unlimited": [
+    { src: "/images/bucket-list-2027/rotterdam-unlimited/rotterdam-erasmusbruecke.jpg", alt: "Erasmusbrücke in Rotterdam", caption: "Rotterdam · Erasmusbrücke", credit: { author: "Ymblanter", source: "https://commons.wikimedia.org/wiki/File:Rotterdam_Erasmusbrug_seen_from_Willemsplein.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+  ],
+  "preveza-lefkada": [
+    { src: "/images/bucket-list-2027/preveza-lefkada/lefkada-porto-katsiki.jpg", alt: "Porto-Katsiki-Strand auf Lefkada", caption: "Lefkada · Porto Katsiki", credit: { author: "Dimitra Papadimitriou", source: "https://commons.wikimedia.org/wiki/File:Porto_Katsiki_Beach,_Lefkada,_Ionian_Islands,_Greece.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+  ],
+  "hydra-unlimited": [
+    { src: "/images/bucket-list-2027/hydra-unlimited/hydra-hafen.jpg", alt: "Hafenpanorama der Insel Hydra", caption: "Hydra · Hafen", credit: { author: "Νικόλαος Κυριακάκης", source: "https://commons.wikimedia.org/wiki/File:Hydra_harbour,_Greece.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+  ],
   "bodensee-unlimited": [
     { src: "/images/explore-trips/bodensee-konstanz.jpg", alt: "Konstanz am Bodensee", caption: "Konstanz" },
     { src: "/images/explore-trips/bodensee-schifffahrt.jpg", alt: "Schifffahrt auf dem Bodensee", caption: "Auf dem Wasser" },
