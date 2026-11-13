@@ -317,17 +317,17 @@ export function BucketListOverview() {
             <p aria-live="polite" className="mt-5 text-sm text-[var(--mwg-ink-70)]">
               {filtered.length} von {europaBucketList2027.length} Reisen
             </p>
-            <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {filtered.map((trip, i) => (
                 <article key={trip.slug} className="flex flex-col rounded-sm border border-[var(--mwg-line)] bg-white p-6">
                   <button type="button" onClick={() => openTrip(trip.slug)} aria-label={`${trip.title} öffnen`} className="group -mx-6 -mt-6 mb-5 block aspect-[16/9] w-[calc(100%+3rem)] overflow-hidden bg-[#173f49] relative cursor-pointer text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mwg-accent)]">
                     {bucketList2027Images[trip.slug] ? (
                       <>
-                        <img src={bucketList2027Images[trip.slug]!.src} alt={bucketList2027Images[trip.slug]!.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <img src={bucketList2027Images[trip.slug]!.src} alt={bucketList2027Images[trip.slug]!.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-105" />
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" aria-hidden="true" />
-                        <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5 text-white">
-                          <span className="max-w-[80%] font-display text-2xl leading-tight drop-shadow-md">{trip.title}</span>
-                          <span className="shrink-0 rounded-full border border-white/60 bg-black/25 px-2.5 py-1 font-mono text-xs">{String(europaBucketList2027.findIndex(t => t.slug === trip.slug) + 1).padStart(2, "0")}</span>
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-3 text-white sm:p-5">
+                          <span className="max-w-[82%] font-display text-xl leading-tight drop-shadow-md sm:text-2xl">{trip.title}</span>
+                          <span className="shrink-0 rounded-full border border-white/60 bg-black/25 px-2 py-1 font-mono text-[10px] sm:px-2.5 sm:text-xs">{String(europaBucketList2027.findIndex(t => t.slug === trip.slug) + 1).padStart(2, "0")}</span>
                         </div>
                       </>
                     ) : (
