@@ -1,0 +1,34 @@
+name: Import Wikimedia travel photos
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout preview branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/europa-bucket-list-2027-private-preview
+          persist-credentials: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download photos and create attribution manifest
+        run: node scripts/import-commons-bucket-list.mjs
+      - name: Commit imported photos only if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/bucket-list-2027/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "assets: import reviewed Wikimedia travel images with credits"
+            git push origin HEAD:feature/europa-bucket-list-2027-private-preview
+          fi
