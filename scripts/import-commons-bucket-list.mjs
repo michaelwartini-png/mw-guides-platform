@@ -9,7 +9,9 @@ import path from "node:path";
 
 const entries = [
   { trip: "skandinavien-unlimited", file: "Nyhavn, Copenhague.jpg", slug: "kopenhagen-nyhavn" },
+  { trip: "skandinavien-unlimited", file: "MS Silja Symphony in Stockholm.jpg", slug: "stockholm-helsinki-nachtfaehre" },
   { trip: "norwegen-lofoten", file: "Reine - Lofoten.jpg", slug: "lofoten-reine" },
+  { trip: "norwegen-lofoten", file: "Hurtigruten-ships hg.jpg", slug: "norwegen-hurtigruten-schiffe" },
   { trip: "norwegen-lofoten", file: "At Eliassen Rorbuer fishermen cabin area in Hamnøya, Moskenes, Lofoten, Norway, 2015 April - 2.jpg", slug: "lofoten-hamnoy-rorbuer" },
   { trip: "norwegen-lofoten", file: "Bodø Hafen lub 2025-07-24 img01.jpg", slug: "bodo-hafen" },
   { trip: "norwegen-lofoten", file: "09512 Tromsdalen church and bridge - Tromso, Norway - V-P.jpg", slug: "tromso-eismeerkathedrale" },
