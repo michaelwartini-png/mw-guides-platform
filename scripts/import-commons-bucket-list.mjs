@@ -31,6 +31,7 @@ const entries = [
   { trip: "hydra-unlimited", file: "Hydra harbour, Greece.jpg", slug: "hydra-hafen" },
   { trip: "hydra-unlimited", file: "0157 - Hydra.jpg", slug: "hydra-inselblick" },
   { trip: "hydra-unlimited", file: "0058 - Hydra.jpg", slug: "hydra-ortsimpression" },
+  { trip: "bodensee-unlimited", file: "Rhine Falls in Switzerland.jpg", slug: "rheinfall-schaffhausen" },
   { trip: "portugal-unlimited", file: "Porto Panoramic1.jpg", slug: "porto-panorama" },
   { trip: "portugal-unlimited", file: "VIVA DOURO 5378.jpg", slug: "porto-douro-ausflugsboot" },
   { trip: "portugal-unlimited", file: "Porto, vista da Douro (01).jpg", slug: "porto-douro-vom-schiff" },
