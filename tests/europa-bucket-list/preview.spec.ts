@@ -27,11 +27,11 @@ test.describe("Europa Bucket List 2027 – unlisted preview", () => {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
   });
 
-  test("opens Portugal direct link and displays four gallery photos", async ({ page }) => {
+  test("opens Portugal direct link and displays six gallery photos", async ({ page }) => {
     await page.goto(previewPath + "?reise=portugal-unlimited");
     await expect(page.getByRole("heading", { name: "Portugal Unlimited" })).toBeVisible();
     const images = page.locator('img[src*="/images/bucket-list-2027/portugal-unlimited/"]');
-    await expect(images).toHaveCount(5); // hero + four gallery images
+    await expect(images).toHaveCount(7); // hero + six gallery images
     await expect.poll(async () => images.evaluateAll(items => items.every(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0))).toBe(true);
   });
 
