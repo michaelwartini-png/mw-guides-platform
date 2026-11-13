@@ -84,6 +84,32 @@ export function BucketListOverview() {
                       <p className="mt-3 font-display text-xl">Alles kann – nichts muss</p>
                     </div>
                   </section>
+                  {(selected.slug === "skandinavien-unlimited" || selected.slug === "norwegen-lofoten") && (
+                    <section aria-label="Reiseimpressionen" className="border-y border-[var(--mwg-line)] py-8">
+                      <p className="mwg-eyebrow text-[var(--mwg-accent)]">Drei Perspektiven auf die Reise</p>
+                      <h3 className="mt-2 font-display text-3xl">Orte, die in Erinnerung bleiben</h3>
+                      <p className="mt-3 max-w-[65ch] text-sm text-[var(--mwg-ink-70)]">Ein erster redaktioneller Überblick. Originalfotos ergänzen wir, sobald passende, nutzbare Bilddateien vorliegen.</p>
+                      <div className="mt-6 grid gap-3 md:grid-cols-3">
+                        {(selected.slug === "skandinavien-unlimited" ? [
+                          { place: "Kopenhagen", tag: "Hafen & Stadtleben", tone: "from-[#123c50] to-[#4c8893]" },
+                          { place: "Stockholm", tag: "Inseln & Schären", tone: "from-[#294b58] to-[#9a8c70]" },
+                          { place: "Helsinki", tag: "Ostsee & Architektur", tone: "from-[#355b64] to-[#a3b3ad]" },
+                        ] : [
+                          { place: "Bodø", tag: "Tor zum Norden", tone: "from-[#173849] to-[#638b94]" },
+                          { place: "Lofoten", tag: "Inseln & Fischerdörfer", tone: "from-[#27464d] to-[#8c8b7d]" },
+                          { place: "Tromsø", tag: "Arktisches Stadtleben", tone: "from-[#1e3549] to-[#7c9ca6]" },
+                        ]).map((item, i) => (
+                          <div key={item.place} className={`relative flex aspect-[4/3] flex-col justify-end overflow-hidden bg-gradient-to-br ${item.tone} p-5 text-white`}>
+                            <span className="absolute right-5 top-5 font-mono text-xs tracking-widest text-white/75">0{i + 1}</span>
+                            <div aria-hidden="true" className="absolute -right-12 -top-12 h-44 w-44 rounded-full border border-white/20" />
+                            <div aria-hidden="true" className="absolute -left-8 top-1/4 h-32 w-32 rounded-full border border-white/15" />
+                            <p className="relative text-xs uppercase tracking-[0.16em] text-white/80">{item.tag}</p>
+                            <h4 className="relative mt-2 font-display text-3xl text-white">{item.place}</h4>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  )}
                   <section aria-label="Reiseroute">
                     <p className="mwg-eyebrow text-[var(--mwg-accent)]">Orientierung statt Stundenplan</p>
                     <h3 className="mt-2 font-display text-3xl">Unsere mögliche Route</h3>
