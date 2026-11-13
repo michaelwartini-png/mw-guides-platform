@@ -26,6 +26,7 @@ const collections: Record<string, { src: string; alt: string; caption: string; c
 export function TravelGallery({ slug }: { slug: string }) {
   const photos = collections[slug];
   const [active, setActive] = useState<number | null>(null);
+  const [failedImages, setFailedImages] = useState<string[]>([]);
   const closeButton = useRef<HTMLButtonElement>(null);
   const lastTrigger = useRef<HTMLButtonElement | null>(null);
   const close = () => {
@@ -46,12 +47,12 @@ export function TravelGallery({ slug }: { slug: string }) {
   if (!photos) return null;
   const current = active === null ? null : photos[active];
   return <section aria-label="Reisebilder" className="space-y-5">
-    <div><p className="mwg-eyebrow text-[var(--mwg-accent)]">Reiseimpressionen</p><h3 className="mt-2 font-display text-3xl">Unterwegs in Bildern</h3><p className="mt-2 text-sm text-[var(--mwg-ink-70)]">Vorhandene Motive aus der MW-Guides-Mediensammlung. Bild anklicken zum Vergrößern.</p></div>
+    <div><p className="mwg-eyebrow text-[var(--mwg-accent)]">Reiseimpressionen</p><h3 className="mt-2 font-display text-3xl">Unterwegs in Bildern</h3><p className="mt-2 text-sm text-[var(--mwg-ink-70)]">Reisebilder aus der MW-Guides-Mediensammlung und Wikimedia Commons. Bild anklicken zum Vergrößern.</p></div>
     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
       {photos.map((photo,i)=><figure key={photo.src}>
-        <button type="button" onClick={(event)=>{ lastTrigger.current=event.currentTarget; setActive(i); }} aria-label={photo.caption+" vergrößern"} className="block aspect-video w-full overflow-hidden rounded-sm bg-[var(--mwg-line)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mwg-accent)]">
-          <img src={photo.src} alt={photo.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-300 hover:scale-105" />
-        </button>
+        {failedImages.includes(photo.src) ? <div role="status" className="flex aspect-video flex-col items-center justify-center gap-2 bg-white p-5 text-center text-sm"><span>Bild derzeit nicht verfügbar</span>{photo.credit && <a href={photo.credit.source} target="_blank" rel="noopener noreferrer" className="underline">Original bei Wikimedia öffnen</a>}</div> : <button type="button" onClick={(event)=>{ lastTrigger.current=event.currentTarget; setActive(i); }} aria-label={photo.caption+" vergrößern"} className="block aspect-video w-full overflow-hidden rounded-sm bg-[var(--mwg-line)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--mwg-accent)]">
+          <img src={photo.src} alt={photo.alt} loading="lazy" onError={()=>setFailedImages(previous => previous.includes(photo.src) ? previous : [...previous, photo.src])} className="h-full w-full object-cover transition-transform duration-300 hover:scale-105" />
+        </button>}
         <figcaption className="mt-2 text-sm text-[var(--mwg-ink-70)]">{photo.caption}{photo.credit && <span className="mt-1 block text-xs">Foto: {photo.credit.author} · <a href={photo.credit.source} target="_blank" rel="noopener noreferrer" className="underline">Wikimedia Commons</a> · <a href={photo.credit.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">{photo.credit.license}</a> · unverändert, auf Anzeigegröße skaliert</span>}</figcaption>
       </figure>)}
     </div>
