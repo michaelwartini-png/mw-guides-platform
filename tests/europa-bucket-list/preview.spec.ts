@@ -9,20 +9,11 @@ import { expect, test } from "@playwright/test";
  * PLAYWRIGHT_BASE_URL: protected preview origin.
  */
 const previewPath = process.env.PLAYWRIGHT_PREVIEW_PATH;
-const auth = process.env.PLAYWRIGHT_PREVIEW_AUTH;
 
 test.describe("Europa Bucket List 2027 – private preview", () => {
   test.skip(!previewPath, "Private preview not deployed yet; no public route must be created for testing.");
 
   test("renders nine trips and allows searching", async ({ page }) => {
-    if (auth) {
-      const separator = auth.indexOf(":");
-      if (separator < 1) throw new Error("Invalid PLAYWRIGHT_PREVIEW_AUTH");
-      await page.context().setHTTPCredentials({
-        username: auth.slice(0, separator),
-        password: auth.slice(separator + 1),
-      });
-    }
     await page.goto(previewPath!);
     await expect(page.getByRole("heading", { name: "Europa Bucket List 2027" })).toBeVisible();
     await expect(page.getByRole("article")).toHaveCount(9);
@@ -37,14 +28,6 @@ test.describe("Europa Bucket List 2027 – private preview", () => {
   });
 
   test("filters transport and has no horizontal overflow", async ({ page }) => {
-    if (auth) {
-      const separator = auth.indexOf(":");
-      if (separator < 1) throw new Error("Invalid PLAYWRIGHT_PREVIEW_AUTH");
-      await page.context().setHTTPCredentials({
-        username: auth.slice(0, separator),
-        password: auth.slice(separator + 1),
-      });
-    }
     await page.goto(previewPath!);
     await page.getByLabel("Verkehrsmittel").selectOption("Nachtfähre");
     await expect(page.getByRole("article")).toHaveCount(1);
@@ -54,14 +37,6 @@ test.describe("Europa Bucket List 2027 – private preview", () => {
   });
 
   test("does not leak browser errors", async ({ page }) => {
-    if (auth) {
-      const separator = auth.indexOf(":");
-      if (separator < 1) throw new Error("Invalid PLAYWRIGHT_PREVIEW_AUTH");
-      await page.context().setHTTPCredentials({
-        username: auth.slice(0, separator),
-        password: auth.slice(separator + 1),
-      });
-    }
     const errors: string[] = [];
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto(previewPath!);
