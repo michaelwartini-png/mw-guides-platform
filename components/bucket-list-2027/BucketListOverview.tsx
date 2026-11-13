@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, Compass, MapPin, TrainFront } from "lucide-react";
 import { europaBucketList2027 } from "@/content/europaBucketList2027";
 import { bucketList2027Images } from "@/content/bucketList2027Images";
@@ -42,7 +42,25 @@ export function BucketListOverview() {
     return haystack.includes(query.trim().toLocaleLowerCase("de")) &&
       (transport === "alle" || trip.transport.includes(transport));
   }), [query, transport]);
-  const openTrip = (slug: string) => { setSelectedSlug(slug); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  // A selected trip can be shared, refreshed and navigated with the browser Back button.
+  useEffect(() => {
+    const syncFromUrl = () => {
+      const slug = new URL(window.location.href).searchParams.get("reise");
+      setSelectedSlug(europaBucketList2027.some((trip) => trip.slug === slug) ? slug : null);
+    };
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, []);
+  const navigateToTrip = (slug: string | null) => {
+    const url = new URL(window.location.href);
+    if (slug) url.searchParams.set("reise", slug);
+    else url.searchParams.delete("reise");
+    window.history.pushState(null, "", url.toString());
+    setSelectedSlug(slug);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const openTrip = (slug: string) => navigateToTrip(slug);
   const selected = europaBucketList2027.find((trip) => trip.slug === selectedSlug);
 
   return (
@@ -59,7 +77,7 @@ export function BucketListOverview() {
 
         {selected ? (
           <section className="mt-12" aria-label={selected.title}>
-            <button type="button" onClick={() => setSelectedSlug(null)}
+            <button type="button" onClick={() => navigateToTrip(null)}
               className="inline-flex items-center gap-2 text-sm font-medium text-[var(--mwg-accent)] hover:underline">
               <ArrowLeft size={16} /> Alle neun Reisen
             </button>
