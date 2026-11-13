@@ -5,10 +5,10 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const collections: Record<string, { src: string; alt: string; caption: string; credit?: { author: string; source: string; license: string; licenseUrl: string } }[]> = {
   "skandinavien-unlimited": [
-    { src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nyhavn%2C%20Copenhague.jpg?width=1280", alt: "Nyhavn mit farbigen Häusern am Hafen von Kopenhagen", caption: "Kopenhagen · Nyhavn", credit: { author: "Bene Riobó", source: "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhague.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/skandinavien-unlimited/kopenhagen-nyhavn.jpg", alt: "Nyhavn mit farbigen Häusern am Hafen von Kopenhagen", caption: "Kopenhagen · Nyhavn", credit: { author: "Bene Riobó", source: "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhague.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
   ],
   "norwegen-lofoten": [
-    { src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Reine%20-%20Lofoten.jpg?width=1280", alt: "Fischerdorf Reine auf den Lofoten in Norwegen", caption: "Lofoten · Reine", credit: { author: "Jakub Fryš", source: "https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
+    { src: "/images/bucket-list-2027/norwegen-lofoten/lofoten-reine.jpg", alt: "Fischerdorf Reine auf den Lofoten in Norwegen", caption: "Lofoten · Reine", credit: { author: "Jakub Fryš", source: "https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
   ],
   "bodensee-unlimited": [
     { src: "/images/explore-trips/bodensee-konstanz.jpg", alt: "Konstanz am Bodensee", caption: "Konstanz" },
