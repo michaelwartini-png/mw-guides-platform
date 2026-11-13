@@ -81,6 +81,43 @@ const featuredItineraries: Record<string, { label: string; description: string }
   ],
 };
 
+const planningLinks: Record<string, { label: string; url: string; note: string }[]> = {
+  "skandinavien-unlimited": [
+    { label: "DSB – Bahn Dänemark", url: "https://www.dsb.dk/", note: "Dänische Bahnverbindungen" },
+    { label: "SJ – Bahn Schweden", url: "https://www.sj.se/", note: "Schwedische Fernzüge" },
+    { label: "Tallink Silja Line", url: "https://www.tallink.com/", note: "Ostsee-Fährverbindungen" },
+    { label: "Viking Line", url: "https://www.vikingline.com/", note: "Alternative Fährverbindungen" },
+  ],
+  "norwegen-lofoten": [
+    { label: "Entur – Norwegische Reiseplanung", url: "https://entur.no/", note: "Öffentlicher Verkehr" },
+    { label: "Reis Nordland", url: "https://www.reisnordland.no/", note: "Regionalverkehr und Fähren" },
+    { label: "Hurtigruten", url: "https://www.hurtigruten.com/", note: "Küstenverbindungen" },
+    { label: "Havila Voyages", url: "https://www.havilavoyages.com/", note: "Weitere Küstenschiffe" },
+  ],
+  "rotterdam-unlimited": [
+    { label: "NS – Niederländische Bahn", url: "https://www.ns.nl/", note: "Bahnverbindungen" },
+    { label: "RET – Nahverkehr Rotterdam", url: "https://www.ret.nl/", note: "Metro, Tram und Bus" },
+  ],
+  "portugal-unlimited": [
+    { label: "CP – Portugiesische Bahn", url: "https://www.cp.pt/", note: "Porto–Lissabon und Regionalzüge" },
+    { label: "Carris – Lissabon", url: "https://www.carris.pt/", note: "Tram und Stadtverkehr" },
+  ],
+  "bratislava-wien-wachau": [
+    { label: "Twin City Liner", url: "https://www.twincityliner.com/", note: "Schiffsverbindung Wien–Bratislava" },
+    { label: "ÖBB", url: "https://www.oebb.at/", note: "Bahn und Regionalverkehr" },
+  ],
+  "preveza-lefkada": [
+    { label: "Visit Greece", url: "https://www.visitgreece.gr/", note: "Offizielle Reiseinformationen" },
+  ],
+  "bodensee-unlimited": [
+    { label: "Bodensee-Schiffsbetriebe", url: "https://www.bsb.de/", note: "Schifffahrten" },
+    { label: "Deutsche Bahn", url: "https://www.bahn.de/", note: "Bahnverbindungen" },
+  ],
+  "hydra-unlimited": [
+    { label: "Visit Greece", url: "https://www.visitgreece.gr/", note: "Offizielle Reiseinformationen" },
+  ],
+};
+
 /** Public, unlisted editorial travel preview. */
 export function BucketListOverview() {
   const [query, setQuery] = useState("");
@@ -239,6 +276,21 @@ export function BucketListOverview() {
                           </li>
                         ))}
                       </ol>
+                    </section>
+                  )}
+                  {planningLinks[selected.slug] && (
+                    <section aria-label="Offizielle Planungslinks">
+                      <p className="mwg-eyebrow text-[var(--mwg-accent)]">Selbst entdecken</p>
+                      <h3 className="mt-2 font-display text-3xl">Nützliche Links für unterwegs</h3>
+                      <p className="mt-3 text-sm text-[var(--mwg-ink-70)]">Einstiegsseiten der Anbieter. Fahrpläne, Preise und Verfügbarkeit sind noch nicht geprüft.</p>
+                      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                        {planningLinks[selected.slug].map((link) => (
+                          <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between gap-4 border border-[var(--mwg-line)] bg-white p-5 hover:border-[var(--mwg-accent)]">
+                            <span><span className="block font-display text-lg group-hover:text-[var(--mwg-accent)]">{link.label}</span><span className="mt-1 block text-xs text-[var(--mwg-ink-70)]">{link.note}</span></span>
+                            <ArrowRight size={18} className="shrink-0 text-[var(--mwg-accent)]" />
+                          </a>
+                        ))}
+                      </div>
                     </section>
                   )}
                   <section className="border border-[var(--mwg-line)] p-6 sm:p-8">
