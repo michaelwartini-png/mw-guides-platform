@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, Compass, MapPin, TrainFront } from "lucide-react";
 import { europaBucketList2027 } from "@/content/europaBucketList2027";
+import { bucketList2027Images } from "@/content/bucketList2027Images";
 
 /**
  * Private preview component. Intentionally NOT mounted on a Next.js route.
@@ -43,6 +44,7 @@ export function BucketListOverview() {
               <ArrowLeft size={16} /> Alle neun Reisen
             </button>
             <div className="mt-8 border-t border-[var(--mwg-line)] pt-8">
+              {bucketList2027Images[selected.slug] && <div className="mb-8 aspect-[16/7] overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={bucketList2027Images[selected.slug]!.src} alt={bucketList2027Images[selected.slug]!.alt} className="h-full w-full object-cover" /></div>}
               <p className="mwg-eyebrow text-[var(--mwg-accent)]">{selected.duration}</p>
               <h2 className="mwg-display-lg mt-3">{selected.title}</h2>
               <p className="mt-4 max-w-[65ch] text-lg text-[var(--mwg-ink-70)]">{selected.subtitle}</p>
@@ -101,6 +103,7 @@ export function BucketListOverview() {
             <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {filtered.map((trip, i) => (
                 <article key={trip.slug} className="flex flex-col rounded-sm border border-[var(--mwg-line)] bg-white p-6">
+                  {bucketList2027Images[trip.slug] && <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden bg-[var(--mwg-line)]"><img src={bucketList2027Images[trip.slug]!.src} alt={bucketList2027Images[trip.slug]!.alt} loading="lazy" className="h-full w-full object-cover" /></div>}
                   <span className="font-mono text-xs text-[var(--mwg-accent)]">{String(i + 1).padStart(2, "0")} / 09</span>
                   <h2 className="mt-4 font-display text-2xl">{trip.title}</h2>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--mwg-ink-70)]">{trip.subtitle}</p>
