@@ -47,34 +47,55 @@ export function BucketListOverview() {
               <p className="mwg-eyebrow text-[var(--mwg-accent)]">{selected.duration}</p>
               <h2 className="mwg-display-lg mt-3">{selected.title}</h2>
               <p className="mt-4 max-w-[65ch] text-lg text-[var(--mwg-ink-70)]">{selected.subtitle}</p>
-              {selected.slug === "mailand-unlimited" ? <MilanMagazine /> : <div className="mt-10 grid gap-10 md:grid-cols-2">
-                <div>
-                  <h3 className="font-display text-2xl">Mögliche Route</h3>
-                  <ol className="mt-5 space-y-3">
-                    {selected.route.map((stop, i) => (
-                      <li key={stop} className="flex gap-3 text-[var(--mwg-ink-70)]">
-                        <span className="font-mono text-xs text-[var(--mwg-accent)]">{String(i + 1).padStart(2, "0")}</span>
-                        {stop}
-                      </li>
-                    ))}
-                  </ol>
+              {selected.slug === "mailand-unlimited" ? <MilanMagazine /> : (
+                <div className="mt-12 space-y-12">
+                  <section aria-label="Reisecharakter" className="grid gap-4 sm:grid-cols-3">
+                    <div className="border border-[var(--mwg-line)] p-5">
+                      <span className="mwg-eyebrow text-[var(--mwg-accent)]">Reisedauer</span>
+                      <p className="mt-3 font-display text-xl">{selected.duration}</p>
+                    </div>
+                    <div className="border border-[var(--mwg-line)] p-5">
+                      <span className="mwg-eyebrow text-[var(--mwg-accent)]">Unterwegs</span>
+                      <p className="mt-3 font-display text-xl">{selected.transport.join(" · ")}</p>
+                    </div>
+                    <div className="border border-[var(--mwg-line)] p-5">
+                      <span className="mwg-eyebrow text-[var(--mwg-accent)]">Unser Motto</span>
+                      <p className="mt-3 font-display text-xl">Alles kann – nichts muss</p>
+                    </div>
+                  </section>
+                  <section aria-label="Reiseroute">
+                    <p className="mwg-eyebrow text-[var(--mwg-accent)]">Orientierung statt Stundenplan</p>
+                    <h3 className="mt-2 font-display text-3xl">Unsere mögliche Route</h3>
+                    <p className="mt-3 max-w-[70ch] text-[var(--mwg-ink-70)]">Diese Stationen sind eine Idee für die Reise – nicht jeder Ort muss besucht werden.</p>
+                    <ol className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                      {selected.route.map((stop, i) => (
+                        <li key={stop} className="flex min-h-20 items-center gap-4 border border-[var(--mwg-line)] bg-white p-4">
+                          <span className="font-mono text-lg text-[var(--mwg-accent)]">{String(i + 1).padStart(2, "0")}</span>
+                          <span className="font-display text-lg">{stop}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </section>
+                  <section aria-label="Besondere Erlebnisse">
+                    <p className="mwg-eyebrow text-[var(--mwg-accent)]">Die Highlights</p>
+                    <h3 className="mt-2 font-display text-3xl">Was diese Reise besonders macht</h3>
+                    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                      {selected.highlights.map((highlight, i) => (
+                        <article key={highlight} className="border-t-2 border-[var(--mwg-accent)] bg-white p-6">
+                          <span className="font-mono text-xs text-[var(--mwg-accent)]">ERLEBNIS {String(i + 1).padStart(2, "0")}</span>
+                          <h4 className="mt-3 font-display text-2xl">{highlight}</h4>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+                  <section className="border border-[var(--mwg-line)] p-6 sm:p-8">
+                    <h3 className="font-display text-2xl">Gut zu wissen</h3>
+                    <ul className="mt-5 space-y-3 text-[var(--mwg-ink-70)]">
+                      {selected.planningNotes.map((note) => <li key={note} className="flex gap-3"><span className="text-[var(--mwg-accent)]" aria-hidden="true">•</span><span>{note}</span></li>)}
+                    </ul>
+                  </section>
                 </div>
-                <div>
-                  <h3 className="font-display text-2xl">Besondere Erlebnisse</h3>
-                  <ul className="mt-5 space-y-3 text-[var(--mwg-ink-70)]">
-                    {selected.highlights.map((highlight) => <li key={highlight}>• {highlight}</li>)}
-                  </ul>
-                </div>
-              </div>}
-              {selected.slug !== "mailand-unlimited" && <div className="mt-10 rounded-sm border border-[var(--mwg-line)] p-6">
-                <h3 className="font-display text-xl">Gut zu wissen</h3>
-                <p className="mt-3 text-sm text-[var(--mwg-ink-70)]">
-                  Unterwegs mit: {selected.transport.join(" · ")}
-                </p>
-                <ul className="mt-4 space-y-2 text-sm text-[var(--mwg-ink-70)]">
-                  {selected.planningNotes.map((note) => <li key={note}>• {note}</li>)}
-                </ul>
-              </div>}
+              )}
             </div>
           </section>
         ) : (
