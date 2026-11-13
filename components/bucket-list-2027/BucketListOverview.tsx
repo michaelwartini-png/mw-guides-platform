@@ -119,6 +119,14 @@ const planningLinks: Record<string, { label: string; url: string; note: string }
   ],
 };
 
+const commonsCandidates: Record<string, { title: string; author: string; license: string; url: string }[]> = {
+  "skandinavien-unlimited": [
+    { title: "Nyhavn, Kopenhagen", author: "Bene Riobó", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhague.jpg" },
+  ],
+  "norwegen-lofoten": [
+    { title: "Reine, Lofoten", author: "Jakub Fryš", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg" },
+  ],
+};
 /** Public, unlisted editorial travel preview. */
 export function BucketListOverview() {
   const [query, setQuery] = useState("");
@@ -237,6 +245,22 @@ export function BucketListOverview() {
                     </section>
                   )}
                   <TravelGallery slug={selected.slug} />
+                  {commonsCandidates[selected.slug] && (
+                    <section aria-label="Wikimedia Bildrecherche" className="border border-[var(--mwg-line)] bg-white p-6 sm:p-8">
+                      <p className="mwg-eyebrow text-[var(--mwg-accent)]">Wikimedia Commons · Bildrecherche</p>
+                      <h3 className="mt-2 font-display text-2xl">Motive in der Auswahl</h3>
+                      <p className="mt-3 text-sm text-[var(--mwg-ink-70)]">Diese Bilder sind Recherchekandidaten, noch keine freigegebenen Websitefotos. Originaldatei und Lizenzangaben bitte vor Verwendung erneut prüfen.</p>
+                      <ul className="mt-5 space-y-4">
+                        {commonsCandidates[selected.slug].map((photo) => (
+                          <li key={photo.url} className="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--mwg-line)] pt-4">
+                            <div><p className="font-display text-lg">{photo.title}</p><p className="mt-1 text-xs text-[var(--mwg-ink-70)]">Foto: {photo.author} · {photo.license}</p></div>
+                            <a href={photo.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[var(--mwg-accent)] hover:underline">Original bei Wikimedia <ArrowRight size={15} /></a>
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+                  )}
+
                   <section aria-label="Reiseroute">
                     <p className="mwg-eyebrow text-[var(--mwg-accent)]">Orientierung statt Stundenplan</p>
                     <h3 className="mt-2 font-display text-3xl">Unsere mögliche Route</h3>
