@@ -38,7 +38,7 @@ for (const entry of entries) {
   const thumbnailUrl = new URL(info.thumburl);
   // Wikimedia may return thumbnail URLs from multiple official media hosts.
   // Log the hostname for diagnostics while rejecting untrusted hosts.
-  const approvedHosts = new Set(["upload.wikimedia.org", "commons.wikimedia.org"]);
+  const approvedHosts = new Set(["upload.wikimedia.org", "commons.wikimedia.org", "thumb.wikimedia.org"]);
   process.stdout.write("Thumbnail host for " + entry.file + ": " + thumbnailUrl.hostname + "\\n");
   if (thumbnailUrl.protocol !== "https:" || !approvedHosts.has(thumbnailUrl.hostname)) {
     throw new Error("Unexpected image host " + thumbnailUrl.hostname + " for " + entry.file);
