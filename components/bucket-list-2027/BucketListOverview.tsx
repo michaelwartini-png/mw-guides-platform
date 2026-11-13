@@ -119,23 +119,6 @@ const planningLinks: Record<string, { label: string; url: string; note: string }
   ],
 };
 
-const commonsCandidates: Record<string, { title: string; author: string; license: string; url: string }[]> = {
-  "skandinavien-unlimited": [
-    { title: "Nyhavn, Kopenhagen", author: "Bene Riobó", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhague.jpg" },
-  ],
-  "norwegen-lofoten": [
-    { title: "Reine, Lofoten", author: "Jakub Fryš", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Reine_-_Lofoten.jpg" },
-  ],
-};
-const commonsSearchTerms: Record<string, string[]> = {
-  "skandinavien-unlimited": ["Nyhavn Copenhagen", "Stockholm Gamla Stan", "Helsinki Cathedral", "Stockholm Helsinki ferry"],
-  "norwegen-lofoten": ["Reine Lofoten", "Bodo Norway harbor", "Tromso Norway", "Lofoten fishing village"],
-  "rotterdam-unlimited": ["Rotterdam Erasmusbrug", "Port of Rotterdam", "Delft Netherlands", "Kinderdijk windmills"],
-  "portugal-unlimited": ["Porto tram 1", "Douro Porto", "Lisbon tram 28", "Belem Lisbon"],
-  "preveza-lefkada": ["Preveza Greece", "Nicopolis Greece", "Nydri Lefkada", "Porto Katsiki Lefkada"],
-  "hydra-unlimited": ["Hydra island Greece harbor", "Hydra Greece streets", "Hydra island coast", "Hydra Greece water taxi"],
-};
-const commonsSearchUrl = (term: string) => "https://commons.wikimedia.org/w/index.php?search=" + encodeURIComponent(term) + "&title=Special:MediaSearch&type=image";
 /** Public, unlisted editorial travel preview. */
 export function BucketListOverview() {
   const [query, setQuery] = useState("");
@@ -227,64 +210,7 @@ export function BucketListOverview() {
                       <p className="mt-3 font-display text-xl">Alles kann – nichts muss</p>
                     </div>
                   </section>
-                  {(selected.slug === "skandinavien-unlimited" || selected.slug === "norwegen-lofoten") && (
-                    <section aria-label="Reiseimpressionen" className="border-y border-[var(--mwg-line)] py-8">
-                      <p className="mwg-eyebrow text-[var(--mwg-accent)]">Drei Perspektiven auf die Reise</p>
-                      <h3 className="mt-2 font-display text-3xl">Orte, die in Erinnerung bleiben</h3>
-                      <p className="mt-3 max-w-[65ch] text-sm text-[var(--mwg-ink-70)]">Ein erster redaktioneller Überblick. Originalfotos ergänzen wir, sobald passende, nutzbare Bilddateien vorliegen.</p>
-                      <div className="mt-6 grid gap-3 md:grid-cols-3">
-                        {(selected.slug === "skandinavien-unlimited" ? [
-                          { place: "Kopenhagen", tag: "Hafen & Stadtleben", tone: "from-[#123c50] to-[#4c8893]" },
-                          { place: "Stockholm", tag: "Inseln & Schären", tone: "from-[#294b58] to-[#9a8c70]" },
-                          { place: "Helsinki", tag: "Ostsee & Architektur", tone: "from-[#355b64] to-[#a3b3ad]" },
-                        ] : [
-                          { place: "Bodø", tag: "Tor zum Norden", tone: "from-[#173849] to-[#638b94]" },
-                          { place: "Lofoten", tag: "Inseln & Fischerdörfer", tone: "from-[#27464d] to-[#8c8b7d]" },
-                          { place: "Tromsø", tag: "Arktisches Stadtleben", tone: "from-[#1e3549] to-[#7c9ca6]" },
-                        ]).map((item, i) => (
-                          <div key={item.place} className={`relative flex aspect-[4/3] flex-col justify-end overflow-hidden bg-gradient-to-br ${item.tone} p-5 text-white`}>
-                            <span className="absolute right-5 top-5 font-mono text-xs tracking-widest text-white/75">0{i + 1}</span>
-                            <div aria-hidden="true" className="absolute -right-12 -top-12 h-44 w-44 rounded-full border border-white/20" />
-                            <div aria-hidden="true" className="absolute -left-8 top-1/4 h-32 w-32 rounded-full border border-white/15" />
-                            <p className="relative text-xs uppercase tracking-[0.16em] text-white/80">{item.tag}</p>
-                            <h4 className="relative mt-2 font-display text-3xl text-white">{item.place}</h4>
-                          </div>
-                        ))}
-                      </div>
-                    </section>
-                  )}
                   <TravelGallery slug={selected.slug} />
-                  {commonsSearchTerms[selected.slug] && (
-                    <section aria-label="Wikimedia Motivsuche" className="border border-[var(--mwg-line)] p-6 sm:p-8">
-                      <p className="mwg-eyebrow text-[var(--mwg-accent)]">Wikimedia Commons</p>
-                      <h3 className="mt-2 font-display text-2xl">Bildmotive recherchieren</h3>
-                      <p className="mt-3 text-sm text-[var(--mwg-ink-70)]">Diese Suchlinks öffnen passende Wikimedia-Bildsuchen. Die Ergebnisse sind noch nicht ausgewählt oder lizenzgeprüft. Für jede Verwendung müssen Originaldatei, Urheber und Lizenz kontrolliert werden.</p>
-                      <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                        {commonsSearchTerms[selected.slug].map((term) => (
-                          <a key={term} href={commonsSearchUrl(term)} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 bg-white p-4 text-sm hover:text-[var(--mwg-accent)]">
-                            <span>{term}</span><ArrowRight size={16} className="shrink-0" />
-                          </a>
-                        ))}
-                      </div>
-                    </section>
-                  )}
-
-                  {commonsCandidates[selected.slug] && (
-                    <section aria-label="Wikimedia Bildrecherche" className="border border-[var(--mwg-line)] bg-white p-6 sm:p-8">
-                      <p className="mwg-eyebrow text-[var(--mwg-accent)]">Wikimedia Commons · Bildrecherche</p>
-                      <h3 className="mt-2 font-display text-2xl">Motive in der Auswahl</h3>
-                      <p className="mt-3 text-sm text-[var(--mwg-ink-70)]">Diese Bilder sind Recherchekandidaten, noch keine freigegebenen Websitefotos. Originaldatei und Lizenzangaben bitte vor Verwendung erneut prüfen.</p>
-                      <ul className="mt-5 space-y-4">
-                        {commonsCandidates[selected.slug].map((photo) => (
-                          <li key={photo.url} className="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--mwg-line)] pt-4">
-                            <div><p className="font-display text-lg">{photo.title}</p><p className="mt-1 text-xs text-[var(--mwg-ink-70)]">Foto: {photo.author} · {photo.license}</p></div>
-                            <a href={photo.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[var(--mwg-accent)] hover:underline">Original bei Wikimedia <ArrowRight size={15} /></a>
-                          </li>
-                        ))}
-                      </ul>
-                    </section>
-                  )}
-
                   <section aria-label="Reiseroute">
                     <p className="mwg-eyebrow text-[var(--mwg-accent)]">Orientierung statt Stundenplan</p>
                     <h3 className="mt-2 font-display text-3xl">Unsere mögliche Route</h3>
