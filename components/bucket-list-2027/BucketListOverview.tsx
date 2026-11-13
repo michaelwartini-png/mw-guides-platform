@@ -4,11 +4,9 @@ import { useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, Compass, MapPin, TrainFront } from "lucide-react";
 import { europaBucketList2027 } from "@/content/europaBucketList2027";
 import { bucketList2027Images } from "@/content/bucketList2027Images";
+import { MilanMagazine } from "./MilanMagazine";
 
-/**
- * Private preview component. Intentionally NOT mounted on a Next.js route.
- * Publish only behind verified host-level access control.
- */
+/** Public, unlisted editorial travel preview. */
 export function BucketListOverview() {
   const [query, setQuery] = useState("");
   const [transport, setTransport] = useState("alle");
@@ -48,7 +46,7 @@ export function BucketListOverview() {
               <p className="mwg-eyebrow text-[var(--mwg-accent)]">{selected.duration}</p>
               <h2 className="mwg-display-lg mt-3">{selected.title}</h2>
               <p className="mt-4 max-w-[65ch] text-lg text-[var(--mwg-ink-70)]">{selected.subtitle}</p>
-              <div className="mt-10 grid gap-10 md:grid-cols-2">
+              {selected.slug === "mailand-unlimited" ? <MilanMagazine /> : <div className="mt-10 grid gap-10 md:grid-cols-2">
                 <div>
                   <h3 className="font-display text-2xl">Mögliche Route</h3>
                   <ol className="mt-5 space-y-3">
@@ -66,8 +64,8 @@ export function BucketListOverview() {
                     {selected.highlights.map((highlight) => <li key={highlight}>• {highlight}</li>)}
                   </ul>
                 </div>
-              </div>
-              <div className="mt-10 rounded-sm border border-[var(--mwg-line)] p-6">
+              </div>}
+              {selected.slug !== "mailand-unlimited" && <div className="mt-10 rounded-sm border border-[var(--mwg-line)] p-6">
                 <h3 className="font-display text-xl">Gut zu wissen</h3>
                 <p className="mt-3 text-sm text-[var(--mwg-ink-70)]">
                   Unterwegs mit: {selected.transport.join(" · ")}
@@ -75,7 +73,7 @@ export function BucketListOverview() {
                 <ul className="mt-4 space-y-2 text-sm text-[var(--mwg-ink-70)]">
                   {selected.planningNotes.map((note) => <li key={note}>• {note}</li>)}
                 </ul>
-              </div>
+              </div>}
             </div>
           </section>
         ) : (
