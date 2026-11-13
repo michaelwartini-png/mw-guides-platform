@@ -10,6 +10,8 @@ import path from "node:path";
 const entries = [
   { trip: "skandinavien-unlimited", file: "Nyhavn, Copenhague.jpg", slug: "kopenhagen-nyhavn" },
   { trip: "norwegen-lofoten", file: "Reine - Lofoten.jpg", slug: "lofoten-reine" },
+  { trip: "skandinavien-unlimited", file: "Stockholm-Gamla-Stan-panorama.jpg", slug: "stockholm-gamla-stan" },
+  { trip: "skandinavien-unlimited", file: "Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg", slug: "helsinki-dom-senatsplatz" },
 ];
 const allowed = new Set(["CC BY 4.0", "CC BY-SA 4.0", "CC0", "Public domain"]);
 const root = path.resolve("public/images/bucket-list-2027");
