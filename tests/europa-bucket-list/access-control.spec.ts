@@ -1,18 +1,11 @@
 import { expect, test } from "@playwright/test";
 
 /**
- * Security gate for a deployed private preview.
- * Requires PREVIEW_PROTECTED_URL to be a known private page URL.
- * Must run without authentication and verify denial at the host.
+ * The Netlify deploy preview is intentionally unlisted, NOT password protected.
+ * Check search-engine indexing directives; never claim this provides access control.
  */
-test("unauthenticated visitors cannot read private preview", async ({ request }) => {
-  const url = process.env.PREVIEW_PROTECTED_URL;
-  test.skip(!url, "Protected preview URL not configured.");
-  const response = await request.get(url!, { maxRedirects: 0 });
-  // 401/403 for direct protection, or a redirect to an auth provider.
-  expect([301, 302, 303, 307, 308, 401, 403]).toContain(response.status());
-  if (response.status() >= 300 && response.status() < 400) {
-    const location = response.headers()["location"] ?? "";
-    expect(location).toMatch(/login|auth|signin|identity/i);
-  }
+test("preview carries a noindex directive", async ({ page }) => {
+  await page.goto(process.env.PLAYWRIGHT_PREVIEW_PATH ?? "/bucket-list-2027");
+  const robots = await page.locator('meta[name="robots"]').getAttribute("content");
+  expect(robots?.toLowerCase()).toContain("noindex");
 });
