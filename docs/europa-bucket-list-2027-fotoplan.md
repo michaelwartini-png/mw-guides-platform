@@ -11,7 +11,7 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 | Portugal Unlimited | 7 (Commons) | Lissabon Aussicht, Belém, Cascais, Porto Architekturdetails; Douro-Schiff und eindeutig zugeordnete Tramlinie 1 eingebunden |
 | Bratislava–Wien–Wachau | 4 (lokal) | Twin City Liner, Wiener Parlament, UNO City (Außenansicht), Wachau-Schiff, Bratislava Burg |
 | Preveza & Lefkada | 6 (Commons) | Nikopolis antike Ruinen (Museum bereits bebildert), Nidri Bootsausflug (Hafen bereits bebildert), Lefkada-Stadt, Preveza Altstadt |
-| Bodensee Unlimited | 4 (lokal) | Mainau, Reichenau, Stein am Rhein, Rheinfall, Lindau, Bregenz/Pfänder |
+| Bodensee Unlimited | 4 (lokal) | Rheinfall-Foto für nächsten Commons-Import vorgemerkt, noch nicht eingebunden; weitere Motive Mainau, Reichenau, Stein am Rhein, Lindau, Bregenz/Pfänder |
 | Hydra Unlimited | 3 (Commons) | Autofreie Gassen, Wassertaxis, Buchten/Badestellen, optional Poros/Spetses (klar als Ausflug) |
 
 ## Bildredaktion
@@ -37,3 +37,7 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 - Portugal: Douro-Ausflugsschiff mit Weinberglandschaft, Porto-Straßenbahn **Linie 1** (Nummer am Fahrzeug verifizieren), Lissabon Aussichtspunkt und Ufer/Belém.
 
 **Beschaffungsstatus (13.11.2026):** Wikimedia-Importläufe 12, 13 und 14 erfolgreich; Portugal jetzt 7, Skandinavien 4, Norwegen 5 Galeriefotos. Verifiziert importiert und in Galerien eingetragen: Douro-Ausflugsschiff, Porto vom Douro, Hamnøya-Rorbuer, Stockholm–Helsinki-Nachtfähre, Hurtigruten-Schiffe und Porto-Tramlinie 1. Letzter Portugal-Deploy-Status erfolgreich; Playwright-Tests bislang nicht tatsächlich ausgeführt. Für weitere Fotos: Commons-Dateiseite und Lizenz kontrollieren, importieren, Galerie und Bildnachweis ergänzen, danach Browserprüfung.
+
+## Nächster Import – ausstehend
+
+- **Bodensee / Rheinfall:** `Rhine Falls in Switzerland.jpg` → `rheinfall-schaffhausen`; im Importskript eingetragen (Commit `141807f`), **noch kein erfolgreicher Workflow-Lauf und kein Eintrag in `credits.json`**. Erst nach erfolgreichem Import in `TravelGallery.tsx` mit aus dem Manifest übernommenem Urheber-, Lizenz- und Quellnachweis eintragen; danach Bildanzahl im Playwright-Test auf fünf anheben.
