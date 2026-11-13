@@ -35,6 +35,27 @@ test.describe("Europa Bucket List 2027 – unlisted preview", () => {
     await expect.poll(async () => images.evaluateAll(items => items.every(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0))).toBe(true);
   });
 
+  for (const trip of [
+    { slug: "preveza-lefkada", galleryCount: 6 },
+    { slug: "rotterdam-unlimited", galleryCount: 5 },
+    { slug: "hydra-unlimited", galleryCount: 3 },
+  ]) {
+    test(`loads every licensed gallery image for ${trip.slug}`, async ({ page }) => {
+      await page.goto(previewPath + "?reise=" + trip.slug);
+      const gallery = page.getByRole("region", { name: "Reisebilder" });
+      const images = gallery.locator("figure img");
+      await expect(images).toHaveCount(trip.galleryCount);
+      await expect.poll(async () => images.evaluateAll(items =>
+        items.every(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0)
+      )).toBe(true);
+      await expect(gallery.getByText("Bild derzeit nicht verfügbar")).toHaveCount(0);
+      await gallery.getByRole("button", { name: /vergrößern/ }).first().click();
+      await expect(page.getByRole("dialog")).toBeVisible();
+      await page.keyboard.press("Escape");
+      await expect(page.getByRole("dialog")).toHaveCount(0);
+    });
+  }
+
   test("has no JavaScript exceptions or horizontal overflow", async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", error => errors.push(error.message));
