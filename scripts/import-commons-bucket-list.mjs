@@ -10,6 +10,7 @@ import path from "node:path";
 const entries = [
   { trip: "skandinavien-unlimited", file: "Nyhavn, Copenhague.jpg", slug: "kopenhagen-nyhavn" },
   { trip: "norwegen-lofoten", file: "Reine - Lofoten.jpg", slug: "lofoten-reine" },
+  { trip: "norwegen-lofoten", file: "At Eliassen Rorbuer fishermen cabin area in Hamnøya, Moskenes, Lofoten, Norway, 2015 April - 2.jpg", slug: "lofoten-hamnoy-rorbuer" },
   { trip: "norwegen-lofoten", file: "Bodø Hafen lub 2025-07-24 img01.jpg", slug: "bodo-hafen" },
   { trip: "norwegen-lofoten", file: "09512 Tromsdalen church and bridge - Tromso, Norway - V-P.jpg", slug: "tromso-eismeerkathedrale" },
   { trip: "skandinavien-unlimited", file: "Stockholm-Gamla-Stan-panorama.jpg", slug: "stockholm-gamla-stan" },
@@ -29,6 +30,8 @@ const entries = [
   { trip: "hydra-unlimited", file: "0157 - Hydra.jpg", slug: "hydra-inselblick" },
   { trip: "hydra-unlimited", file: "0058 - Hydra.jpg", slug: "hydra-ortsimpression" },
   { trip: "portugal-unlimited", file: "Porto Panoramic1.jpg", slug: "porto-panorama" },
+  { trip: "portugal-unlimited", file: "VIVA DOURO 5378.jpg", slug: "porto-douro-ausflugsboot" },
+  { trip: "portugal-unlimited", file: "Porto, vista da Douro (01).jpg", slug: "porto-douro-vom-schiff" },
   { trip: "portugal-unlimited", file: "Tram at Rua de Santa Catarina in Porto (1).jpg", slug: "porto-historische-tram" },
   { trip: "portugal-unlimited", file: "Lisboa, tranvía 28.jpg", slug: "lissabon-tram-28" },
   { trip: "portugal-unlimited", file: "A panoramic view of the Dom Luís I Bridge spanning the Douro River in Porto, Portugal, with a yellow tram crossing and the historic city skyline in the background. (55246746406).jpg", slug: "porto-douro-bruecke" },
