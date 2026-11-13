@@ -10,6 +10,7 @@ export default defineConfig({
   fullyParallel: true,
   reporter: [["list"], ["html", { outputFolder: "playwright-report", open: "never" }]],
   use: {
+    ...(process.env.PLAYWRIGHT_PREVIEW_AUTH ? { httpCredentials: { username: process.env.PLAYWRIGHT_PREVIEW_AUTH.split(":")[0], password: process.env.PLAYWRIGHT_PREVIEW_AUTH.slice(process.env.PLAYWRIGHT_PREVIEW_AUTH.indexOf(":") + 1) } } : {}),
     baseURL,
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
