@@ -28,7 +28,7 @@ export default function MilanMagazinePreview() {
     </section>
     <nav aria-label="Mailand-Magazin – Abschnitte" className="sticky top-0 z-30 border-b border-stone-300 bg-[#f7f4ec]/95 px-4 py-3 backdrop-blur">
       <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto text-xs font-semibold sm:text-sm">
-        {[["#konzept","Reisekonzept"],["#entdeckungen","Besondere Erlebnisse"],["#ausfluege","Alle Ausflüge"],["#reiseplanung","7 Tage & Quellen"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
+        {[["#konzept","Reisekonzept"],["#bildstrecke","Bildgeschichte"],["#entdeckungen","Besondere Erlebnisse"],["#ausfluege","Alle Ausflüge"],["#reiseplanung","7 Tage & Quellen"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
       </div>
     </nav>
     <section id="konzept" className="scroll-mt-24 mx-auto max-w-4xl px-6 py-20 text-center">
@@ -71,6 +71,22 @@ export default function MilanMagazinePreview() {
       <div className="mt-24 grid gap-9 md:grid-cols-12 md:items-center">
         <div className="md:col-span-7"><figure><div className="overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-closing.jpg" alt="Norditalien – Landschaft und Reisestimmung" loading="lazy" className="aspect-[16/10] w-full object-cover" /></div><figcaption className="mt-3 text-xs text-stone-500">Vorhandenes Motiv aus der Mailand-Vorlage · Bildrechte vor öffentlicher Veröffentlichung prüfen</figcaption></figure></div>
         <div className="md:col-span-5"><p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">04 · Und abends?</p><h3 className="mt-4 font-serif text-4xl leading-tight">Zurück nach Mailand. Mit Geschichten im Gepäck.</h3><p className="mt-6 text-lg leading-relaxed text-stone-600">Kein Hotelwechsel. Kein Kofferpacken. Nur die Frage, welcher Ausflug morgen auf uns wartet. Und wenn wir einmal nirgendwohin fahren möchten? Dann gehört der Tag ganz Mailand.</p></div>
+      </div>
+    </section>
+    <section id="bildstrecke" aria-label="Reisestimmungen aus der ursprünglichen Mailand-Vorlage" className="scroll-mt-24 pb-24">
+      <div className="mx-auto max-w-6xl px-5 sm:px-10">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+          <div><p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die Bildgeschichte · ein Ausgangspunkt, viele Welten</p><h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Der schönste Reiseplan ist manchmal eine offene Tür.</h2></div>
+          <p className="max-w-xs text-sm leading-relaxed text-stone-600">Drei Stimmungen, die Mailand Unlimited ausmachen: Natur, Stadtgeschichten und die unerwartete Begegnung.</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-12">
+          <figure className="group relative overflow-hidden bg-stone-200 md:col-span-7"><img src="/images/explore-trips/mailand-natur.jpg" alt="Naturmotiv aus der bestehenden Mailand-Unlimited-Bildauswahl" loading="lazy" className="aspect-[4/5] h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025] md:aspect-auto"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-6 pb-7 pt-24 text-white"><span className="text-xs uppercase tracking-[0.2em] text-white/75">Natur & Wasser</span><strong className="mt-2 block max-w-lg font-serif text-3xl font-normal leading-tight sm:text-4xl">Einmal abbiegen. Und die Stadt ist ganz weit weg.</strong></figcaption></figure>
+          <div className="grid gap-4 md:col-span-5">
+            <figure className="group relative overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-staedte.jpg" alt="Städtemotiv aus der bestehenden Mailand-Unlimited-Bildauswahl" loading="lazy" className="aspect-[5/4] w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-5 pb-6 pt-20 text-white"><span className="text-xs uppercase tracking-[0.2em] text-white/75">Städte & Geschichte</span><strong className="mt-2 block font-serif text-2xl font-normal leading-tight sm:text-3xl">Hinter jeder Fassade eine neue Zeit.</strong></figcaption></figure>
+            <figure className="group relative overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-besondere-erlebnisse.jpg" alt="Erlebnismotiv aus der bestehenden Mailand-Unlimited-Bildauswahl" loading="lazy" className="aspect-[5/4] w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-5 pb-6 pt-20 text-white"><span className="text-xs uppercase tracking-[0.2em] text-white/75">Unerwartete Entdeckungen</span><strong className="mt-2 block font-serif text-2xl font-normal leading-tight sm:text-3xl">Die besten Geschichten stehen nicht im Fahrplan.</strong></figcaption></figure>
+          </div>
+        </div>
+        <p className="mt-4 text-xs leading-relaxed text-stone-500">Bildstrecke mit drei bereits im Repository vorhandenen Motiven der Mailand-Vorlage. Die Fotos illustrieren Reisethemen und sind nicht als Nachweis konkreter Sonderführungen oder Orte beschriftet. Rechte- und Herkunftsnachweise vor einer öffentlichen Veröffentlichung vervollständigen.</p>
       </div>
     </section>
     <section id="entdeckungen" className="scroll-mt-24 border-y border-stone-300 bg-[#ece6d9] py-20">
