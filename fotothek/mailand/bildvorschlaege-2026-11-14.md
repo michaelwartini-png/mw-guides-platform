@@ -45,3 +45,23 @@ Drei neue Motive, sieben erneut hochgeladene Dateien (Dateiidentität/Hashes noc
 | 28 | `Panorama_from_the_cathedral,_Milan,_Italy_LOC_4711357943.jpg` | Mailand | Historische kolorierte Panoramaaufnahme | Neu | offen |
 
 **Zwischenstand:** 28 hochgeladene Dateien, voraussichtlich 21 verschiedene Motive (Dubletten nur visuell/namensbasiert erkannt). Bilddateien verbleiben im Chat; dieses Register enthält Metadaten und Dateinamen. Keine Rechtefreigabe allein aus Dateinamen ableiten.
+
+## Dritte Lieferung – 11 Dateien (14.11.2026)
+
+Neue Uploads, Bildinhalte visuell eingeordnet. **Keine Rechtefreigabe**; Originalquelle, Urheber, Lizenz, Bearbeitungsbedingungen und ggf. Zuschreibung offen. Keine Bilder ins Magazin übernommen.
+
+| Nr. | Datei | Zuordnung | Bildinhalt | Redaktioneller Hinweis | Lizenzstatus |
+|---|---|---|---|---|---|
+| 29 | `Mailänder_Dom_Detail_Dachaufgang.jpg` | Mailand | Gotische Details am Dom-Dachaufgang | Kandidat | offen |
+| 30 | `Milan_Cathedral_from_Piazza_del_Duomo.jpg` | Mailand | Domfassade unter blauem Himmel | Kandidat | offen |
+| 31 | `Bergamo_-_Piazza_Pontida.jpg` | Bergamo | Historische Schwarzweißansicht Piazza Pontida | Kandidat | offen |
+| 32 | `Collage_Verona.jpg` | Verona | Bildcollage mehrerer Verona-Motive | Kandidat; Rechte aller Teilbilder prüfen | offen |
+| 33 | `Der_Mailänder_Dom_(1874).jpg` | Mailand | Historische Domdarstellung von 1874 | Kandidat; Urheber und Reproduktion prüfen | offen |
+| 34 | `For_sale,_market_in_Turin,_Italy_(32273853228).jpg` | Turin | Marktstand mit Lebensmitteln | Außerhalb der Mailand-Ausflugsziele | offen |
+| 35 | `Gran_Guardia_(Verona).jpg` | Verona | Fassade Gran Guardia | Kandidat | offen |
+| 36 | `La_basilica_al_tramonto.jpg` | Ort zu verifizieren | Basilika vor schneebedeckten Bergen im Abendlicht | Kandidat; Ort offen | offen |
+| 37 | `Lago-Maggiore_1359.JPG` | Lago Maggiore | Insel mit Häusern und Kirchturm | Kandidat | offen |
+| 38 | `Lago-Maggiore_1364.JPG` | Lago Maggiore | Insel mit Palastgebäude | Kandidat | offen |
+| 39 | `Mailänder_Dom_Dach_a.jpg` | Mailand | Domterrasse mit Besuchern und Fialen | Kandidat | offen |
+
+**Stand nach Lieferung 3:** 39 Uploads insgesamt; zuvor 28 Uploads und vorläufig 21 verschiedene Motive. Die 11 neuen Dateien sind noch nicht technisch auf Dubletten geprüft. Das ausdrücklich ausgeschlossene Bergamo-Panorama bleibt ausgeschlossen. Dateinamen und Bildansicht sind keine Lizenznachweise.
