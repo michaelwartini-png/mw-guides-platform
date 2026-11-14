@@ -28,15 +28,10 @@ export default function MilanMagazinePreview() {
     </section>
     <nav aria-label="Mailand-Magazin – Abschnitte" className="sticky top-0 z-30 border-b border-stone-300 bg-[#f7f4ec]/95 px-4 py-3 backdrop-blur">
       <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto text-xs font-semibold sm:text-sm">
-        {[["#konzept","Reisekonzept"],["#bildstrecke","Bildgeschichte"],["#entdeckungen","Besondere Erlebnisse"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"],["#ausfluege","Ausflugswahl"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
+        {[["#bildstrecke","Fotoreportage"],["#entdeckungen","Besondere Erlebnisse"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"],["#ausfluege","Ausflugswahl"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
       </div>
     </nav>
-    <section id="konzept" className="scroll-mt-24 mx-auto max-w-4xl px-6 py-20 text-center">
-      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die Idee hinter Mailand Unlimited</p>
-      <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-6xl">Einmal ankommen. Jeden Tag neu entdecken.</h2>
-      <p className="mx-auto mt-7 max-w-3xl text-lg leading-relaxed text-stone-600">Mailand ist unser Ausgangspunkt – nicht das alleinige Reiseziel. Seen und Schiffe, historische Städte, Standseilbahnen, Arkaden und sogar ein Abstecher in die Schweiz: Wir wählen täglich neu, wohin es geht. Alles kann, nichts muss.</p>
-    </section>
-    <section aria-label="Norditalien in großen Bildern" className="mx-auto max-w-6xl px-5 pb-24 sm:px-10">
+    <section id="bildstrecke" aria-label="Norditalien in großen Bildern" className="mx-auto max-w-6xl px-5 pb-24 sm:px-10">
       <div className="grid gap-8 md:grid-cols-12 md:items-end">
         <div className="md:col-span-8">
           <figure>
@@ -69,7 +64,7 @@ export default function MilanMagazinePreview() {
         <figure className="mt-9"><div className="overflow-hidden bg-stone-700"><img src="/images/explore-trips/mailand-centrale.jpg" alt="Milano Centrale – Ausgangspunkt zahlreicher Zugausflüge" loading="lazy" className="aspect-[16/9] w-full object-cover" /></div><figcaption className="mt-3 text-sm italic text-white/70">Milano Centrale. Nicht nur ein Bahnhof. Das Tor zu vielen Möglichkeiten.</figcaption></figure>
       </div>
     </section>
-    <section id="bildstrecke" aria-label="Reisestimmungen aus der ursprünglichen Mailand-Vorlage" className="scroll-mt-24 pb-24">
+    <section aria-label="Reisestimmungen aus der ursprünglichen Mailand-Vorlage" className="scroll-mt-24 pb-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-10">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
           <div><p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die Bildgeschichte · ein Ausgangspunkt, viele Welten</p><h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Der schönste Reiseplan ist manchmal eine offene Tür.</h2></div>
