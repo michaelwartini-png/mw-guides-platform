@@ -28,7 +28,7 @@ export default function MilanMagazinePreview() {
     </section>
     <nav aria-label="Mailand-Magazin – Abschnitte" className="sticky top-0 z-30 border-b border-stone-300 bg-[#f7f4ec]/95 px-4 py-3 backdrop-blur">
       <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto text-xs font-semibold sm:text-sm">
-        {[["#bildstrecke","Fotoreportage"],["#entdeckungen","Besondere Erlebnisse"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"],["#ausfluege","Ausflugswahl"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
+        {[["#bildstrecke","Fotoreportage"],["#ausfluege","Reiseziele"],["#entdeckungen","Geheimtipps"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
       </div>
     </nav>
     <section id="bildstrecke" aria-label="Norditalien in großen Bildern" className="mx-auto max-w-6xl px-5 pb-24 sm:px-10">
@@ -63,6 +63,12 @@ export default function MilanMagazinePreview() {
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Ein Bahnhof als Ausgangspunkt: Die nächste Geschichte wartet vielleicht nur eine Zugfahrt entfernt.</p>
         <figure className="mt-9"><div className="overflow-hidden bg-stone-700"><img src="/images/explore-trips/mailand-centrale.jpg" alt="Milano Centrale – Ausgangspunkt zahlreicher Zugausflüge" loading="lazy" className="aspect-[16/9] w-full object-cover" /></div><figcaption className="mt-3 text-sm italic text-white/70">Milano Centrale · Ausgangspunkt unserer Tagesausflüge</figcaption></figure>
       </div>
+    </section>
+    <section id="ausfluege" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-20 sm:px-10">
+      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Acht Welten · auf einen Blick</p>
+      <h2 className="mt-3 font-serif text-4xl sm:text-6xl">Welche Welt zieht uns an?</h2>
+      <p className="mt-5 max-w-3xl leading-relaxed text-stone-600">Erst schauen, dann entscheiden: alle Ziele ohne zusätzliche Klicks.</p>
+      <div><MilanMagazine magazineMode /></div>
     </section>
     <section id="entdeckungen" className="scroll-mt-24 border-y border-stone-300 bg-[#ece6d9] py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-10">
@@ -132,12 +138,6 @@ export default function MilanMagazinePreview() {
         </div>
         <p className="mt-6 text-xs text-white/60">Offizielle Einstiegsseiten zur eigenständigen Fahrplanprüfung. Keine Echtzeit-Verfügbarkeiten oder für 2027 garantierten Verbindungen.</p>
       </div>
-    </section>
-    <section id="ausfluege" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-20 sm:px-10">
-      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die ursprünglichen Reiseziele · frei kombinierbar</p>
-      <h2 className="mt-3 font-serif text-4xl sm:text-6xl">Wohin soll es morgen gehen?</h2>
-      <p className="mt-5 max-w-3xl leading-relaxed text-stone-600">Alle Ausflugsoptionen an einem Ort.</p>
-      <div><MilanMagazine magazineMode /></div>
     </section>
     <footer className="border-t border-stone-300 px-6 py-10 text-center text-sm text-stone-600">Europa Bucket List 2027 · Private Gestaltungsvorschau</footer>
   </main>;
