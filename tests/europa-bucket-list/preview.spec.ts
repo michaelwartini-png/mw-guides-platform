@@ -38,7 +38,7 @@ test.describe("Europa Bucket List 2027 – unlisted preview", () => {
   for (const trip of [
     { slug: "preveza-lefkada", galleryCount: 6 },
     { slug: "rotterdam-unlimited", galleryCount: 5 },
-    { slug: "hydra-unlimited", galleryCount: 3 },
+    { slug: "hydra-unlimited", galleryCount: 8 },
     { slug: "portugal-unlimited", galleryCount: 7 },
     { slug: "norwegen-lofoten", galleryCount: 5 },
     { slug: "skandinavien-unlimited", galleryCount: 4 },
