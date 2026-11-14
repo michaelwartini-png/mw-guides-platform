@@ -77,6 +77,10 @@ export default function HydraMagazinePreview() {
       <div className="mt-12 grid gap-8 md:grid-cols-2">
         {[
           { title: "Fähren & Inselhopping", links: [
+            { name: "Hydra-Hafen · tagesaktuelle Abfahrten", url: "https://www.gtp.gr/ferries/ports/hydraport", desc: "Besonders nützlich: Abfahrten und Ankünfte nach Datum; damit Hin- und Rückfahrt für Ausflüge vergleichen." },
+            { name: "Alpha Lines · Fahrplan & Preise 2026", url: "https://www.ferries.gr/de/ferry-companies/alphalines/route/piraeus-poros-hydra-spetses/", desc: "Konkrete 2026er Fahrplanperioden und Preisübersicht, unter anderem Hydra–Spetses. Keine Zusage für 2027." },
+            { name: "Magic Sea Ferries · Fahrpläne 2026", url: "https://www.ferries.gr/de/ferry-companies/magicseaferries/route/athens-poros-hydra-spetses-portoheli/", desc: "Saisonale Verbindungen mit Poros und Spetses; vor Planung prüfen, ob die Route im Reisezeitraum verkehrt." },
+            { name: "Hellenic Seaways · Fahrpläne 2026", url: "https://www.ferries.gr/de/ferry-companies/hellenic-seaways/route/piraeus-poros-hydra-spetses-hermioni/", desc: "Weitere Abfahrten über Poros und Hydra nach Spetses; mögliche Rückfahrten für Inselbesuche abgleichen." },
             { name: "Hellenic Seaways · Hydra", url: "https://www.hellenicseaways.gr/en-gb/destinations/hydra-the-lady-of-the-saronic-gulf", desc: "Reederei für die Anreise ab Piräus; konkrete Abfahrten und Tickets direkt prüfen." },
             { name: "Ferryhopper · Hydra", url: "https://www.ferryhopper.com/en/destinations/greece/hydra", desc: "Verbindungen und Reisedauer vergleichen; auch für Spetses und Poros." },
             { name: "Ferries.gr · Saronische Inseln", url: "https://www.ferries.gr/en/ferry-companies/hellenic-seaways/route/piraeus-aegina-poros-hydra/", desc: "Routenübersicht Piräus–Poros–Hydra–Spetses. Fahrpläne vor der Buchung erneut prüfen." }
