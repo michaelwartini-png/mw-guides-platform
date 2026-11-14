@@ -14,6 +14,18 @@ Stand: 14.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 | Bodensee Unlimited | 7 (4 lokal + 3 Commons) | Rheinfall, Mainau und Stein am Rhein eingebunden; offen: Reichenau, Lindau, Bregenz/Pfänder |
 | Hydra Unlimited | 9 (Commons: 5 Hydra + 3 Spetses + 1 Poros) | Autofreie Gassen und weitere Details; Spetses/Poros sind als optionale Ausflugsideen beschriftet, Fährverbindungen noch nicht geprüft |
 
+## Verbindlicher zweistufiger Foto-Freigabeprozess (Nutzerentscheidung 14.11.2026)
+
+**Gilt für alle neun Reisen, rückwirkend und künftig. Kein Austausch, Löschen, Umordnen oder Veröffentlichen von Bildern ohne ausdrückliche Freigabe des Nutzers.** Recherche, Kandidatenlisten und Dokumentation sind ohne Bildänderungen möglich.
+
+1. **Hero-Freigabe:** Genau drei echte, emotional starke, überprüfte Fotoalternativen A/B/C **sichtbar nebeneinander** vorlegen. Nutzer gibt genau ein Hero-Foto frei. Die zwei nicht gewählten Fotos gehen **automatisch und ohne Verlust** als Kandidaten in die zweite Stufe; sie sind damit noch nicht als Galeriefotos freigegeben.
+2. **Galerie-Freigabe:** Für dieselbe Reise **mindestens zwölf** echte, emotional außergewöhnliche, abwechslungsreiche Fotokandidaten zeigen, **einschließlich der zwei unterlegenen Hero-Kandidaten und relevanter bisheriger Galeriebilder**. Nutzer wählt **mindestens sechs, höchstens neun** Galeriefotos ausdrücklich aus. Falls weniger als sechs überzeugen, weitere Kandidaten recherchieren, nicht die Mindestzahl erzwingen.
+3. **Umsetzung:** Erst nach ausdrücklicher Freigabe beider Stufen genau die freigegebenen Bilder auf der Reiseseite übernehmen. Bisherige Fotos vor Freigabe unverändert lassen; nicht gewählte Kandidaten im Archiv/Manifest erhalten, soweit rechtlich zulässig. Reihenfolge bei Bedarf gesondert abstimmen.
+4. **Qualität:** „Da will ich hin!“ – Atmosphäre, Sehnsucht, einzigartige Erlebnisse, echte Ortszuordnung, technische Eignung, Lizenz/Urheber/Quelle und nachvollziehbare Beschriftung prüfen. Die beiden Hero-Nichtgewinner sind automatisch Teil der Galerie-Auswahl, aber **nicht** automatisch Teil der finalen Galerie.
+5. **Hydra-Sonderstand:** Hero A (Hafenpanorama) ist ausdrücklich freigegeben und bleibt. Hero B (Wassertaxis) und C (Vlychos-Strand) gehören zwingend in die **noch ausstehende** Galerie-Vorauswahl. Die bisherigen neun Galeriefotos bleiben bis zur neuen ausdrücklichen Galerie-Freigabe unverändert.
+
+**Mengen:** 9 × 3 = 27 Hero-Kandidaten; mindestens 9 × 12 = 108 Galerie-Präsentationsplätze (inkl. je zwei unterlegenen Hero-Kandidaten); final neun Heros und 54–81 Galeriefotos. Ein Foto kann in beiden Auswahlstufen vorkommen, deshalb sind das nicht zwingend 135 verschiedene Dateien.
+
 ## Verbindliche Bildstrategie: „Da will ich hin!“
 
 **Primärziel:** Fotos sollen Reisesehnsucht auslösen und Lust auf die konkrete Reise machen – nicht bloß Orte dokumentieren. Bei der Auswahl emotionale Wirkung vor Vollständigkeit priorisieren.
