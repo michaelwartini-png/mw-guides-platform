@@ -42,7 +42,7 @@ test.describe("Europa Bucket List 2027 – unlisted preview", () => {
     { slug: "portugal-unlimited", galleryCount: 7 },
     { slug: "norwegen-lofoten", galleryCount: 5 },
     { slug: "skandinavien-unlimited", galleryCount: 4 },
-    { slug: "bodensee-unlimited", galleryCount: 5 },
+    { slug: "bodensee-unlimited", galleryCount: 7 },
   ]) {
     test(`loads every licensed gallery image for ${trip.slug}`, async ({ page }) => {
       await page.goto(previewPath + "?reise=" + trip.slug);
