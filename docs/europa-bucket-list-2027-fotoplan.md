@@ -14,6 +14,18 @@ Stand: 14.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 | Bodensee Unlimited | 7 (4 lokal + 3 Commons) | Rheinfall, Mainau und Stein am Rhein eingebunden; offen: Reichenau, Lindau, Bregenz/Pfänder |
 | Hydra Unlimited | 9 (Commons: 5 Hydra + 3 Spetses + 1 Poros) | Autofreie Gassen und weitere Details; Spetses/Poros sind als optionale Ausflugsideen beschriftet, Fährverbindungen noch nicht geprüft |
 
+## Verbindliche Bildstrategie: „Da will ich hin!“
+
+**Primärziel:** Fotos sollen Reisesehnsucht auslösen und Lust auf die konkrete Reise machen – nicht bloß Orte dokumentieren. Bei der Auswahl emotionale Wirkung vor Vollständigkeit priorisieren.
+
+- **Hero:** ein starkes, authentisches Sehnsuchtsmotiv mit Tiefe, Licht, Atmosphäre und sofort erkennbarer Besonderheit; keine austauschbare Standardansicht.
+- **Galerie:** bewusst abwechslungsreiche Dramaturgie aus Wow-Panorama, menschlich vorstellbarem Erlebnis (z. B. Wassertaxi, Boot, Pferdekutsche), sinnlichem Detail (Gasse, Café, Blüten) und einem ruhigen Entdeckungsmoment.
+- **Auswahlfrage:** „Würde dieses Bild jemanden dazu bringen, genau dorthin reisen zu wollen?“ Bei zwei ähnlichen Bildern das emotional stärkere wählen; schwache Dubletten entfernen.
+- **Authentizität:** nur echte, korrekt zugeordnete Ortsfotos als Reisebilder; Licht, Perspektive und Stimmung dürfen begeistern, aber keine falschen Orte, Fahrten oder Erlebnisse suggerieren.
+- **Rechte:** Urheber, Lizenz, Quelle und Änderungen vor Veröffentlichung dokumentieren; Bildqualität und ausreichende Auflösung prüfen.
+- **Hydra/Spetses/Poros:** warmes Hafenlicht, Badebuchten, autofreie Gassen, Wassertaxis und Pferdekutschen bevorzugen; Spetses und Poros als eigenständige optionale Ausflugsziele ausweisen.
+- **Qualitätskontrolle:** vorhandene Fotos bei Gelegenheit nach emotionaler Wirkung neu bewerten; Import allein ist noch keine finale Bildauswahl.
+
 ## Bildredaktion
 - Ziel: pro Reise **8–12 unterschiedliche, aussagekräftige Fotos**, kein starres Mindestmaß auf Kosten der Qualität.
 - Mischung: etwa 1 Hero, 2–3 Landschafts-/Stadtpanoramen, 2–3 konkrete Erlebnisse/Verkehrsmittel, 2–3 Details/Kultur.
