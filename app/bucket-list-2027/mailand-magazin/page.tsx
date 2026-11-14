@@ -156,7 +156,7 @@ export default function MilanMagazinePreview() {
         <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Aus der vertieften Recherche · besondere Entdeckungen</p>
         <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Die Geschichten hinter den Postkarten.</h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Acht Entdeckungen, die aus einem gewöhnlichen Tagesausflug eine besondere Erinnerung machen können.</p>
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid gap-x-10 md:grid-cols-2">
           {[
             {num:"01",place:"Lago Maggiore · Stresa",title:"Die Insel, auf der das Leben weitergeht",copy:"Zwischen den prachtvollen Palästen liegt die Isola dei Pescatori: enge Gassen, Stege und der Blick zurück über das Wasser. Als Tagesausflug mit Bahn und Schiff.",detail:"Schiffssaison und Rückfahrt ab Stresa prüfen",href:"https://www.navigazionelaghi.it/en/tickets-and-timetables-lake-maggiore/",link:"Offizielle Schifffahrt"},
             {num:"02",place:"Bergamo Alta",title:"Ein italienischer Abend über den Dächern",copy:"Mit der Standseilbahn in die Città Alta, durch verwinkelte Gassen zur Piazza Vecchia – und bleiben, bis die Fassaden im Abendlicht leuchten. Ein Ausflug, der nicht nach einer Checkliste verlangt.",detail:"Für einen langen Abend Rückfahrt und Standseilbahn prüfen",href:"https://www.visitbergamo.net/",link:"Visit Bergamo"},
@@ -166,13 +166,15 @@ export default function MilanMagazinePreview() {
             {num:"06",place:"Lugano · Schweiz",title:"Ein Berg genügt für einen großen Perspektivwechsel",copy:"Monte Brè oder Monte San Salvatore: eine historische Bergbahn und der Blick auf den See. Wir wählen bewusst einen Gipfel, statt zwei Ausflüge in einen Tag zu pressen.",detail:"Wetter, Schweizer Fahrkarten und Bergbahnbetrieb prüfen",href:"https://www.luganoregion.com/en/",link:"Lugano Region"},
             {num:"07",place:"Modena",title:"Wenn Zeit zum Handwerk wird",copy:"Eine traditionelle Acetaia erzählt die Geschichte des Balsamicos über Holzfässer und jahrelange Reifung. Für eine echte Betriebsführung brauchen wir einen bestätigten Anbieter und Termin.",detail:"Noch kein konkreter Betrieb verbindlich ausgewählt",href:"https://www.visitmodena.it/",link:"Visit Modena"},
             {num:"08",place:"Pavia",title:"Die große Stille vor Mailands Haustür",copy:"Die Certosa di Pavia bietet einen überraschenden Kontrast zur Großstadt: Kreuzgänge, kunstvolle Architektur und ein langsameres Tempo.",detail:"Zugang und Öffnungszeiten vorab prüfen",href:"https://museilombardia.cultura.gov.it/",link:"Musei Lombardia"}
-          ].map((item,i)=><article key={item.num} className={`flex flex-col justify-between overflow-hidden border border-stone-300 bg-[#f7f4ec] ${i===0||i===3?"md:min-h-[390px]":""}`}>
-            <div>
-              {"image" in item && typeof item.image === "string" && <img src={item.image} alt="Bergamo Alta – vorhandenes Ortsfoto" loading="lazy" className="aspect-[16/9] w-full object-cover" />}
-              <div className="px-7 pt-7 sm:px-9 sm:pt-9"><div className="flex items-center justify-between gap-3"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">{item.place}</span><span className="font-serif text-3xl italic text-stone-300">{item.num}</span></div>
-              <h3 className="mt-7 max-w-lg font-serif text-3xl leading-tight sm:text-4xl">{item.title}</h3>
-              <p className="mt-5 leading-relaxed text-stone-600">{item.copy}</p></div>
-            </div>
+          ].map(item=><details key={item.num} className="group border-t border-stone-400 py-5 open:bg-[#f7f4ec] open:px-5 open:pb-6">
+            <summary className="flex cursor-pointer list-none items-start gap-5 [&::-webkit-details-marker]:hidden">
+              <span className="font-serif text-3xl italic text-[#92734e]">{item.num}</span>
+              <span className="min-w-0 flex-1"><span className="block text-xs uppercase tracking-[0.16em] text-[#92734e]">{item.place}</span><strong className="mt-2 block font-serif text-2xl font-normal leading-tight sm:text-3xl">{item.title}</strong></span>
+              <span aria-hidden="true" className="mt-2 text-2xl text-[#92734e] group-open:rotate-45">+</span>
+            </summary>
+            <div className="ml-12 mt-5 max-w-xl"><p className="leading-relaxed text-stone-600">{item.copy}</p><p className="mt-4 text-xs text-stone-500">{item.detail}</p><a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-semibold underline decoration-[#92734e] underline-offset-4">{item.link} ↗</a></div>
+          </details>)}
+        </div>
             <div className="mx-7 mb-7 mt-8 border-t border-stone-300 pt-5 sm:mx-9 sm:mb-9"><p className="text-xs text-stone-500">{item.detail}</p><a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-semibold underline decoration-[#92734e] underline-offset-4 hover:text-[#92734e]">{item.link} ↗</a></div>
           </article>)}
         </div>
@@ -197,7 +199,10 @@ export default function MilanMagazinePreview() {
               {day:"05",heading:"Handwerk und große Räume: Modena oder Parma.",text:"Eine reservierte Acetaia-Besichtigung, die Käsereikultur oder das Teatro Farnese. Keine unrealistische Pflichtkombination."},
               {day:"06",heading:"Ein Hauch Schweiz – oder noch einmal an den See.",text:"Lugano mit genau einer Bergbahn als Option; alternativ ein zweiter, ruhigerer Tag am Wasser."},
               {day:"07",heading:"Mailand gehört uns.",text:"Zeit für eine Entdeckung in der Stadt, einen Lieblingsort, einen spontanen Abstecher oder die entspannte Rückreise."}
-            ].map(item=><article key={item.day} className="grid gap-3 py-6 sm:grid-cols-[70px_1fr] sm:gap-6"><span className="font-serif text-4xl italic text-[#92734e]">{item.day}</span><div><h3 className="font-serif text-2xl leading-tight sm:text-3xl">{item.heading}</h3><p className="mt-3 max-w-2xl leading-relaxed text-stone-600">{item.text}</p></div></article>)}
+            ].map(item=><details key={item.day} className="group py-4">
+              <summary className="flex cursor-pointer list-none items-center gap-5 [&::-webkit-details-marker]:hidden"><span className="w-12 shrink-0 font-serif text-3xl italic text-[#92734e]">{item.day}</span><span className="flex-1 font-serif text-xl leading-tight sm:text-2xl">{item.heading}</span><span aria-hidden="true" className="text-xl text-[#92734e] group-open:rotate-45">+</span></summary>
+              <p className="ml-[4.25rem] mt-3 max-w-2xl leading-relaxed text-stone-600">{item.text}</p>
+            </details>)}
           </div>
           <p className="mt-5 text-sm leading-relaxed text-stone-500">Die Reihenfolge bleibt offen. Saisonfahrpläne und Sonderführungen für 2027 müssen vor der Reise geprüft werden.</p>
         </div>
