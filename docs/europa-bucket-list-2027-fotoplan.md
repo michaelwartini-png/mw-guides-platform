@@ -1,6 +1,6 @@
 # Europa Bucket List 2027 – redaktioneller Fotoplan
 
-Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste bereits lizenzierter oder importierter Dateien. Vor Aufnahme jedes Fotos: Motiv/Ort, Auflösung, Lizenz, Urheber, Quelllink und Bildunterschrift prüfen. Keine ungesicherten Dateinamen ins Importskript übernehmen.
+Stand: 14.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste bereits lizenzierter oder importierter Dateien. Vor Aufnahme jedes Fotos: Motiv/Ort, Auflösung, Lizenz, Urheber, Quelllink und Bildunterschrift prüfen. Keine ungesicherten Dateinamen ins Importskript übernehmen.
 
 | Reise | Bereits eingebunden (Galerie) | Fehlende Motivgruppen / Priorität |
 |---|---:|---|
@@ -11,8 +11,8 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 | Portugal Unlimited | 7 (Commons) | Lissabon Aussicht, Belém, Cascais, Porto Architekturdetails; Douro-Schiff und eindeutig zugeordnete Tramlinie 1 eingebunden |
 | Bratislava–Wien–Wachau | 4 (lokal) | Twin City Liner, Wiener Parlament, UNO City (Außenansicht), Wachau-Schiff, Bratislava Burg |
 | Preveza & Lefkada | 6 (Commons) | Nikopolis antike Ruinen (Museum bereits bebildert), Nidri Bootsausflug (Hafen bereits bebildert), Lefkada-Stadt, Preveza Altstadt |
-| Bodensee Unlimited | 5 (4 lokal + 1 Commons) | Rheinfall eingebunden; weitere Motive Mainau, Reichenau, Stein am Rhein, Lindau, Bregenz/Pfänder |
-| Hydra Unlimited | 3 (Commons); Wassertaxis und Vlychos für Import vorgemerkt | Autofreie Gassen, Spetses-Hafen/Altstadt, optional Poros-Hafen; Spetses und Poros ausdrücklich als mögliche Ausflugsziele kennzeichnen |
+| Bodensee Unlimited | 7 (4 lokal + 3 Commons) | Rheinfall, Mainau und Stein am Rhein eingebunden; offen: Reichenau, Lindau, Bregenz/Pfänder |
+| Hydra Unlimited | 8 (Commons: 5 Hydra + 2 Spetses + 1 Poros) | Autofreie Gassen und weitere Details; Spetses/Poros sind als optionale Ausflugsideen beschriftet, Fährverbindungen noch nicht geprüft |
 
 ## Bildredaktion
 - Ziel: pro Reise **8–12 unterschiedliche, aussagekräftige Fotos**, kein starres Mindestmaß auf Kosten der Qualität.
@@ -25,7 +25,7 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 ## Nächste Produktionswelle
 1. Preveza & Lefkada: antike Ruinen von Nikopolis, Bootsausflug ab Nidri, Preveza Altstadt (Museum und Hafen bereits bebildert).
 2. Rotterdam: Hafenrundfahrt, Den Haag, Scheveningen (Kinderdijk und Delft bereits erledigt).
-3. Hydra: Gassen, Wassertaxi, Bucht (drei Orts-/Hafenbilder bereits eingebunden).
+3. Hydra: autofreie Gassen und Ortsdetails (Wassertaxi, Vlychos, Spetses und Poros bereits eingebunden).
 4. Danach die restlichen sechs Reisen entsprechend der Tabelle.
 
 ## Recherchewelle Skandinavien, Norwegen und Portugal
