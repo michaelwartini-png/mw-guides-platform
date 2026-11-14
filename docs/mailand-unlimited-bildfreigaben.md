@@ -63,3 +63,19 @@ Die Freigabe bezieht sich auf diese sechs **exakten Commons-Dateien**, nicht auf
 ## Verbindliche Planänderung – 14.11.2026
 
 **Nutzeranweisung: „vergess die wasserzisterne“**. Die historische Wasserzisterne / Fontana del Lantro ist **aus der weiteren Planung für Mailand Unlimited gestrichen**. Keine weitere Bildrecherche, Rechteklärung, Erwähnung als offenes Motiv oder spätere Integration. Frühere Vermerke in diesem Dokument zur Zisterne sind **historische Recherche und durch diese Entscheidung überholt**. Für Bergamo ist ausschließlich das bereits freigegebene Originalfoto **„Piazza Vecchia bei Nacht“ (Zairon)** vorgesehen. Keine Website- oder Bilddateien ändern.
+
+
+## Verbindliche Bergamo-Fotoänderung – 14.11.2026 (ersetzt bisherige Freigabe)
+
+**Vom Nutzer ausdrücklich als einziges Bergamo-Galeriefoto freigegeben:** **B – Bergamo Alta Panoramic View**.
+
+- **Exakte Originaldatei:** `Bergamo Alta Panoramic View.jpg`
+- **Commons:** https://commons.wikimedia.org/wiki/File:Bergamo_Alta_Panoramic_View.jpg
+- **Fotograf:** Walkabout 88 (laut vorheriger Originaldatei-Recherche)
+- **Lizenz:** CC BY-SA 4.0 (vor Import nochmals anhand der Datei prüfen)
+- **Originalauflösung:** 7.432 × 2.438 Pixel (laut vorheriger Recherche)
+- **Geplante Verwendung:** Großes Bergamo-Altstadt-Panorama im natürlichen Breitbildformat (ca. 3,05:1), möglichst ohne starken Beschnitt.
+
+**Ersetzt ausdrücklich die vorherige Freigabe** von `Bergamo Piazza Vecchia Palazzo della Ragione bei Nacht 1.jpg` (Zairon). Das Nachtfoto ist **nicht mehr für die Galerie freigegeben** und darf nicht zusätzlich als Detailbild eingebaut werden, sofern keine neue Zustimmung erfolgt. Frühere gegenteilige Freigabevermerke in diesem Protokoll sind überholt.
+
+Die Wasserzisterne bleibt gemäß Nutzerentscheidung gestrichen. **Keine Website-Bilder ändern, keine Bilddateien importieren, kein Layout ändern.** Ausschließlich Dokumentation aktualisieren.
