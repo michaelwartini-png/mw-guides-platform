@@ -42,3 +42,19 @@ Die Freigabe bezieht sich auf diese sechs **exakten Commons-Dateien**, nicht auf
 - Offizielle Beschreibung bestätigt Fontana del Lantro als unterirdische Zisterne der Tour Bergamo sotterranea: https://www.visitbergamo.net/de/oggetto/bergamo-sotterranea/
 - **Vor Freigabe:** Visuell prüfen, ob die konkrete Originalaufnahme tatsächlich die Zisterne von innen zeigt und den gewünschten Wow-Effekt besitzt. Die Commons-Beschreibung nennt nur „Fontana del Lantro“, nicht explizit die Bildperspektive.
 - Nicht mit der urheberrechtlich ungeklärten Fotografie in der städtischen Broschüre verwechseln. Keine Website-Bildänderung.
+
+
+## Verbindliche Bergamo-Altstadt-Freigabe (Nutzerentscheidung 14.11.2026)
+
+**Freigegeben: B – Piazza Vecchia bei Nacht**, exakt diese Wikimedia-Commons-Datei:
+- **Original:** `Bergamo Piazza Vecchia Palazzo della Ragione bei Nacht 1.jpg`
+- **Quelle:** https://commons.wikimedia.org/wiki/File:Bergamo_Piazza_Vecchia_Palazzo_della_Ragione_bei_Nacht_1.jpg
+- **Fotograf:** Zairon (laut vorausgegangener Recherche)
+- **Lizenz:** CC BY-SA 4.0 (laut vorausgegangener Recherche)
+- **Auflösung:** 4.586 × 3.440 Pixel (laut vorausgegangener Recherche)
+- **Verwendungszweck:** Bergamo-Altstadt / Piazza Vecchia als atmosphärisches Nachtmotiv.
+- **Nicht freigegeben:** Alternativen A (Panorama San Vigilio) und C (Piazza Vecchia bei Tageslicht). Nicht ohne erneute Zustimmung einsetzen.
+
+**Weiterhin vorgemerkt, nicht als konkrete Datei freigegeben:** Historische unterirdische Wasserzisterne **Fontana del Lantro**. Die Innenaufnahme aus https://storage.ecodibergamo.it/media/old_attach/2010/03/cannoniera.pdf hat ungeklärte Nutzungsrechte; keinesfalls ohne Rechteklärung veröffentlichen.
+
+**Wichtig:** Der Nutzer hat ausdrücklich „Noch keine Website-Bilder ändern“ angewiesen. Nur dieses Dokument aktualisieren, keine Bildimporte, keine Website- oder Layoutänderungen.
