@@ -90,7 +90,7 @@ export default function MilanMagazinePreview() {
     </section>
     <nav aria-label="Mailand-Magazin – Abschnitte" className="sticky top-0 z-30 border-b border-stone-300 bg-[#f7f4ec]/95 px-4 py-3 backdrop-blur">
       <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto text-xs font-semibold sm:text-sm">
-        {[["#bildstrecke","Fotoreportage"],["#ausfluege","Reiseziele"],["#entdeckungen","Geheimtipps"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
+        {[["#bildstrecke","Fotoreportage"],["#ausfluege","Reiseziele"],["#entdeckungen","Geheimtipps"],["#wochenidee","7 Tage"],["#unterkunft","Hotelbasis"],["#buchungsfahrplan","Vorbereitung"],["#reisepraxis","Reisepraxis"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
       </div>
     </nav>
     <section id="bildstrecke" aria-label="Norditalien in sieben Originalfotografien" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-24 pt-16 sm:px-10">
@@ -173,6 +173,29 @@ export default function MilanMagazinePreview() {
           <p className="mt-5 text-sm leading-relaxed text-stone-500">Die Reihenfolge bleibt offen. Saisonfahrpläne und Sonderführungen für 2027 müssen vor der Reise geprüft werden.</p>
         </div>
       </div>
+    </section>
+    <section id="unterkunft" className="scroll-mt-24 border-y border-stone-300 bg-[#ece6d9] px-5 py-20 sm:px-10">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Ein Hotel · sieben Möglichkeiten</p>
+        <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Die richtige Basis macht die Reise leicht.</h2>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Wir wechseln nicht ständig das Hotel. Stattdessen wohnen wir so, dass sowohl Mailand selbst als auch die Bahnausflüge bequem erreichbar sind.</p>
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <article className="border-t border-stone-400 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Für viele Bahn-Ausflüge</span><h3 className="mt-3 font-serif text-3xl">Milano Centrale</h3><p className="mt-4 leading-relaxed text-stone-600">Praktisch für zahlreiche Fern- und Regionalzüge. Bei der Hotelwahl aber nicht nur auf Bahnhofsnähe achten: Umgebung, Lärm und Metroanschluss mitprüfen.</p></article>
+          <article className="border-t border-stone-400 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Für Stadtgefühl</span><h3 className="mt-3 font-serif text-3xl">Duomo & Innenstadt</h3><p className="mt-4 leading-relaxed text-stone-600">Mailand am Morgen und am Abend direkt erleben. Für Ausflüge den Weg zum jeweils richtigen Bahnhof bewusst einplanen.</p></article>
+          <article className="border-t border-stone-400 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Für eine andere Atmosphäre</span><h3 className="mt-3 font-serif text-3xl">Brera & Porta Garibaldi</h3><p className="mt-4 leading-relaxed text-stone-600">Restaurants, Stadtviertel und Bahnanschlüsse verbinden. Ob die Lage passt, hängt von den ausgewählten Tagesausflügen ab.</p></article>
+        </div>
+        <p className="mt-8 text-sm text-stone-600">Noch keine konkreten Hotels oder Preise empfohlen. Erst Reisedaten und bevorzugte Ausflüge festlegen, dann Lage, Stornierung und tatsächliche Verbindungen vergleichen.</p>
+      </div>
+    </section>
+    <section id="buchungsfahrplan" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-20 sm:px-10">
+      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Vorfreude ohne Termindruck</p>
+      <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Was wir vorher buchen. Und was wir offenlassen.</h2>
+      <div className="mt-10 grid gap-7 md:grid-cols-3">
+        <article className="border-t-2 border-[#92734e] pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Zuerst sichern</span><h3 className="mt-3 font-serif text-3xl">Anreise & Hotel</h3><p className="mt-4 leading-relaxed text-stone-600">Reisetage, An- und Abfahrt sowie eine gut gelegene Unterkunft mit passenden Stornierungsbedingungen festlegen.</p></article>
+        <article className="border-t-2 border-[#92734e] pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Gezielt reservieren</span><h3 className="mt-3 font-serif text-3xl">Besondere Erlebnisse</h3><p className="mt-4 leading-relaxed text-stone-600">Domterrassen und gewünschte Sonderführungen auf verfügbare Zeitfenster prüfen. Nicht jede Entdeckung braucht eine feste Reservierung.</p></article>
+        <article className="border-t-2 border-[#92734e] pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Spontan entscheiden</span><h3 className="mt-3 font-serif text-3xl">Seen, Städte & Wetter</h3><p className="mt-4 leading-relaxed text-stone-600">Die meisten Tagesideen bleiben austauschbar. Bei Schiffen und Bergbahnen die Saison, das Wetter und die letzte Rückfahrt beachten.</p></article>
+      </div>
+      <p className="mt-9 text-sm text-stone-500">Redaktioneller Planungsrahmen, keine bestätigten Angebote, Fahrpläne oder Verfügbarkeiten für 2027.</p>
     </section>
     <section id="reisepraxis" className="scroll-mt-24 bg-[#263b3a] px-5 py-20 text-[#f7f4ec] sm:px-10">
       <div className="mx-auto max-w-6xl">
