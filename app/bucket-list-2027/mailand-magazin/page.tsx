@@ -200,46 +200,33 @@ export default function MilanMagazinePreview() {
         </div>
       </div>
     </section>
-    <section id="unterkunft" className="scroll-mt-24 border-y border-stone-300 bg-[#ece6d9] px-5 py-20 sm:px-10">
+    <section id="unterkunft" className="scroll-mt-24 bg-[#263b3a] px-5 py-24 text-[#f7f4ec] sm:px-10">
       <div className="mx-auto max-w-6xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Ein Hotel · sieben Möglichkeiten</p>
-        <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Die richtige Basis macht die Reise leicht.</h2>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Wir wechseln nicht ständig das Hotel. Stattdessen wohnen wir so, dass sowohl Mailand selbst als auch die Bahnausflüge bequem erreichbar sind.</p>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          <article className="border-t border-stone-400 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Für viele Bahn-Ausflüge</span><h3 className="mt-3 font-serif text-3xl">Milano Centrale</h3><p className="mt-4 leading-relaxed text-stone-600">Praktisch für zahlreiche Fern- und Regionalzüge. Bei der Hotelwahl aber nicht nur auf Bahnhofsnähe achten: Umgebung, Lärm und Metroanschluss mitprüfen.</p></article>
-          <article className="border-t border-stone-400 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Für Stadtgefühl</span><h3 className="mt-3 font-serif text-3xl">Duomo & Innenstadt</h3><p className="mt-4 leading-relaxed text-stone-600">Mailand am Morgen und am Abend direkt erleben. Für Ausflüge den Weg zum jeweils richtigen Bahnhof bewusst einplanen.</p></article>
-          <article className="border-t border-stone-400 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Für eine andere Atmosphäre</span><h3 className="mt-3 font-serif text-3xl">Brera & Porta Garibaldi</h3><p className="mt-4 leading-relaxed text-stone-600">Restaurants, Stadtviertel und Bahnanschlüsse verbinden. Ob die Lage passt, hängt von den ausgewählten Tagesausflügen ab.</p></article>
+        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">Ein Hotel. Viele Möglichkeiten.</p>
+        <h2 className="mt-6 max-w-5xl font-serif text-5xl leading-[1.08] sm:text-7xl">Morgens aufbrechen.<br/><span className="italic text-[#d4bb91]">Abends nach Mailand zurückkehren.</span></h2>
+        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75">Die Freiheit dieser Reise beginnt mit einer guten Basis. Wir entscheiden uns für eine Unterkunft – und behalten alle Richtungen offen.</p>
+        <div className="mt-16 grid gap-8 border-t border-white/30 pt-8 md:grid-cols-3">
+          <div><span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">Bahn im Mittelpunkt</span><h3 className="mt-3 font-serif text-3xl">Milano Centrale</h3><p className="mt-3 text-sm leading-relaxed text-white/65">Viele Bahnverbindungen in Reichweite. Umgebung, Lärm und Metroanschluss bei der Hotelwahl mitprüfen.</p></div>
+          <div><span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">Mitten im Stadtleben</span><h3 className="mt-3 font-serif text-3xl">Duomo & Zentrum</h3><p className="mt-3 text-sm leading-relaxed text-white/65">Mailand vor und nach den Tagesausflügen erleben. Die Wege zu den Bahnhöfen bewusst einplanen.</p></div>
+          <div><span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">Ein Viertel zum Bleiben</span><h3 className="mt-3 font-serif text-3xl">Brera & Garibaldi</h3><p className="mt-3 text-sm leading-relaxed text-white/65">Abendliches Stadtgefühl mit Verkehrsanbindung verbinden. Die konkrete Lage entscheidet.</p></div>
         </div>
-        <p className="mt-8 text-sm text-stone-600">Noch keine konkreten Hotels oder Preise empfohlen. Erst Reisedaten und bevorzugte Ausflüge festlegen, dann Lage, Stornierung und tatsächliche Verbindungen vergleichen.</p>
       </div>
     </section>
     <section id="buchungsfahrplan" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-20 sm:px-10">
-      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Vorfreude ohne Termindruck</p>
-      <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Was wir vorher buchen. Und was wir offenlassen.</h2>
-      <div className="mt-10 grid gap-7 md:grid-cols-3">
-        <article className="border-t-2 border-[#92734e] pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Zuerst sichern</span><h3 className="mt-3 font-serif text-3xl">Anreise & Hotel</h3><p className="mt-4 leading-relaxed text-stone-600">Reisetage, An- und Abfahrt sowie eine gut gelegene Unterkunft mit passenden Stornierungsbedingungen festlegen.</p></article>
-        <article className="border-t-2 border-[#92734e] pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Gezielt reservieren</span><h3 className="mt-3 font-serif text-3xl">Besondere Erlebnisse</h3><p className="mt-4 leading-relaxed text-stone-600">Domterrassen und gewünschte Sonderführungen auf verfügbare Zeitfenster prüfen. Nicht jede Entdeckung braucht eine feste Reservierung.</p></article>
-        <article className="border-t-2 border-[#92734e] pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">Spontan entscheiden</span><h3 className="mt-3 font-serif text-3xl">Seen, Städte & Wetter</h3><p className="mt-4 leading-relaxed text-stone-600">Die meisten Tagesideen bleiben austauschbar. Bei Schiffen und Bergbahnen die Saison, das Wetter und die letzte Rückfahrt beachten.</p></article>
+      <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
+        <div><p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Für später aufheben</p><h2 className="mt-4 font-serif text-4xl leading-tight sm:text-6xl">Die Planung soll nicht die Reise sein.</h2><p className="mt-6 max-w-md text-stone-600">Alle wichtigen Hinweise bleiben erhalten – aber erst sichtbar, wenn wir sie brauchen.</p></div>
+        <div className="divide-y divide-stone-300 border-y border-stone-300">
+          <details className="group py-6"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-serif text-2xl [&::-webkit-details-marker]:hidden">01 · Anreise & Hotel <span className="text-[#92734e] group-open:rotate-45">+</span></summary><p className="mt-4 leading-relaxed text-stone-600">Reisetage, An- und Abfahrt und eine gut angebundene Unterkunft mit passenden Stornierungsbedingungen festlegen. Konkrete Hotelpreise sind noch nicht geprüft.</p></details>
+          <details className="group py-6"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-serif text-2xl [&::-webkit-details-marker]:hidden">02 · Besondere Erlebnisse <span className="text-[#92734e] group-open:rotate-45">+</span></summary><p className="mt-4 leading-relaxed text-stone-600">Domterrassen und gewünschte Sonderführungen auf Zeitfenster prüfen. Nicht jede Entdeckung braucht eine Reservierung.</p></details>
+          <details className="group py-6"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-serif text-2xl [&::-webkit-details-marker]:hidden">03 · Seen, Züge & Rückfahrt <span className="text-[#92734e] group-open:rotate-45">+</span></summary><p className="mt-4 leading-relaxed text-stone-600">Schiffssaison, Wetter und letzte Rückfahrt prüfen. Tagesausflüge bleiben austauschbar; Fahrpläne für 2027 sind nicht bestätigt.</p></details>
+          <details className="group py-6"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-serif text-2xl [&::-webkit-details-marker]:hidden">04 · Offizielle Verbindungen <span className="text-[#92734e] group-open:rotate-45">+</span></summary><div className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm underline underline-offset-4"><a href="https://www.trenitalia.com/" target="_blank" rel="noopener noreferrer">Trenitalia</a><a href="https://www.trenord.it/" target="_blank" rel="noopener noreferrer">Trenord</a><a href="https://www.navigazionelaghi.it/" target="_blank" rel="noopener noreferrer">Navigazione Laghi</a><a href="https://www.sbb.ch/" target="_blank" rel="noopener noreferrer">SBB</a></div><p className="mt-4 text-sm text-stone-500">Offizielle Einstiegsseiten, keine bestätigten Verbindungen oder Verfügbarkeiten.</p></details>
+        </div>
       </div>
-      <p className="mt-9 text-sm text-stone-500">Redaktioneller Planungsrahmen, keine bestätigten Angebote, Fahrpläne oder Verfügbarkeiten für 2027.</p>
     </section>
-    <section id="reisepraxis" className="scroll-mt-24 bg-[#263b3a] px-5 py-20 text-[#f7f4ec] sm:px-10">
-      <div className="mx-auto max-w-6xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">Gut zu wissen, bevor es losgeht</p>
-        <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Freiheit braucht nur ein bisschen Vorbereitung.</h2>
-        <div className="mt-12 grid gap-9 md:grid-cols-3">
-          <div><h3 className="font-serif text-3xl">Der richtige Ausgangspunkt</h3><p className="mt-4 leading-relaxed text-white/75">Ein Hotel mit guter Anbindung an Milano Centrale oder andere passende Bahnhöfe spart tägliche Umwege. Die konkrete Lage entscheidet mit über die Reisequalität.</p></div>
-          <div><h3 className="font-serif text-3xl">Erst die Rückfahrt</h3><p className="mt-4 leading-relaxed text-white/75">Bei Seen und Schiffen zuerst den letzten sinnvollen Rückweg prüfen. Fähren, Bergbahnen und Sonderführungen können saisonal fahren oder ausfallen.</p></div>
-          <div><h3 className="font-serif text-3xl">Eine Überraschung pro Tag</h3><p className="mt-4 leading-relaxed text-white/75">Eine besondere Führung oder Bootsfahrt reicht als Höhepunkt. Alles Weitere bleibt freiwillig. Bei schlechtem Wetter wählen wir eine Stadt statt einer Bergbahn.</p></div>
-        </div>
-        <div className="mt-12 flex flex-wrap gap-3 text-sm">
-          <a href="https://www.trenitalia.com/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-5 py-3 hover:bg-white/10">Trenitalia · Bahn</a>
-          <a href="https://www.trenord.it/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-5 py-3 hover:bg-white/10">Trenord · Regionalzüge</a>
-          <a href="https://www.navigazionelaghi.it/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-5 py-3 hover:bg-white/10">Navigazione Laghi · Schiffe</a>
-          <a href="https://www.sbb.ch/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-5 py-3 hover:bg-white/10">SBB · Schweiz</a>
-        </div>
-        <p className="mt-6 text-xs text-white/60">Offizielle Einstiegsseiten zur eigenständigen Fahrplanprüfung. Keine Echtzeit-Verfügbarkeiten oder für 2027 garantierten Verbindungen.</p>
-      </div>
+    <section id="reisepraxis" className="bg-[#eae4d8] px-5 py-24 text-center sm:px-10">
+      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Mailand Unlimited · 2027</p>
+      <p className="mx-auto mt-7 max-w-4xl font-serif text-4xl italic leading-tight sm:text-6xl">Nicht alles sehen müssen. Sondern das Richtige erleben.</p>
+      <p className="mx-auto mt-7 max-w-xl text-stone-600">Ein Hotel, offene Tage und genug Zeit, um unterwegs überrascht zu werden.</p>
     </section>
     <footer className="border-t border-stone-300 px-6 py-10 text-center text-sm text-stone-600">Europa Bucket List 2027 · Private Gestaltungsvorschau</footer>
   </main>;
