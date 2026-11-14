@@ -58,8 +58,8 @@ const featuredItineraries: Record<string, { label: string; description: string }
     { label: "Hydra-Ort", description: "Gassen, Treppen und autofreie Inselatmosphäre." },
     { label: "Küste vom Wasser", description: "Wassertaxi oder Bootsausflug je nach Wetter." },
     { label: "Buchten entdecken", description: "Bade- und Aussichtspunkte mit passender Verbindung." },
-    { label: "Inselkultur", description: "Galerien, Architektur und gemütliche Spaziergänge." },
-    { label: "Freier Inseltag", description: "Lieblingsorte wiedersehen; weitere Insel nur bei sinnvoller Fährverbindung." },
+    { label: "Inselkultur oder Poros", description: "Hydras Galerien, Architektur und Spaziergänge genießen – alternativ Poros mit Hafen und Altstadt als eigenständiges Ausflugsziel, sofern die tatsächlichen Fährverbindungen passen." },
+    { label: "Ausflugsidee: Spetses", description: "Optional die Insel Spetses mit Hafen Dapia, Uferpromenade und historischen Gassen entdecken. Nur bei geeigneter Verbindung und ausreichend Zeit; sonst ein weiterer Hydra-Tag." },
     { label: "Rückfahrt & Heimreise", description: "Fähr- und Flugzeiten mit ausreichendem Puffer planen." },
   ],
   "skandinavien-unlimited": [
