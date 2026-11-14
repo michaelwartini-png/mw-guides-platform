@@ -1,0 +1,13 @@
+/** Verified existing, non-empty image files from MW Guides public/images/explore-trips. */
+export const bucketList2027Images: Record<string, {src:string; alt:string} | undefined> = {
+  "skandinavien-unlimited": {src:"/images/bucket-list-2027/skandinavien-unlimited/kopenhagen-nyhavn.jpg",alt:"Bunte historische Häuser und Boote am Nyhavn in Kopenhagen"},
+  "portugal-unlimited": {src:"/images/bucket-list-2027/portugal-unlimited/porto-panorama.jpg",alt:"Panorama von Porto am Douro"},
+  "rotterdam-unlimited": {src:"/images/bucket-list-2027/rotterdam-unlimited/rotterdam-erasmusbruecke.jpg",alt:"Erasmusbrücke in Rotterdam vom Willemsplein aus"},
+  "preveza-lefkada": {src:"/images/bucket-list-2027/preveza-lefkada/lefkada-porto-katsiki.jpg",alt:"Porto-Katsiki-Strand auf Lefkada"},
+  "hydra-unlimited": {src:"/images/bucket-list-2027/hydra-unlimited/hydra-hafen.jpg",alt:"Hafenpanorama der griechischen Insel Hydra"},
+  "norwegen-lofoten": {src:"/images/bucket-list-2027/norwegen-lofoten/lofoten-reine.jpg",alt:"Fischerdorf Reine zwischen Bergen und Fjord auf den Lofoten"},
+  "mailand-unlimited": {src:"/images/explore-trips/mailand-hero.jpg",alt:"Mailänder Dom auf der Piazza del Duomo"},
+  "bodensee-unlimited": {src:"/images/explore-trips/bodensee-hero.jpg",alt:"Bodenseelandschaft"},
+  "bratislava-wien-wachau": {src:"/images/explore-trips/wien-bratislava-hero.jpg",alt:"Wien und Bratislava – Reisemotiv"},
+};
+/** Do not substitute unrelated destinations for missing image assets. */
