@@ -35,21 +35,21 @@ const links = [
   {label:"ATM Milano – Nahverkehr",href:"https://www.atm.it/"},
   {label:"Navigazione Laghi – Schiffe",href:"https://www.navigazionelaghi.it/"},
 ];
-export function MilanMagazine() {
+export function MilanMagazine({ magazineMode = false }: { magazineMode?: boolean } = {}) {
   const [showAll, setShowAll] = useState(false);
   return <div className="mt-10 space-y-14">
-    <div className="grid gap-5 md:grid-cols-3">
+    {!magazineMode && <div className="grid gap-5 md:grid-cols-3">
       <div className="rounded-sm border border-[var(--mwg-line)] p-5"><TrainFront className="mb-3 text-[var(--mwg-accent)]" size={22}/><strong className="block font-display text-xl">Ein Hotel als Basis</strong><p className="mt-2 text-sm leading-relaxed text-[var(--mwg-ink-70)]">Von Mailand aus sternförmig zu den schönsten Zielen Norditaliens.</p></div>
       <div className="rounded-sm border border-[var(--mwg-line)] p-5"><Ship className="mb-3 text-[var(--mwg-accent)]" size={22}/><strong className="block font-display text-xl">Stadt, Seen & Schiffe</strong><p className="mt-2 text-sm leading-relaxed text-[var(--mwg-ink-70)]">Abwechslung zwischen Architektur, Altstädten und Wasser.</p></div>
       <div className="rounded-sm border border-[var(--mwg-line)] p-5"><CalendarDays className="mb-3 text-[var(--mwg-accent)]" size={22}/><strong className="block font-display text-xl">Alles kann – nichts muss</strong><p className="mt-2 text-sm leading-relaxed text-[var(--mwg-ink-70)]">Sieben flexible Tage. Wir entscheiden vor Ort, worauf wir Lust haben.</p></div>
-    </div>
+    </div>}
 
-    <section aria-label="Bilder aus Norditalien">
+    {!magazineMode && <section aria-label="Bilder aus Norditalien">
       <div className="mb-5 flex items-end justify-between gap-3"><div><p className="mwg-eyebrow text-[var(--mwg-accent)]">Impressionen</p><h3 className="mt-2 font-display text-3xl">Norditalien in Bildern</h3></div><span className="text-xs text-[var(--mwg-ink-70)]">MW Guides · vorhandene Bilddateien</span></div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {photos.slice(1).map((p)=><figure key={p.src} className="min-w-0"><div className="aspect-video w-full overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={p.src} alt={p.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" /></div><figcaption className="mt-2 text-xs text-[var(--mwg-ink-70)]">{p.caption}</figcaption></figure>)}
       </div>
-    </section>
+    </section>}
 
     <section>
       <p className="mwg-eyebrow text-[var(--mwg-accent)]">Entdecken statt abhaken</p>
@@ -61,16 +61,16 @@ export function MilanMagazine() {
       <button type="button" onClick={()=>setShowAll(!showAll)} className="mt-5 inline-flex items-center gap-2 font-medium text-[var(--mwg-accent)] hover:underline">{showAll?"Weniger Ausflüge anzeigen":"Alle acht Ausflugsideen anzeigen"} <ChevronDown size={16} className={showAll?"rotate-180":""}/></button>
     </section>
 
-    <section className="border-t border-[var(--mwg-line)] pt-10">
+    {!magazineMode && <section className="border-t border-[var(--mwg-line)] pt-10">
       <p className="mwg-eyebrow text-[var(--mwg-accent)]">Inspiration, kein Stundenplan</p><h3 className="mt-2 font-display text-3xl">Sieben Tage voller Möglichkeiten</h3>
       <div className="mt-7 grid gap-3 md:grid-cols-2">{days.map(d=><div key={d.day} className="flex gap-5 border-b border-[var(--mwg-line)] py-4"><span className="font-mono text-lg text-[var(--mwg-accent)]">{d.day}</span><div><h4 className="font-display text-xl">{d.title}</h4><p className="mt-2 text-sm leading-relaxed text-[var(--mwg-ink-70)]">{d.text}</p></div></div>)}</div>
       <p className="mt-4 text-sm italic text-[var(--mwg-ink-70)]">Die Reihenfolge ist frei austauschbar. Für Fähren, Zugfahrten und Besichtigungen prüfen wir vorab aktuelle Zeiten.</p>
-    </section>
+    </section>}
 
-    <section className="rounded-sm bg-white p-7">
+    {!magazineMode && <section className="rounded-sm bg-white p-7">
       <h3 className="font-display text-2xl">Praktische Links für die Planung</h3>
       <p className="mt-2 text-sm text-[var(--mwg-ink-70)]">Offizielle Einstiegsseiten – keine bestätigten Fahrpläne oder Buchungen.</p>
       <div className="mt-5 grid gap-3 sm:grid-cols-2">{links.map(l=><a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-2 border-b border-[var(--mwg-line)] py-3 text-sm font-medium text-[var(--mwg-accent)] hover:underline">{l.label}<ArrowUpRight size={17}/></a>)}</div>
-    </section>
+    </section>}
   </div>;
 }
