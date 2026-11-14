@@ -32,7 +32,7 @@ export default function HydraMagazinePreview() {
     </div>
     <section className="mx-auto mt-8 max-w-[1600px] px-3 sm:px-6">
       <div className="relative overflow-hidden bg-stone-700">
-        <img src={photos.hero.src} alt={photos.hero.alt} className="h-[64vh] min-h-[420px] w-full object-cover object-center md:h-[82vh]" />
+        <img src={photos.hero.src} alt={photos.hero.alt} className="h-[76vh] min-h-[540px] w-full object-cover object-center md:h-[92vh]" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
         <div className="absolute bottom-8 left-6 right-6 text-white sm:bottom-14 sm:left-14">
           <p className="mb-4 text-xs uppercase tracking-[0.32em]">Griechenland · Saronischer Golf</p>
@@ -64,11 +64,16 @@ export default function HydraMagazinePreview() {
     <section id="fotos" className="mx-auto max-w-6xl scroll-mt-24 px-5 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">01 · Hydra erleben</p>
       <h2 className="mb-8 mt-3 font-serif text-4xl sm:text-6xl">Der schönste Weg führt übers Wasser.</h2>
-      <PhotoFigure photo={photos.taxi} caption="Hier ist das Boot das Taxi." imageClassName="aspect-[16/9] w-full object-cover" />
+      <PhotoFigure photo={photos.taxi} caption="Hier ist das Boot das Taxi." imageClassName="aspect-[16/9] w-full object-cover md:aspect-[21/9]" />
       <div className="mt-16 grid gap-10 md:grid-cols-2 md:items-start">
         <PhotoFigure photo={photos.village} caption="Einfach losgehen. Und die Zeit vergessen." imageClassName="aspect-[4/5] w-full object-cover" />
         <div className="md:pt-28"><PhotoFigure photo={photos.beach} caption="Ein Platz am Meer, der sich nach Urlaub anfühlt." imageClassName="aspect-[4/5] w-full object-cover" /></div>
       </div>
+    </section>
+    <section className="bg-[#173a36] px-6 py-28 text-center text-[#f7f4ec] sm:py-36">
+      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">03 · Ein Abend, der bleibt</p>
+      <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl sm:text-7xl">Und irgendwann wird aus einem Tag eine Erinnerung.</h2>
+      <p className="mx-auto mt-6 max-w-2xl text-white/75">Das ausgewählte Sonnenuntergangsfoto bei Kamini wird hier ergänzt, sobald die Originaldatei erfolgreich und lizenzgeprüft importiert ist. Bis dahin zeigen wir bewusst kein Ersatzbild.</p>
     </section>
     <section className="mx-auto mt-24 max-w-6xl border-t border-stone-300 px-5 py-20 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">02 · Wenn die Verbindung passt</p>
@@ -78,11 +83,6 @@ export default function HydraMagazinePreview() {
         <div><h3 className="mb-5 font-serif text-3xl">Spetses</h3><PhotoFigure photo={photos.spetsesBeach} caption="Ein Strand, an dem man gern länger bleibt." /><div className="mt-9"><PhotoFigure photo={photos.spetsesView} caption="Ein anderer Blick auf die Insel." /></div></div>
         <div className="md:pt-28"><h3 className="mb-5 font-serif text-3xl">Poros</h3><PhotoFigure photo={photos.poros} caption="Ein Hafen wie ein Versprechen." /></div>
       </div>
-    </section>
-    <section className="bg-[#eae4d8] px-6 py-20 text-center">
-      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">03 · Ein Abend, der bleibt</p>
-      <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl sm:text-6xl">Und irgendwann wird aus einem Tag eine Erinnerung.</h2>
-      <p className="mx-auto mt-6 max-w-2xl text-stone-600">Das ausgewählte Sonnenuntergangsfoto bei Kamini wird hier ergänzt, sobald die Originaldatei erfolgreich und lizenzgeprüft importiert ist. Bis dahin zeigen wir bewusst kein Ersatzbild.</p>
     </section>
     <section id="besonderes" className="scroll-mt-24 bg-[#243d3c] px-5 py-20 text-[#f7f4ec] sm:px-10">
       <div className="mx-auto max-w-6xl">
