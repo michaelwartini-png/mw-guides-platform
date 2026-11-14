@@ -51,6 +51,7 @@ const collections: Record<string, { src: string; alt: string; caption: string; c
     { src: "/images/explore-trips/bodensee-schifffahrt.jpg", alt: "Schifffahrt auf dem Bodensee", caption: "Auf dem Wasser" },
     { src: "/images/explore-trips/bodensee-natur.jpg", alt: "Natur am Bodensee", caption: "Natur entdecken" },
     { src: "/images/explore-trips/bodensee-zeppelin.jpg", alt: "Zeppelin-Erlebnis am Bodensee", caption: "Zeppelin-Erlebnis" },
+    { src: "/images/bucket-list-2027/bodensee-unlimited/rheinfall-schaffhausen.jpg", alt: "Rheinfall bei Schaffhausen in der Schweiz", caption: "Schaffhausen · Rheinfall", credit: { author: "OlhaSolodenko", source: "https://commons.wikimedia.org/wiki/File:Rhine_Falls_in_Switzerland.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/" } },
   ],
   "bratislava-wien-wachau": [
     { src: "/images/explore-trips/bratislava-tram.jpg", alt: "Straßenbahn in Bratislava", caption: "Bratislava" },
