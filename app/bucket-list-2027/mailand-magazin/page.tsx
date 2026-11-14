@@ -88,31 +88,19 @@ export default function MilanMagazinePreview() {
     </nav>
     <section id="mailand" className="scroll-mt-24 bg-[#263b3a] px-5 py-20 text-[#f7f4ec] sm:px-10">
       <div className="mx-auto max-w-6xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">Mailand ist mehr als unser Ausgangspunkt</p>
-        <div className="mt-5 grid gap-10 lg:grid-cols-12 lg:items-end">
-          <h2 className="font-serif text-4xl leading-tight sm:text-6xl lg:col-span-7">Die Stadt, in der jeder Ausflug beginnt. Und jeder Abend weitergeht.</h2>
-          <p className="max-w-lg text-lg leading-relaxed text-white/75 lg:col-span-5">Wir wohnen in Mailand, statt nur durchzureisen. Ein Morgen auf den Domterrassen, ein Abend am Wasser, dazwischen eine Stadt, die immer wieder überrascht.</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">Mailand · die Stadt nach dem Ausflug</p>
+        <h2 className="mt-5 max-w-4xl font-serif text-5xl leading-tight sm:text-7xl">Wenn der Tag noch lange nicht zu Ende ist.</h2>
+        <div className="mt-12 grid gap-7 md:grid-cols-5 md:items-start">
+          <figure className="md:col-span-3">
+            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Milano_Naviglio_Grande_am_Abend_1.jpg?width=1600" alt="Naviglio Grande in Mailand im Abendlicht" loading="lazy" className="aspect-[4/3] w-full object-cover" />
+            <figcaption className="mt-4"><span className="block font-serif text-3xl italic">Ein Abend, der nach Mailand klingt.</span><span className="mt-2 block text-xs text-white/65">Foto: Zairon · <a href="https://commons.wikimedia.org/wiki/File:Milano_Naviglio_Grande_am_Abend_1.jpg" target="_blank" rel="noopener noreferrer" className="underline">Original & Lizenz</a></span></figcaption>
+          </figure>
+          <figure className="md:col-span-2 md:mt-24">
+            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Galleria_Vittorio_Emanuele_II%2C_Milan%2C_interior.jpg?width=1280" alt="Licht und Architektur im Inneren der Galleria Vittorio Emanuele II" loading="lazy" className="aspect-[3/4] w-full object-cover" />
+            <figcaption className="mt-4"><span className="block font-serif text-3xl italic">Unter einem Himmel aus Glas.</span><span className="mt-2 block text-xs text-white/65">Foto: Gerda Arendt · CC0 · <a href="https://commons.wikimedia.org/wiki/File:Galleria_Vittorio_Emanuele_II,_Milan,_interior.jpg" target="_blank" rel="noopener noreferrer" className="underline">Original & Lizenz</a></span></figcaption>
+          </figure>
         </div>
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
-          <article className="border-t border-white/35 pt-6">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">01 · Hoch hinaus</span>
-            <h3 className="mt-4 font-serif text-3xl">Zwischen den Spitzen des Doms.</h3>
-            <p className="mt-4 leading-relaxed text-white/75">Auf den Dachterrassen rückt die Architektur plötzlich ganz nah. Nicht nur ein Blick auf Mailand – ein Blick mitten durch die steinernen Türme.</p>
-            <p className="mt-4 text-xs text-white/60">Zugang und Zeitfenster vorab prüfen</p>
-          </article>
-          <article className="border-t border-white/35 pt-6">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">02 · Staunen im Alltag</span>
-            <h3 className="mt-4 font-serif text-3xl">Licht, Glas und große Gesten.</h3>
-            <p className="mt-4 leading-relaxed text-white/75">Durch die Galleria Vittorio Emanuele II schlendern, in den Seitengassen abbiegen und der Stadt Zeit geben, ihre kleinen Geschichten zu erzählen.</p>
-            <p className="mt-4 text-xs text-white/60">Ideal für einen offenen Stadtnachmittag</p>
-          </article>
-          <article className="border-t border-white/35 pt-6">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">03 · Wenn es Abend wird</span>
-            <h3 className="mt-4 font-serif text-3xl">Am Kanal noch lange bleiben.</h3>
-            <p className="mt-4 leading-relaxed text-white/75">In den Navigli spiegeln sich Lichter im Wasser. Hier endet kein Tagesausflug mit dem letzten Foto – hier beginnt unser Mailänder Abend.</p>
-            <p className="mt-4 text-xs text-white/60">Für einen Abend ohne straffen Zeitplan</p>
-          </article>
-        </div>
+        <p className="mt-10 max-w-2xl text-lg leading-relaxed text-white/75">Morgens die Domterrassen, nachmittags durch die Galleria, abends am Naviglio Grande. Mailand ist nicht nur unser Ausgangspunkt. Es ist ein Teil der Reise.</p>
       </div>
     </section>
     <section id="bildstrecke" aria-label="Norditalien in sieben Originalfotografien" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-24 pt-16 sm:px-10">
