@@ -81,3 +81,14 @@ Neue Uploads, Bildinhalte visuell eingeordnet. **Keine Rechtefreigabe**; Origina
 | 46 | `Verona_0001.jpg` | Verona | Gasse mit Glockenturm | Atmosphärisches Stadtmotiv | offen |
 
 **Gesamtstand:** 46 Uploads in vier Lieferungen (18 + 10 + 11 + 7). Davon mindestens sieben mutmaßliche Wiederholungen aus Lieferung 2; technische Dublettenprüfung steht aus. Originale sind im Chat hochgeladen, **nicht als Binärdateien in diesem GitHub-Verzeichnis**. Das zuvor abgelehnte Bergamo-Panorama bleibt ausgeschlossen.
+
+## Lizenzrecherche – verifizierte Originalseiten (14.11.2026)
+
+Die folgende Prüfung bezieht sich auf **Wikimedia-Commons-Dateiseiten mit exakt passenden Dateinamen**. Ein Binär-/Hashvergleich mit den Chat-Uploads ist noch nicht durchgeführt. Status deshalb **Lizenzquelle verifiziert; Dateiidentität vor Einbau noch prüfen**.
+
+| Upload-Nr. | Datei | Autor laut Original | Lizenz laut Original | Original-/Lizenzlink | Prüfung / Hinweise |
+|---|---|---|---|---|---|
+| 42 | `Sunrise_at_Bergamo_old_town,_Lombardy,_Italy.jpg` | hozinja (Flickr; Eric Hossinger laut Commons-Strukturdaten einer abgeleiteten Datei) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Sunrise_at_Bergamo_old_town,_Lombardy,_Italy.jpg · https://creativecommons.org/licenses/by/2.0/ | Flickr-Lizenz am 09.08.2011 durch Commons-Upload bestätigt. Urheber nennen, Quelle und Lizenz verlinken, Änderungen kennzeichnen. Bergamo-Ersatzkandidat, noch nicht eingebaut. |
+| 40 | `Verona_il_Sole_che_cala.jpg` | Maurizio Moro5153 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Verona_il_Sole_che_cala.jpg · https://creativecommons.org/licenses/by-sa/4.0/ | 6697 × 4044 px; 2022 aufgenommen; Namensnennung, Quellen-/Lizenzlink, Änderungen kennzeichnen, Share-Alike für Bearbeitungen beachten. Noch nicht eingebaut. |
+
+**Redaktionelle Sperre bleibt:** kein ungeprüfter Bildtausch, kein Einsatz des ausdrücklich abgelehnten Bergamo-Panoramas. Lizenzangaben ersetzen keine technische Prüfung, dass die hochgeladene Datei tatsächlich dem Commons-Original entspricht.
