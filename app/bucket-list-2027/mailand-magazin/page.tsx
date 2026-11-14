@@ -90,9 +90,38 @@ export default function MilanMagazinePreview() {
     </section>
     <nav aria-label="Mailand-Magazin – Abschnitte" className="sticky top-0 z-30 border-b border-stone-300 bg-[#f7f4ec]/95 px-4 py-3 backdrop-blur">
       <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto text-xs font-semibold sm:text-sm">
-        {[["#bildstrecke","Fotoreportage"],["#ausfluege","Reiseziele"],["#entdeckungen","Geheimtipps"],["#wochenidee","7 Tage"],["#unterkunft","Hotelbasis"],["#buchungsfahrplan","Vorbereitung"],["#reisepraxis","Reisepraxis"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
+        {[["#mailand","Mailand erleben"],["#bildstrecke","Fotoreportage"],["#ausfluege","Reiseziele"],["#entdeckungen","Geheimtipps"],["#wochenidee","7 Tage"],["#unterkunft","Hotelbasis"],["#buchungsfahrplan","Vorbereitung"],["#reisepraxis","Reisepraxis"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
       </div>
     </nav>
+    <section id="mailand" className="scroll-mt-24 bg-[#263b3a] px-5 py-20 text-[#f7f4ec] sm:px-10">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">Mailand ist mehr als unser Ausgangspunkt</p>
+        <div className="mt-5 grid gap-10 lg:grid-cols-12 lg:items-end">
+          <h2 className="font-serif text-4xl leading-tight sm:text-6xl lg:col-span-7">Die Stadt, in der jeder Ausflug beginnt. Und jeder Abend weitergeht.</h2>
+          <p className="max-w-lg text-lg leading-relaxed text-white/75 lg:col-span-5">Wir wohnen in Mailand, statt nur durchzureisen. Ein Morgen auf den Domterrassen, ein Abend am Wasser, dazwischen eine Stadt, die immer wieder überrascht.</p>
+        </div>
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
+          <article className="border-t border-white/35 pt-6">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">01 · Hoch hinaus</span>
+            <h3 className="mt-4 font-serif text-3xl">Zwischen den Spitzen des Doms.</h3>
+            <p className="mt-4 leading-relaxed text-white/75">Auf den Dachterrassen rückt die Architektur plötzlich ganz nah. Nicht nur ein Blick auf Mailand – ein Blick mitten durch die steinernen Türme.</p>
+            <p className="mt-4 text-xs text-white/60">Zugang und Zeitfenster vorab prüfen</p>
+          </article>
+          <article className="border-t border-white/35 pt-6">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">02 · Staunen im Alltag</span>
+            <h3 className="mt-4 font-serif text-3xl">Licht, Glas und große Gesten.</h3>
+            <p className="mt-4 leading-relaxed text-white/75">Durch die Galleria Vittorio Emanuele II schlendern, in den Seitengassen abbiegen und der Stadt Zeit geben, ihre kleinen Geschichten zu erzählen.</p>
+            <p className="mt-4 text-xs text-white/60">Ideal für einen offenen Stadtnachmittag</p>
+          </article>
+          <article className="border-t border-white/35 pt-6">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#d4bb91]">03 · Wenn es Abend wird</span>
+            <h3 className="mt-4 font-serif text-3xl">Am Kanal noch lange bleiben.</h3>
+            <p className="mt-4 leading-relaxed text-white/75">In den Navigli spiegeln sich Lichter im Wasser. Hier endet kein Tagesausflug mit dem letzten Foto – hier beginnt unser Mailänder Abend.</p>
+            <p className="mt-4 text-xs text-white/60">Für einen Abend ohne straffen Zeitplan</p>
+          </article>
+        </div>
+      </div>
+    </section>
     <section id="bildstrecke" aria-label="Norditalien in sieben Originalfotografien" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-24 pt-16 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die Fotoreportage · sieben Reiseziele</p>
       <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Einmal aufbrechen. Siebenmal staunen.</h2>
