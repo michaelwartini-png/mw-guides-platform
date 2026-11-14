@@ -4,11 +4,13 @@ import { useState } from "react";
 import { ArrowUpRight, ChevronDown, MapPin, TrainFront, Ship, CalendarDays } from "lucide-react";
 
 const photos = [
-  {src:"/images/explore-trips/mailand-hero.jpg",alt:"Mailänder Dom",caption:"Mailand · Unsere Basis"},
-  {src:"/images/explore-trips/mailand-como.jpg",alt:"Comer See",caption:"Comer See · Unterwegs am Wasser"},
-  {src:"/images/explore-trips/mailand-bergamo.jpg",alt:"Bergamo",caption:"Bergamo · Altstadt entdecken"},
-  {src:"/images/explore-trips/mailand-centrale.jpg",alt:"Bahnhof Milano Centrale",caption:"Milano Centrale · Startpunkt für Ausflüge"},
-  {src:"/images/explore-trips/mailand-closing.jpg",alt:"Norditalien",caption:"Norditalien · Immer neue Perspektiven"},
+  {src:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio_and_Lake_Como_from_Menaggio-Varenna_ferry.jpg?width=1280",alt:"Comer See von der Fähre",caption:"Comer See · Mit dem Schiff unterwegs",source:"https://commons.wikimedia.org/wiki/File:Bellagio_and_Lake_Como_from_Menaggio-Varenna_ferry.jpg",credit:"Daniel Case · CC BY-SA 3.0"},
+  {src:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Isole_dei_Pescatori.jpg?width=1280",alt:"Isola dei Pescatori am Lago Maggiore",caption:"Lago Maggiore · Inselwelten",source:"https://commons.wikimedia.org/wiki/File:Isole_dei_Pescatori.jpg",credit:"Fawcett5 · Public Domain"},
+  {src:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Finestrella_di_Via_Piella.jpg?width=1280",alt:"Finestrella di Via Piella in Bologna",caption:"Bologna · Das Fenster zum Kanal",source:"https://commons.wikimedia.org/wiki/File:Finestrella_di_Via_Piella.jpg",credit:"Donatella Bajo · CC BY-SA 4.0"},
+  {src:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Teatro_Farnese_Interno.jpg?width=1280",alt:"Teatro Farnese in Parma",caption:"Parma · Teatro Farnese",source:"https://commons.wikimedia.org/wiki/File:Teatro_Farnese_Interno.jpg",credit:"Maurizio Moro5153 · CC BY-SA 4.0"},
+  {src:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Panoramic_photograph_of_Verona_from_Castel_San_Pietro.jpg?width=1280",alt:"Blick vom Castel San Pietro über Verona",caption:"Verona · Stadtpanorama",source:"https://commons.wikimedia.org/wiki/File:Panoramic_photograph_of_Verona_from_Castel_San_Pietro.jpg",credit:"Espt123 · CC BY-SA 3.0"},
+  {src:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Lugano_Funicolare_Monte_Bre.jpeg?width=1280",alt:"Standseilbahn Monte Brè in Lugano",caption:"Lugano · Mit der Bergbahn hinauf",source:"https://commons.wikimedia.org/wiki/File:Lugano_Funicolare_Monte_Bre.jpeg",credit:"Robot8A · CC BY-SA 4.0"},
+  {src:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bergamo_Alta_Panoramic_View.jpg?width=1280",alt:"Breites Panorama von Bergamo Alta",caption:"Bergamo · Oberstadt",source:"https://commons.wikimedia.org/wiki/File:Bergamo_Alta_Panoramic_View.jpg",credit:"Walkabout 88 · CC BY-SA 4.0"},
 ];
 const excursions = [
   {name:"Mailand",tag:"Stadt & Kultur",image:"/images/explore-trips/mailand-hero.jpg",text:"Dom, Galleria Vittorio Emanuele II, Navigli und die lebendigen Viertel der Stadt. Auch ein freier Nachmittag gehört dazu.",via:"Zu Fuß · Metro · Tram"},
@@ -45,9 +47,9 @@ export function MilanMagazine({ magazineMode = false }: { magazineMode?: boolean
     </div>}
 
     {!magazineMode && <section aria-label="Bilder aus Norditalien">
-      <div className="mb-5 flex items-end justify-between gap-3"><div><p className="mwg-eyebrow text-[var(--mwg-accent)]">Impressionen</p><h3 className="mt-2 font-display text-3xl">Norditalien in Bildern</h3></div><span className="text-xs text-[var(--mwg-ink-70)]">MW Guides · vorhandene Bilddateien</span></div>
+      <div className="mb-5 flex items-end justify-between gap-3"><div><p className="mwg-eyebrow text-[var(--mwg-accent)]">Impressionen</p><h3 className="mt-2 font-display text-3xl">Norditalien in Bildern</h3></div><span className="text-xs text-[var(--mwg-ink-70)]">Wikimedia Commons · Originale mit Quellenangaben</span></div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        {photos.slice(1).map((p)=><figure key={p.src} className="min-w-0"><div className="aspect-video w-full overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={p.src} alt={p.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" /></div><figcaption className="mt-2 text-xs text-[var(--mwg-ink-70)]">{p.caption}</figcaption></figure>)}
+        {photos.map((p)=><figure key={p.src} className="min-w-0"><div className="aspect-video w-full overflow-hidden rounded-sm bg-[var(--mwg-line)]"><img src={p.src} alt={p.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" /></div><figcaption className="mt-2 text-xs text-[var(--mwg-ink-70)]">{p.caption} · <a href={p.source} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{p.credit} · Original & Lizenz</a></figcaption></figure>)}
       </div>
     </section>}
 
