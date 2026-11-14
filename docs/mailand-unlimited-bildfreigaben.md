@@ -58,3 +58,8 @@ Die Freigabe bezieht sich auf diese sechs **exakten Commons-Dateien**, nicht auf
 **Weiterhin vorgemerkt, nicht als konkrete Datei freigegeben:** Historische unterirdische Wasserzisterne **Fontana del Lantro**. Die Innenaufnahme aus https://storage.ecodibergamo.it/media/old_attach/2010/03/cannoniera.pdf hat ungeklärte Nutzungsrechte; keinesfalls ohne Rechteklärung veröffentlichen.
 
 **Wichtig:** Der Nutzer hat ausdrücklich „Noch keine Website-Bilder ändern“ angewiesen. Nur dieses Dokument aktualisieren, keine Bildimporte, keine Website- oder Layoutänderungen.
+
+
+## Verbindliche Planänderung – 14.11.2026
+
+**Nutzeranweisung: „vergess die wasserzisterne“**. Die historische Wasserzisterne / Fontana del Lantro ist **aus der weiteren Planung für Mailand Unlimited gestrichen**. Keine weitere Bildrecherche, Rechteklärung, Erwähnung als offenes Motiv oder spätere Integration. Frühere Vermerke in diesem Dokument zur Zisterne sind **historische Recherche und durch diese Entscheidung überholt**. Für Bergamo ist ausschließlich das bereits freigegebene Originalfoto **„Piazza Vecchia bei Nacht“ (Zairon)** vorgesehen. Keine Website- oder Bilddateien ändern.
