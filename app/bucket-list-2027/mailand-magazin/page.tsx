@@ -28,7 +28,7 @@ export default function MilanMagazinePreview() {
     </section>
     <nav aria-label="Mailand-Magazin – Abschnitte" className="sticky top-0 z-30 border-b border-stone-300 bg-[#f7f4ec]/95 px-4 py-3 backdrop-blur">
       <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto text-xs font-semibold sm:text-sm">
-        {[["#konzept","Reisekonzept"],["#bildstrecke","Bildgeschichte"],["#entdeckungen","Besondere Erlebnisse"],["#ausfluege","Alle Ausflüge"],["#reiseplanung","7 Tage & Quellen"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
+        {[["#konzept","Reisekonzept"],["#bildstrecke","Bildgeschichte"],["#entdeckungen","Besondere Erlebnisse"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"],["#ausfluege","Alle Ausflüge"],["#reiseplanung","7 Tage & Quellen"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
       </div>
     </nav>
     <section id="konzept" className="scroll-mt-24 mx-auto max-w-4xl px-6 py-20 text-center">
@@ -114,6 +114,48 @@ export default function MilanMagazinePreview() {
           </article>)}
         </div>
         <p className="mt-8 max-w-4xl text-sm leading-relaxed text-stone-600">Redaktioneller Prüfstand: Die genannten Erlebnisse sind Rechercheoptionen, keine für 2027 bestätigten Buchungen. Für mehrere Sonderführungen, Fahrpläne und Preise liegen noch keine verbindlichen Angaben vor. Die Bildredaktion ergänzt nach Rechteprüfung echte Fotos dieser Orte.</p>
+      </div>
+    </section>
+    <section id="wochenidee" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-20 sm:px-10">
+      <div className="grid gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-4">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Sieben Tage · ein Hotel · freie Auswahl</p>
+          <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Keine sieben Pflichten. Sieben Möglichkeiten.</h2>
+          <p className="mt-6 leading-relaxed text-stone-600">Dies ist eine Dramaturgie für die Reise, kein Stundenplan. Wir suchen uns aus dem größeren Angebot jeden Tag das aus, worauf wir Lust haben – und behalten Mailand als festen Anker.</p>
+          <div className="mt-8 border-l-2 border-[#92734e] pl-5 font-serif text-2xl italic leading-snug">Manchmal ist der beste Tagesausflug der, den wir erst beim Frühstück beschließen.</div>
+        </div>
+        <div className="lg:col-span-8">
+          <div className="divide-y divide-stone-300 border-y border-stone-300">
+            {[
+              {day:"01",heading:"Mailand. Erst einmal ankommen.",text:"Hotel beziehen, die Stadt entdecken, den Bahnhof für die kommenden Tage kennenlernen."},
+              {day:"02",heading:"Wasser: Comer See oder Lago Maggiore.",text:"Fähren und Uferorte am Comer See – oder Stresa mit den Borromäischen Inseln. Nicht beides am selben Tag."},
+              {day:"03",heading:"Geschichte: Bergamo oder Pavia.",text:"Mit der Standseilbahn hinauf nach Bergamo Alta oder die ruhigen Höfe und das Kloster von Pavia erkunden."},
+              {day:"04",heading:"Eine andere Stadt: Bologna oder Verona.",text:"Verborgene Kanäle und Arkaden – oder der Blick vom Castel San Pietro. Sonderführungen nur bei bestätigten Terminen."},
+              {day:"05",heading:"Handwerk und große Räume: Modena oder Parma.",text:"Eine reservierte Acetaia-Besichtigung, die Käsereikultur oder das Teatro Farnese. Keine unrealistische Pflichtkombination."},
+              {day:"06",heading:"Ein Hauch Schweiz – oder noch einmal an den See.",text:"Lugano mit genau einer Bergbahn als Option; alternativ ein zweiter, ruhigerer Tag am Wasser."},
+              {day:"07",heading:"Mailand gehört uns.",text:"Zeit für eine Entdeckung in der Stadt, einen Lieblingsort, einen spontanen Abstecher oder die entspannte Rückreise."}
+            ].map(item=><article key={item.day} className="grid gap-3 py-6 sm:grid-cols-[70px_1fr] sm:gap-6"><span className="font-serif text-4xl italic text-[#92734e]">{item.day}</span><div><h3 className="font-serif text-2xl leading-tight sm:text-3xl">{item.heading}</h3><p className="mt-3 max-w-2xl leading-relaxed text-stone-600">{item.text}</p></div></article>)}
+          </div>
+          <p className="mt-5 text-sm leading-relaxed text-stone-500">Auswahl, keine bestätigten Termine. Abfahrten, Saisonfahrpläne und Sonderführungen für 2027 vor der Reise neu prüfen. Die ausführliche ursprüngliche Reisevorlage folgt weiter unten.</p>
+        </div>
+      </div>
+    </section>
+    <section id="reisepraxis" className="scroll-mt-24 bg-[#263b3a] px-5 py-20 text-[#f7f4ec] sm:px-10">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">Gut zu wissen, bevor es losgeht</p>
+        <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Freiheit braucht nur ein bisschen Vorbereitung.</h2>
+        <div className="mt-12 grid gap-9 md:grid-cols-3">
+          <div><h3 className="font-serif text-3xl">Der richtige Ausgangspunkt</h3><p className="mt-4 leading-relaxed text-white/75">Ein Hotel mit guter Anbindung an Milano Centrale oder andere passende Bahnhöfe spart tägliche Umwege. Die konkrete Lage entscheidet mit über die Reisequalität.</p></div>
+          <div><h3 className="font-serif text-3xl">Erst die Rückfahrt</h3><p className="mt-4 leading-relaxed text-white/75">Bei Seen und Schiffen zuerst den letzten sinnvollen Rückweg prüfen. Fähren, Bergbahnen und Sonderführungen können saisonal fahren oder ausfallen.</p></div>
+          <div><h3 className="font-serif text-3xl">Eine Überraschung pro Tag</h3><p className="mt-4 leading-relaxed text-white/75">Eine besondere Führung oder Bootsfahrt reicht als Höhepunkt. Alles Weitere bleibt freiwillig. Bei schlechtem Wetter wählen wir eine Stadt statt einer Bergbahn.</p></div>
+        </div>
+        <div className="mt-12 flex flex-wrap gap-3 text-sm">
+          <a href="https://www.trenitalia.com/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-5 py-3 hover:bg-white/10">Trenitalia · Bahn</a>
+          <a href="https://www.trenord.it/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-5 py-3 hover:bg-white/10">Trenord · Regionalzüge</a>
+          <a href="https://www.navigazionelaghi.it/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-5 py-3 hover:bg-white/10">Navigazione Laghi · Schiffe</a>
+          <a href="https://www.sbb.ch/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/50 px-5 py-3 hover:bg-white/10">SBB · Schweiz</a>
+        </div>
+        <p className="mt-6 text-xs text-white/60">Offizielle Einstiegsseiten zur eigenständigen Fahrplanprüfung. Keine Echtzeit-Verfügbarkeiten oder für 2027 garantierten Verbindungen.</p>
       </div>
     </section>
     <section id="ausfluege" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-20 sm:px-10">
