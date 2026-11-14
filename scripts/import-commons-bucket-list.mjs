@@ -31,6 +31,8 @@ const entries = [
   { trip: "hydra-unlimited", file: "Hydra harbour, Greece.jpg", slug: "hydra-hafen" },
   { trip: "hydra-unlimited", file: "0157 - Hydra.jpg", slug: "hydra-inselblick" },
   { trip: "hydra-unlimited", file: "0058 - Hydra.jpg", slug: "hydra-ortsimpression" },
+  { trip: "hydra-unlimited", file: "Water taxis in Hydra Greece (43958691225).jpg", slug: "hydra-wassertaxis" },
+  { trip: "hydra-unlimited", file: "Vlychos Beach Hydra, Greece (43058081140).jpg", slug: "hydra-vlychos-strand" },
   { trip: "bodensee-unlimited", file: "Rhine Falls in Switzerland.jpg", slug: "rheinfall-schaffhausen" },
   { trip: "bodensee-unlimited", file: "Mainau-4.jpg", slug: "mainau-tulpenfeld" },
   { trip: "bodensee-unlimited", file: "Stein am Rhein. Les maisons peintes du centre-ville.jpg", slug: "stein-am-rhein-bemalte-haeuser" },
@@ -42,7 +44,7 @@ const entries = [
   { trip: "portugal-unlimited", file: "Lisboa, tranvía 28.jpg", slug: "lissabon-tram-28" },
   { trip: "portugal-unlimited", file: "A panoramic view of the Dom Luís I Bridge spanning the Douro River in Porto, Portugal, with a yellow tram crossing and the historic city skyline in the background. (55246746406).jpg", slug: "porto-douro-bruecke" },
 ];
-const allowed = new Set(["CC BY 4.0", "CC BY-SA 4.0", "CC0", "Public domain"]);
+const allowed = new Set(["CC BY 2.0", "CC BY 4.0", "CC BY-SA 4.0", "CC0", "Public domain"]);
 const root = path.resolve("public/images/bucket-list-2027");
 const credits = [];
 // Preserve previously imported credits when expanding the selection.
