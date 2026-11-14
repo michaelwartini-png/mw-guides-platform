@@ -12,7 +12,7 @@ Stand: 14.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 | Bratislava–Wien–Wachau | 4 (lokal) | Twin City Liner, Wiener Parlament, UNO City (Außenansicht), Wachau-Schiff, Bratislava Burg |
 | Preveza & Lefkada | 6 (Commons) | Nikopolis antike Ruinen (Museum bereits bebildert), Nidri Bootsausflug (Hafen bereits bebildert), Lefkada-Stadt, Preveza Altstadt |
 | Bodensee Unlimited | 7 (4 lokal + 3 Commons) | Rheinfall, Mainau und Stein am Rhein eingebunden; offen: Reichenau, Lindau, Bregenz/Pfänder |
-| Hydra Unlimited | 8 (Commons: 5 Hydra + 2 Spetses + 1 Poros) | Autofreie Gassen und weitere Details; Spetses/Poros sind als optionale Ausflugsideen beschriftet, Fährverbindungen noch nicht geprüft |
+| Hydra Unlimited | 9 (Commons: 5 Hydra + 3 Spetses + 1 Poros) | Autofreie Gassen und weitere Details; Spetses/Poros sind als optionale Ausflugsideen beschriftet, Fährverbindungen noch nicht geprüft |
 
 ## Bildredaktion
 - Ziel: pro Reise **8–12 unterschiedliche, aussagekräftige Fotos**, kein starres Mindestmaß auf Kosten der Qualität.
