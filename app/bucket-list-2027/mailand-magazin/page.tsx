@@ -19,9 +19,9 @@ export default function MilanMagazinePreview() {
         <img src="/images/explore-trips/mailand-hero.jpg" alt="Mailänder Dom – Ausgangspunkt für Tagesausflüge durch Norditalien" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
         <div className="relative flex min-h-[470px] flex-col justify-end px-6 pb-12 text-white sm:min-h-[650px] sm:px-14 sm:pb-16">
-          <p className="text-xs uppercase tracking-[0.35em] text-[#f3d6a7]">Norditalien · ein Hotel · unzählige Möglichkeiten</p>
-          <h1 className="mt-5 max-w-5xl font-serif text-5xl leading-[1.03] sm:text-7xl lg:text-8xl">Mailand Unlimited.<br/>Jeden Tag eine andere Welt.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">Morgens mit dem Zug los. Mittags am Comer See, in Bergamos Altstadt oder auf den Borromäischen Inseln. Abends zurück nach Mailand – ohne Kofferpacken.</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[#f3d6a7]">Mailand Unlimited · Europa Bucket List 2027</p>
+          <h1 className="mt-5 max-w-5xl font-serif text-5xl leading-[1.03] sm:text-7xl lg:text-8xl">Sieben Tage.<br/>Sieben andere Welten.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">Mailand ist unsere Basis. Dahinter beginnt ein Norditalien, das wir jeden Morgen neu entdecken können.</p>
         </div>
       </div>
       <p className="mt-2 px-1 text-xs text-stone-500">Vorhandenes Foto der ursprünglichen Mailand-Vorlage; Bildrechte und Quellenangabe vor einer Veröffentlichung gesondert prüfen.</p>
@@ -41,8 +41,8 @@ export default function MilanMagazinePreview() {
         </div>
         <div className="md:col-span-4 md:pb-8">
           <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">01 · Der See ruft</p>
-          <h3 className="mt-4 font-serif text-4xl leading-tight">Ein Zugticket. Ein völlig anderer Tag.</h3>
-          <p className="mt-5 leading-relaxed text-stone-600">Von der Großstadt ans Wasser. Am Ufer entlang, an Bord eines Schiffes, zwischen kleinen Orten und Bergen. Der Comer See ist keine Pflichtstation – sondern eine Möglichkeit, die man sich offenhält.</p>
+          <h3 className="mt-4 font-serif text-4xl leading-tight">Vom Großstadtmorgen zum Seeufer.</h3>
+          <p className="mt-5 leading-relaxed text-stone-600">Ein Schiff zieht zwischen den Uferorten hindurch, dahinter steigen die Berge auf. Wir steigen dort aus, wo es uns gefällt.</p>
           <p className="mt-4 text-sm text-stone-500">Bahn und Schiff · Verbindung und Saisonfahrplan prüfen</p>
         </div>
       </div>
@@ -52,39 +52,23 @@ export default function MilanMagazinePreview() {
         </div>
         <div className="max-w-md md:order-1 md:pl-8">
           <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">02 · Über den Dächern von Bergamo</p>
-          <h3 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Die schönste Überraschung liegt manchmal ganz nah.</h3>
-          <p className="mt-6 text-lg leading-relaxed text-stone-600">Mit der Bahn nach Bergamo. Dann mit der Standseilbahn hinauf in die Città Alta. Hinter den Mauern warten enge Gassen, kleine Plätze und Ausblicke, für die man gern länger bleibt.</p>
+          <h3 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Eine Stadt über der Stadt.</h3>
+          <p className="mt-6 text-lg leading-relaxed text-stone-600">Die Standseilbahn hebt uns aus dem Alltag direkt in die Città Alta: Stadtmauern, verwinkelte Gassen und ein Blick über die Dächer.</p>
           <p className="mt-5 text-sm text-stone-500">Bahn + Standseilbahn · Betriebszeiten prüfen</p>
         </div>
       </div>
       <div className="mt-24 bg-[#263b3a] px-6 py-12 text-[#f7f4ec] sm:px-12 sm:py-16">
         <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">03 · Das Abenteuer beginnt am Bahnhof</p>
         <h3 className="mt-5 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Wohin fahren wir heute?</h3>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Auf den Anzeigetafeln steht nicht nur das nächste Ziel. Sie zeigen Möglichkeiten: Wasser, Berge, Altstädte und Entdeckungen, für die ein einziger Tag genügt.</p>
-        <figure className="mt-9"><div className="overflow-hidden bg-stone-700"><img src="/images/explore-trips/mailand-centrale.jpg" alt="Milano Centrale – Ausgangspunkt zahlreicher Zugausflüge" loading="lazy" className="aspect-[16/9] w-full object-cover" /></div><figcaption className="mt-3 text-sm italic text-white/70">Milano Centrale. Nicht nur ein Bahnhof. Das Tor zu vielen Möglichkeiten.</figcaption></figure>
-      </div>
-    </section>
-    <section aria-label="Reisestimmungen aus der ursprünglichen Mailand-Vorlage" className="scroll-mt-24 pb-24">
-      <div className="mx-auto max-w-6xl px-5 sm:px-10">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
-          <div><p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die Bildgeschichte · ein Ausgangspunkt, viele Welten</p><h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Der schönste Reiseplan ist manchmal eine offene Tür.</h2></div>
-          <p className="max-w-xs text-sm leading-relaxed text-stone-600">Ein visueller Vorgeschmack auf die Vielfalt jenseits der Stadt.</p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-12">
-          <figure className="group relative overflow-hidden bg-stone-200 md:col-span-7"><img src="/images/explore-trips/mailand-natur.jpg" alt="Naturmotiv aus der bestehenden Mailand-Unlimited-Bildauswahl" loading="lazy" className="aspect-[4/5] h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025] md:aspect-auto"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-6 pb-7 pt-24 text-white"><span className="text-xs uppercase tracking-[0.2em] text-white/75">Natur & Wasser</span><strong className="mt-2 block max-w-lg font-serif text-3xl font-normal leading-tight sm:text-4xl">Einmal abbiegen. Und die Stadt ist ganz weit weg.</strong></figcaption></figure>
-          <div className="grid gap-4 md:col-span-5">
-            <figure className="group relative overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-staedte.jpg" alt="Städtemotiv aus der bestehenden Mailand-Unlimited-Bildauswahl" loading="lazy" className="aspect-[5/4] w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-5 pb-6 pt-20 text-white"><span className="text-xs uppercase tracking-[0.2em] text-white/75">Städte & Geschichte</span><strong className="mt-2 block font-serif text-2xl font-normal leading-tight sm:text-3xl">Hinter jeder Fassade eine neue Zeit.</strong></figcaption></figure>
-            <figure className="group relative overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-besondere-erlebnisse.jpg" alt="Erlebnismotiv aus der bestehenden Mailand-Unlimited-Bildauswahl" loading="lazy" className="aspect-[5/4] w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-5 pb-6 pt-20 text-white"><span className="text-xs uppercase tracking-[0.2em] text-white/75">Unerwartete Entdeckungen</span><strong className="mt-2 block font-serif text-2xl font-normal leading-tight sm:text-3xl">Die besten Geschichten stehen nicht im Fahrplan.</strong></figcaption></figure>
-          </div>
-        </div>
-        <p className="mt-4 text-xs leading-relaxed text-stone-500">Bildstrecke mit drei bereits im Repository vorhandenen Motiven der Mailand-Vorlage. Die Fotos illustrieren Reisethemen und sind nicht als Nachweis konkreter Sonderführungen oder Orte beschriftet. Rechte- und Herkunftsnachweise vor einer öffentlichen Veröffentlichung vervollständigen.</p>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Ein Bahnhof als Ausgangspunkt: Die nächste Geschichte wartet vielleicht nur eine Zugfahrt entfernt.</p>
+        <figure className="mt-9"><div className="overflow-hidden bg-stone-700"><img src="/images/explore-trips/mailand-centrale.jpg" alt="Milano Centrale – Ausgangspunkt zahlreicher Zugausflüge" loading="lazy" className="aspect-[16/9] w-full object-cover" /></div><figcaption className="mt-3 text-sm italic text-white/70">Milano Centrale · Ausgangspunkt unserer Tagesausflüge</figcaption></figure>
       </div>
     </section>
     <section id="entdeckungen" className="scroll-mt-24 border-y border-stone-300 bg-[#ece6d9] py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-10">
         <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Aus der vertieften Recherche · besondere Entdeckungen</p>
-        <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Nicht nur wohin. Sondern was uns dort überrascht.</h2>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Hinter den bekannten Namen verbergen sich Geschichten, die man leicht übersieht. Diese Auswahl ergänzt unsere ursprünglichen Tagesausflüge – sie ersetzt keinen der Orte.</p>
+        <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Die Geschichten hinter den Postkarten.</h2>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Acht Entdeckungen, die aus einem gewöhnlichen Tagesausflug eine besondere Erinnerung machen können.</p>
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {[
             {num:"01",place:"Lago Maggiore · Stresa",title:"Die Insel, auf der das Leben weitergeht",copy:"Zwischen den prachtvollen Palästen liegt die Isola dei Pescatori: enge Gassen, Stege und der Blick zurück über das Wasser. Als Tagesausflug mit Bahn und Schiff.",detail:"Schiffssaison und Rückfahrt ab Stresa prüfen",href:"https://www.navigazionelaghi.it/en/tickets-and-timetables-lake-maggiore/",link:"Offizielle Schifffahrt"},
@@ -151,8 +135,8 @@ export default function MilanMagazinePreview() {
     </section>
     <section id="ausfluege" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-20 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die ursprünglichen Reiseziele · frei kombinierbar</p>
-      <h2 className="mt-3 font-serif text-4xl sm:text-6xl">Norditalien liegt uns zu Füßen.</h2>
-      <p className="mt-5 max-w-3xl leading-relaxed text-stone-600">Alle Ziele unserer ursprünglichen Vorlage auf einen Blick – zum Vergleichen und Auswählen.</p>
+      <h2 className="mt-3 font-serif text-4xl sm:text-6xl">Wohin soll es morgen gehen?</h2>
+      <p className="mt-5 max-w-3xl leading-relaxed text-stone-600">Alle Ausflugsoptionen an einem Ort.</p>
       <div><MilanMagazine magazineMode /></div>
     </section>
     <footer className="border-t border-stone-300 px-6 py-10 text-center text-sm text-stone-600">Europa Bucket List 2027 · Private Gestaltungsvorschau</footer>
