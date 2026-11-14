@@ -31,13 +31,13 @@ export default function HydraMagazinePreview() {
       <div className="flex flex-wrap items-center justify-between gap-3 text-xs uppercase tracking-[0.18em] text-stone-600"><span>Europa Bucket List 2027 · Magazin-Entwurf</span><Link className="underline underline-offset-4" href="/bucket-list-2027?reise=hydra-unlimited">Bisherige Seite vergleichen</Link></div>
       <p className="mt-3 text-xs text-stone-500">Separate Gestaltungsvorschau · kein Ersatz der freigegebenen Reiseseite · Hero A unverändert</p>
     </div>
-    <section className="mx-auto mt-8 max-w-[1600px] px-3 sm:px-6">
+    <section className="mx-auto mt-5 max-w-none px-0">
       <div className="relative overflow-hidden bg-stone-700">
-        <img src={photos.hero.src} alt={photos.hero.alt} className="h-[76vh] min-h-[540px] w-full object-cover object-center md:h-[92vh]" />
+        <img src={photos.hero.src} alt={photos.hero.alt} className="h-[82vh] min-h-[620px] w-full object-cover object-center md:h-[96vh]" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-        <div className="absolute bottom-8 left-6 right-6 text-white sm:bottom-14 sm:left-14">
+        <div className="absolute bottom-12 left-7 right-6 text-white sm:bottom-24 sm:left-[9vw]">
           <p className="mb-4 text-xs uppercase tracking-[0.32em]">Griechenland · Saronischer Golf</p>
-          <h1 className="max-w-4xl font-serif text-5xl leading-[1.02] sm:text-7xl lg:text-8xl">Hydra.<br/>Wo die Zeit langsamer tickt.</h1>
+          <h1 className="max-w-5xl font-serif text-6xl leading-[0.97] tracking-tight sm:text-8xl lg:text-[clamp(6rem,10vw,11rem)]">Hydra.<br/>Wo die Zeit langsamer tickt.</h1>
           <p className="mt-5 max-w-xl text-base text-white/90 sm:text-lg">Eine Insel ohne Autos. Und mit tausend Gründen, noch einen Tag zu bleiben.</p>
         </div>
       </div>
@@ -57,30 +57,30 @@ export default function HydraMagazinePreview() {
         ].map(item => <a key={item.href} href={item.href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 text-[#26312f] transition-colors hover:bg-[#eae4d8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#92734e]">{item.label}</a>)}
       </div>
     </nav>
-    <section className="mx-auto max-w-3xl px-6 py-20 text-center sm:py-28">
+    <section className="mx-auto max-w-3xl px-6 py-28 text-center sm:py-44">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Ankommen und durchatmen</p>
       <h2 className="mt-6 font-serif text-3xl leading-tight sm:text-5xl">Morgens mit dem Boot los. Mittags ans Meer. Abends einfach bleiben.</h2>
       <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-stone-600">Hydra muss man nicht abhaken. Man kann sich treiben lassen, den Hafen hinter sich lassen und den nächsten Lieblingsplatz entdecken. Alles kann – nichts muss.</p>
     </section>
-    <section id="fotos" className="mx-auto max-w-6xl scroll-mt-24 px-5 sm:px-10">
+    <section id="fotos" className="mx-auto max-w-[1450px] scroll-mt-24 px-5 sm:px-[7vw]">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">01 · Hydra erleben</p>
-      <h2 className="mb-8 mt-3 font-serif text-4xl sm:text-6xl">Der schönste Weg führt übers Wasser.</h2>
-      <PhotoFigure photo={photos.taxi} caption="Hier ist das Boot das Taxi." imageClassName="aspect-[16/9] w-full object-cover md:aspect-[21/9]" />
-      <div className="mt-16 grid gap-10 md:grid-cols-2 md:items-start">
+      <h2 className="mb-12 mt-5 max-w-5xl font-serif text-5xl leading-[1.03] sm:text-7xl">Der schönste Weg führt übers Wasser.</h2>
+      <PhotoFigure photo={photos.taxi} caption="Hier ist das Boot das Taxi." imageClassName="aspect-[3/2] w-full object-cover md:aspect-[2.15/1]" />
+      <div className="mt-24 grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start md:gap-16">
         <PhotoFigure photo={photos.village} caption="Einfach losgehen. Und die Zeit vergessen." imageClassName="aspect-[4/5] w-full object-cover" />
-        <div className="md:pt-28"><PhotoFigure photo={photos.beach} caption="Ein Platz am Meer, der sich nach Urlaub anfühlt." imageClassName="aspect-[4/5] w-full object-cover" /></div>
+        <div className="md:pt-44"><PhotoFigure photo={photos.beach} caption="Ein Platz am Meer, der sich nach Urlaub anfühlt." imageClassName="aspect-[4/5] w-full object-cover" /></div>
       </div>
     </section>
-    <section className="bg-[#173a36] px-6 py-28 text-center text-[#f7f4ec] sm:py-36">
+    <section className="bg-[#173a36] px-6 py-36 text-center text-[#f7f4ec] sm:py-52">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">03 · Ein Abend, der bleibt</p>
-      <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl sm:text-7xl">Und irgendwann wird aus einem Tag eine Erinnerung.</h2>
+      <h2 className="mx-auto mt-8 max-w-4xl font-serif text-5xl leading-[1.05] sm:text-8xl">Und irgendwann wird aus einem Tag eine Erinnerung.</h2>
       <p className="mx-auto mt-6 max-w-2xl text-white/75">Das ausgewählte Sonnenuntergangsfoto bei Kamini wird hier ergänzt, sobald die Originaldatei erfolgreich und lizenzgeprüft importiert ist. Bis dahin zeigen wir bewusst kein Ersatzbild.</p>
     </section>
-    <section className="mx-auto mt-24 max-w-6xl border-t border-stone-300 px-5 py-20 sm:px-10">
+    <section className="mx-auto mt-28 max-w-[1450px] border-t border-stone-300 px-5 py-28 sm:px-[7vw]">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">02 · Wenn die Verbindung passt</p>
       <h2 className="mt-3 max-w-4xl font-serif text-4xl sm:text-6xl">Noch zwei Inseln. Noch mehr Sehnsuchtsorte.</h2>
       <p className="mt-5 max-w-2xl text-stone-600">Spetses und Poros sind optionale Ausflugsideen, keine festen Programmpunkte. Die tatsächlichen Fährverbindungen müssen wir vor der Reise prüfen.</p>
-      <div className="mt-12 grid gap-10 md:grid-cols-2">
+      <div className="mt-16 grid gap-12 md:grid-cols-[1.15fr_0.85fr] md:gap-20">
         <div><h3 className="mb-5 font-serif text-3xl">Spetses</h3><PhotoFigure photo={photos.spetsesBeach} caption="Ein Strand, an dem man gern länger bleibt." /><div className="mt-9"><PhotoFigure photo={photos.spetsesView} caption="Ein anderer Blick auf die Insel." /></div></div>
         <div className="md:pt-28"><h3 className="mb-5 font-serif text-3xl">Poros</h3><PhotoFigure photo={photos.poros} caption="Ein Hafen wie ein Versprechen." /></div>
       </div>
