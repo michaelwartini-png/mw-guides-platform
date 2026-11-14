@@ -200,6 +200,22 @@ export function BucketListOverview() {
               <p className="mwg-eyebrow text-[var(--mwg-accent)]">{selected.duration}</p>
               <h2 className="mwg-display-lg mt-3">{selected.title}</h2>
               <p className="mt-4 max-w-[65ch] text-lg text-[var(--mwg-ink-70)]">{selected.subtitle}</p>
+              {selected.slug === "hydra-unlimited" && (
+                <section aria-label="Inselziele rund um Hydra" className="mt-8 grid gap-4 md:grid-cols-3">
+                  <div className="border border-[var(--mwg-line)] bg-white p-5">
+                    <h3 className="text-lg font-semibold">Hydra · Hauptziel</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--mwg-ink-70)]">Autofreie Gassen, Hafen, Wassertaxis und Vlychos-Strand. Hier bleibt genügend Zeit für spontane Entdeckungen.</p>
+                  </div>
+                  <div className="border border-[var(--mwg-line)] bg-white p-5">
+                    <h3 className="text-lg font-semibold">Spetses · Ausflugsidee</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--mwg-ink-70)]">Dapia, historische Häuser, Pferdekutschen und Strand. Eigenständiges Inselziel – nur einplanen, wenn eine geeignete Verbindung und genügend Zeit vorhanden sind.</p>
+                  </div>
+                  <div className="border border-[var(--mwg-line)] bg-white p-5">
+                    <h3 className="text-lg font-semibold">Poros · Ausflugsidee</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--mwg-ink-70)]">Hafen, Altstadt und Aussichtspunkte. Als Alternative zu einem weiteren Hydra-Tag, vorbehaltlich geprüfter Fährverbindungen.</p>
+                  </div>
+                </section>
+              )}
               {selected.slug === "mailand-unlimited" ? <MilanMagazine /> : (
                 <div className="mt-12 space-y-12">
                   <section aria-label="Reisecharakter" className="grid gap-4 sm:grid-cols-3">
