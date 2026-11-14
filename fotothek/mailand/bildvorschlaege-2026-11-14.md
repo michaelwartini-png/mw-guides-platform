@@ -65,3 +65,19 @@ Neue Uploads, Bildinhalte visuell eingeordnet. **Keine Rechtefreigabe**; Origina
 | 39 | `Mailänder_Dom_Dach_a.jpg` | Mailand | Domterrasse mit Besuchern und Fialen | Kandidat | offen |
 
 **Stand nach Lieferung 3:** 39 Uploads insgesamt; zuvor 28 Uploads und vorläufig 21 verschiedene Motive. Die 11 neuen Dateien sind noch nicht technisch auf Dubletten geprüft. Das ausdrücklich ausgeschlossene Bergamo-Panorama bleibt ausgeschlossen. Dateinamen und Bildansicht sind keine Lizenznachweise.
+
+## Vierte Lieferung – 7 Dateien (14.11.2026)
+
+**Alle Lizenzen offen.** Zwei Verona-Motive, ein Bergamo-Motiv und vier Turin-Motive. Turin ist nicht automatisch Teil des Reiseplans. Das Bergamo-Sonnenaufgangsbild ist ein **Kandidat**, keine endgültige Bildfreigabe.
+
+| Nr. | Datei | Ort | Bildinhalt | Redaktioneller Hinweis | Lizenzstatus |
+|---|---|---|---|---|---|
+| 40 | `Verona_il_Sole_che_cala.jpg` | Verona | Sonnenuntergang über der Etsch und Ponte Pietra | Großes Stimmungsbild | offen |
+| 41 | `Piazza_Castello_Turin_Italy_27-12-2021.jpg` | Turin | Piazza Castello mit Menschen | Außerhalb der bisherigen Ausflugsroute | offen |
+| 42 | `Sunrise_at_Bergamo_old_town,_Lombardy,_Italy.jpg` | Bergamo | Altstadt im warmen Sonnenaufgangslicht | Favorit als Ersatzkandidat; noch nicht freigegeben | offen |
+| 43 | `Tram_in_Via_Po,_Turin_(Italy,_2020).jpg` | Turin | Straßenbahn und festliche Lichter | Außerhalb der bisherigen Ausflugsroute | offen |
+| 44 | `Turin,_Italy…City_highlights_(10830904545).jpg` | Turin | Nächtliche Piazza San Carlo | Außerhalb der bisherigen Ausflugsroute | offen |
+| 45 | `Turin_Montage.png` | Turin | Collage mit Stadtansichten | Rechte aller Teilbilder prüfen | offen |
+| 46 | `Verona_0001.jpg` | Verona | Gasse mit Glockenturm | Atmosphärisches Stadtmotiv | offen |
+
+**Gesamtstand:** 46 Uploads in vier Lieferungen (18 + 10 + 11 + 7). Davon mindestens sieben mutmaßliche Wiederholungen aus Lieferung 2; technische Dublettenprüfung steht aus. Originale sind im Chat hochgeladen, **nicht als Binärdateien in diesem GitHub-Verzeichnis**. Das zuvor abgelehnte Bergamo-Panorama bleibt ausgeschlossen.
