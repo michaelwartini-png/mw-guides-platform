@@ -20,11 +20,21 @@ export default function MilanMagazinePreview() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
         <div className="relative flex min-h-[470px] flex-col justify-end px-6 pb-12 text-white sm:min-h-[650px] sm:px-14 sm:pb-16">
           <p className="text-xs uppercase tracking-[0.35em] text-[#f3d6a7]">Mailand Unlimited · Europa Bucket List 2027</p>
-          <h1 className="mt-5 max-w-5xl font-serif text-5xl leading-[1.03] sm:text-7xl lg:text-8xl">Sieben Tage.<br/>Sieben andere Welten.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">Mailand ist unsere Basis. Dahinter beginnt ein Norditalien, das wir jeden Morgen neu entdecken können.</p>
+          <h1 className="mt-5 max-w-5xl font-serif text-5xl leading-[1.03] sm:text-7xl lg:text-8xl">Ein Hotel in Mailand.<br/>Ganz Norditalien vor uns.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">Heute über den Dächern des Doms. Morgen auf einem Schiff zwischen Bergen. Übermorgen ein italienischer Abend in Bergamo. Wir bleiben frei – und entdecken jeden Tag eine andere Welt.</p>
         </div>
       </div>
       <p className="mt-2 px-1 text-xs text-stone-500">Vorhandenes Foto der ursprünglichen Mailand-Vorlage; Bildrechte und Quellenangabe vor einer Veröffentlichung gesondert prüfen.</p>
+    </section>
+    <section aria-label="Die Reise in drei Bildern" className="mx-auto max-w-6xl px-5 pb-16 pt-16 sm:px-10 sm:pt-24">
+      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Mailand Unlimited · Eine Reise, viele Möglichkeiten</p>
+      <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Nicht möglichst viel sehen. Sondern möglichst viel erleben.</h2>
+      <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Mailand ist nicht nur unser Bahnhof, sondern unser Zuhause auf Zeit. Die Stadt gehört uns – und die Seen, Altstädte und Berge Norditaliens sind spontane Möglichkeiten, keine Pflichttermine.</p>
+      <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="border-t border-stone-300 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">01 · Stadtgefühl</span><h3 className="mt-3 font-serif text-3xl">Mailand entdecken.</h3><p className="mt-3 text-stone-600">Domterrassen, Gassen, Plätze – und Zeit für das Unerwartete.</p></div>
+        <div className="border-t border-stone-300 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">02 · Wasser & Weite</span><h3 className="mt-3 font-serif text-3xl">Einfach aufs Schiff.</h3><p className="mt-3 text-stone-600">Comer See oder Lago Maggiore. Der schönste Weg ist manchmal übers Wasser.</p></div>
+        <div className="border-t border-stone-300 pt-5"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">03 · Andere Welten</span><h3 className="mt-3 font-serif text-3xl">Jeden Tag neu wählen.</h3><p className="mt-3 text-stone-600">Bergamo, Bologna, Parma, Verona oder Lugano – ganz ohne Abhakliste.</p></div>
+      </div>
     </section>
     <nav aria-label="Mailand-Magazin – Abschnitte" className="sticky top-0 z-30 border-b border-stone-300 bg-[#f7f4ec]/95 px-4 py-3 backdrop-blur">
       <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto text-xs font-semibold sm:text-sm">
@@ -48,19 +58,19 @@ export default function MilanMagazinePreview() {
       </div>
       <div className="mt-24 grid gap-10 md:grid-cols-2 md:items-center">
         <div className="md:order-2">
-          <figure><div className="overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-bergamo.jpg" alt="Bergamo – historische Oberstadt" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div><figcaption className="mt-4 font-serif text-2xl italic">Ein paar Stationen weiter. Und plötzlich Mittelalter.</figcaption></figure>
+          <figure><div className="overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-bergamo.jpg" alt="Bergamo – historische Oberstadt" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div><figcaption className="mt-4 font-serif text-2xl italic">Ein Abend in Bergamo. Und plötzlich möchte man bleiben.</figcaption></figure>
         </div>
         <div className="max-w-md md:order-1 md:pl-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">02 · Über den Dächern von Bergamo</p>
-          <h3 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Eine Stadt über der Stadt.</h3>
-          <p className="mt-6 text-lg leading-relaxed text-stone-600">Die Standseilbahn hebt uns aus dem Alltag direkt in die Città Alta: Stadtmauern, verwinkelte Gassen und ein Blick über die Dächer.</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">02 · Ein italienischer Abend</p>
+          <h3 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Wenn die Altstadt zu leuchten beginnt.</h3>
+          <p className="mt-6 text-lg leading-relaxed text-stone-600">Die Standseilbahn bringt uns in die Città Alta. Dann geht es zu Fuß durch die Gassen bis zur Piazza Vecchia. Kein Pflichtprogramm – nur ein Abend, der länger dauern darf.</p>
           <p className="mt-5 text-sm text-stone-500">Bahn + Standseilbahn · Betriebszeiten prüfen</p>
         </div>
       </div>
       <div className="mt-24 bg-[#263b3a] px-6 py-12 text-[#f7f4ec] sm:px-12 sm:py-16">
-        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">03 · Das Abenteuer beginnt am Bahnhof</p>
-        <h3 className="mt-5 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Wohin fahren wir heute?</h3>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Ein Bahnhof als Ausgangspunkt: Die nächste Geschichte wartet vielleicht nur eine Zugfahrt entfernt.</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">03 · Unsere Freiheit beginnt in Mailand</p>
+        <h3 className="mt-5 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Sieben Tage. Kein Tag wie der andere.</h3>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Vom Bahnhof aus liegen Seen, historische Städte und sogar die Schweiz in Reichweite. Aber manchmal bleiben wir einfach in Mailand – und das ist genauso richtig.</p>
         <figure className="mt-9"><div className="overflow-hidden bg-stone-700"><img src="/images/explore-trips/mailand-centrale.jpg" alt="Milano Centrale – Ausgangspunkt zahlreicher Zugausflüge" loading="lazy" className="aspect-[16/9] w-full object-cover" /></div><figcaption className="mt-3 text-sm italic text-white/70">Milano Centrale · Ausgangspunkt unserer Tagesausflüge</figcaption></figure>
       </div>
     </section>
@@ -78,7 +88,7 @@ export default function MilanMagazinePreview() {
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {[
             {num:"01",place:"Lago Maggiore · Stresa",title:"Die Insel, auf der das Leben weitergeht",copy:"Zwischen den prachtvollen Palästen liegt die Isola dei Pescatori: enge Gassen, Stege und der Blick zurück über das Wasser. Als Tagesausflug mit Bahn und Schiff.",detail:"Schiffssaison und Rückfahrt ab Stresa prüfen",href:"https://www.navigazionelaghi.it/en/tickets-and-timetables-lake-maggiore/",link:"Offizielle Schifffahrt"},
-            {num:"02",place:"Bergamo Alta",image:"/images/explore-trips/mailand-bergamo.jpg",title:"Unter der Stadt liegt eine zweite Stadt",copy:"Krypten, Zisternen und verborgene Räume erzählen von einem Bergamo, das oberhalb der Erde kaum jemand vermutet. Die besondere Führung ist terminabhängig.",detail:"Nur bei bestätigtem Führungstermin",href:"https://www.visitbergamo.net/es/oggetto/bergamo-sotterranea/",link:"Visit Bergamo"},
+            {num:"02",place:"Bergamo Alta",image:"/images/explore-trips/mailand-bergamo.jpg",title:"Ein italienischer Abend über den Dächern",copy:"Mit der Standseilbahn in die Città Alta, durch verwinkelte Gassen zur Piazza Vecchia – und bleiben, bis die Fassaden im Abendlicht leuchten. Ein Ausflug, der nicht nach einer Checkliste verlangt.",detail:"Für einen langen Abend Rückfahrt und Standseilbahn prüfen",href:"https://www.visitbergamo.net/",link:"Visit Bergamo"},
             {num:"03",place:"Bologna",title:"Die Stadt mit dem verborgenen Wasser",copy:"Nicht nur Arkaden und Türme: Historische Kanäle und Wasserwege haben Bologna geprägt. Die Untergrundführungen sind selten; der Spaziergang auf den Spuren der Kanäle bleibt die Alternative.",detail:"Untergrundtour nur bei bestätigtem Angebot",href:"https://www.bolognawelcome.com/en/events/miscellaneous/bologna-underground",link:"Bologna Welcome"},
             {num:"04",place:"Parma",title:"Ein Theater wie eine Zeitmaschine",copy:"Im Teatro Farnese wird barocke Architektur zur Bühne. Ein außergewöhnlicher Raum, den wir mit einem entspannten Altstadttag verbinden können.",detail:"Öffnungszeiten des Complesso della Pilotta prüfen",href:"https://complessopilotta.it/",link:"Complesso della Pilotta"},
             {num:"05",place:"Verona",title:"Über den Dächern statt vor dem Balkon",copy:"Die Standseilbahn zum Castel San Pietro führt zu einem anderen Verona: Dächer, Fluss und Stadtlandschaft statt der üblichen Fotostopps.",detail:"Betriebszeiten der Funicolare prüfen",href:"https://www.tourism.verona.it/castel-san-pietro",link:"Verona Tourismus"},
