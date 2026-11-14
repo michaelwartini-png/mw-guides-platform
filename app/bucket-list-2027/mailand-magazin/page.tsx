@@ -28,7 +28,7 @@ export default function MilanMagazinePreview() {
     </section>
     <nav aria-label="Mailand-Magazin – Abschnitte" className="sticky top-0 z-30 border-b border-stone-300 bg-[#f7f4ec]/95 px-4 py-3 backdrop-blur">
       <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto text-xs font-semibold sm:text-sm">
-        {[["#konzept","Reisekonzept"],["#bildstrecke","Bildgeschichte"],["#entdeckungen","Besondere Erlebnisse"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"],["#ausfluege","Alle Ausflüge"],["#reiseplanung","Ziele auswählen"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
+        {[["#konzept","Reisekonzept"],["#bildstrecke","Bildgeschichte"],["#entdeckungen","Besondere Erlebnisse"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"],["#ausfluege","Ausflugswahl"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
       </div>
     </nav>
     <section id="konzept" className="scroll-mt-24 mx-auto max-w-4xl px-6 py-20 text-center">
@@ -65,19 +65,15 @@ export default function MilanMagazinePreview() {
       <div className="mt-24 bg-[#263b3a] px-6 py-12 text-[#f7f4ec] sm:px-12 sm:py-16">
         <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">03 · Das Abenteuer beginnt am Bahnhof</p>
         <h3 className="mt-5 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Wohin fahren wir heute?</h3>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Lago Maggiore und die Borromäischen Inseln? Bologna mit seinen Arkaden? Verona, Parma, Modena, Pavia – oder über die Grenze nach Lugano? Unser schönster Luxus ist die Auswahl.</p>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Auf den Anzeigetafeln steht nicht nur das nächste Ziel. Sie zeigen Möglichkeiten: Wasser, Berge, Altstädte und Entdeckungen, für die ein einziger Tag genügt.</p>
         <figure className="mt-9"><div className="overflow-hidden bg-stone-700"><img src="/images/explore-trips/mailand-centrale.jpg" alt="Milano Centrale – Ausgangspunkt zahlreicher Zugausflüge" loading="lazy" className="aspect-[16/9] w-full object-cover" /></div><figcaption className="mt-3 text-sm italic text-white/70">Milano Centrale. Nicht nur ein Bahnhof. Das Tor zu vielen Möglichkeiten.</figcaption></figure>
-      </div>
-      <div className="mt-24 grid gap-9 md:grid-cols-12 md:items-center">
-        <div className="md:col-span-7"><figure><div className="overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-closing.jpg" alt="Norditalien – Landschaft und Reisestimmung" loading="lazy" className="aspect-[16/10] w-full object-cover" /></div><figcaption className="mt-3 text-xs text-stone-500">Vorhandenes Motiv aus der Mailand-Vorlage · Bildrechte vor öffentlicher Veröffentlichung prüfen</figcaption></figure></div>
-        <div className="md:col-span-5"><p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">04 · Und abends?</p><h3 className="mt-4 font-serif text-4xl leading-tight">Zurück nach Mailand. Mit Geschichten im Gepäck.</h3><p className="mt-6 text-lg leading-relaxed text-stone-600">Kein Hotelwechsel. Kein Kofferpacken. Nur die Frage, welcher Ausflug morgen auf uns wartet. Und wenn wir einmal nirgendwohin fahren möchten? Dann gehört der Tag ganz Mailand.</p></div>
       </div>
     </section>
     <section id="bildstrecke" aria-label="Reisestimmungen aus der ursprünglichen Mailand-Vorlage" className="scroll-mt-24 pb-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-10">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
           <div><p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die Bildgeschichte · ein Ausgangspunkt, viele Welten</p><h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Der schönste Reiseplan ist manchmal eine offene Tür.</h2></div>
-          <p className="max-w-xs text-sm leading-relaxed text-stone-600">Drei Stimmungen, die Mailand Unlimited ausmachen: Natur, Stadtgeschichten und die unerwartete Begegnung.</p>
+          <p className="max-w-xs text-sm leading-relaxed text-stone-600">Ein visueller Vorgeschmack auf die Vielfalt jenseits der Stadt.</p>
         </div>
         <div className="grid gap-4 md:grid-cols-12">
           <figure className="group relative overflow-hidden bg-stone-200 md:col-span-7"><img src="/images/explore-trips/mailand-natur.jpg" alt="Naturmotiv aus der bestehenden Mailand-Unlimited-Bildauswahl" loading="lazy" className="aspect-[4/5] h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025] md:aspect-auto"/><figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-6 pb-7 pt-24 text-white"><span className="text-xs uppercase tracking-[0.2em] text-white/75">Natur & Wasser</span><strong className="mt-2 block max-w-lg font-serif text-3xl font-normal leading-tight sm:text-4xl">Einmal abbiegen. Und die Stadt ist ganz weit weg.</strong></figcaption></figure>
@@ -121,7 +117,7 @@ export default function MilanMagazinePreview() {
         <div className="lg:col-span-4">
           <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Sieben Tage · ein Hotel · freie Auswahl</p>
           <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Keine sieben Pflichten. Sieben Möglichkeiten.</h2>
-          <p className="mt-6 leading-relaxed text-stone-600">Dies ist eine Dramaturgie für die Reise, kein Stundenplan. Wir suchen uns aus dem größeren Angebot jeden Tag das aus, worauf wir Lust haben – und behalten Mailand als festen Anker.</p>
+          <p className="mt-6 leading-relaxed text-stone-600">Ein möglicher Wochenrhythmus: bewusst mit Alternativen und freien Entscheidungen statt einem überfüllten Programm.</p>
           <div className="mt-8 border-l-2 border-[#92734e] pl-5 font-serif text-2xl italic leading-snug">Manchmal ist der beste Tagesausflug der, den wir erst beim Frühstück beschließen.</div>
         </div>
         <div className="lg:col-span-8">
@@ -136,7 +132,7 @@ export default function MilanMagazinePreview() {
               {day:"07",heading:"Mailand gehört uns.",text:"Zeit für eine Entdeckung in der Stadt, einen Lieblingsort, einen spontanen Abstecher oder die entspannte Rückreise."}
             ].map(item=><article key={item.day} className="grid gap-3 py-6 sm:grid-cols-[70px_1fr] sm:gap-6"><span className="font-serif text-4xl italic text-[#92734e]">{item.day}</span><div><h3 className="font-serif text-2xl leading-tight sm:text-3xl">{item.heading}</h3><p className="mt-3 max-w-2xl leading-relaxed text-stone-600">{item.text}</p></div></article>)}
           </div>
-          <p className="mt-5 text-sm leading-relaxed text-stone-500">Auswahl, keine bestätigten Termine. Abfahrten, Saisonfahrpläne und Sonderführungen für 2027 vor der Reise neu prüfen. Die ausführliche ursprüngliche Reisevorlage folgt weiter unten.</p>
+          <p className="mt-5 text-sm leading-relaxed text-stone-500">Die Reihenfolge bleibt offen. Saisonfahrpläne und Sonderführungen für 2027 müssen vor der Reise geprüft werden.</p>
         </div>
       </div>
     </section>
@@ -161,9 +157,9 @@ export default function MilanMagazinePreview() {
     <section id="ausfluege" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-20 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die ursprünglichen Reiseziele · frei kombinierbar</p>
       <h2 className="mt-3 font-serif text-4xl sm:text-6xl">Norditalien liegt uns zu Füßen.</h2>
-      <p className="mt-5 max-w-3xl leading-relaxed text-stone-600">Alle ursprünglichen Reiseziele stehen weiterhin zur Auswahl. Die ausführliche Bildgeschichte, der flexible Wochenplan und die praktischen Links sind bereits oben im Magazin integriert – ohne doppelte Abschnitte.</p>
-      <div id="reiseplanung" className="scroll-mt-24"><MilanMagazine magazineMode /></div>
+      <p className="mt-5 max-w-3xl leading-relaxed text-stone-600">Alle Ziele unserer ursprünglichen Vorlage auf einen Blick – zum Vergleichen und Auswählen.</p>
+      <div><MilanMagazine magazineMode /></div>
     </section>
-    <footer className="border-t border-stone-300 px-6 py-10 text-center text-sm text-stone-600">Mailand Unlimited · private, nicht indexierbare Magazin-Vorschau · ursprüngliches Reisekonzept bewahrt</footer>
+    <footer className="border-t border-stone-300 px-6 py-10 text-center text-sm text-stone-600">Europa Bucket List 2027 · Private Gestaltungsvorschau</footer>
   </main>;
 }
