@@ -1,3 +1,4 @@
+// Netlify branch-preview build trigger — no page content changed (2026-11-14).
 import type { Metadata } from "next";
 import Link from "next/link";
 
