@@ -26,3 +26,22 @@
 | 18 | `Lugano_from_Monte_Bre.jpg` | Lugano | Weitblick über See und Berge | Großes Landschaftsbild | offen |
 
 Das ausdrücklich abgelehnte Bergamo-Panorama bleibt ausgeschlossen. Vor dem Einbau sind sowohl Rechteprüfung als auch Motivfreigabe erforderlich.
+
+## Zweite Lieferung – 10 Dateien (14.11.2026)
+
+Drei neue Motive, sieben erneut hochgeladene Dateien (Dateiidentität/Hashes noch nicht geprüft). Alle **Lizenzprüfung offen**, keine Veröffentlichung.
+
+| Nr. | Datei | Ziel | Motiv | Dublettenhinweis | Lizenzstatus |
+|---|---|---|---|---|---|
+| 19 | `Panoramic_view_of_Como_Lake_(Lago_di_Como),_seen_from_the_mountain_Monte_Grona_-_Plesio_(Como)_2015-10-25.JPG` | Comer See | Weites Panorama vom Monte Grona | Neu | offen |
+| 20 | `See_und_Palme_in_Lugano_2024(1).jpg` | Lugano | Palme vor See und Bergen | Wiederholung Nr. 1 | offen |
+| 21 | `Lugano_from_Monte_Bre(1).jpg` | Lugano | Weitblick über See und Berge | Wiederholung Nr. 18 | offen |
+| 22 | `Milan,_Italy._August_2016._(34379545635)(1).jpg` | Mailand | Navigli bei Nacht | Wiederholung Nr. 13 | offen |
+| 23 | `Milan,_Italy_-_December_2025_-_229(1).jpg` | Mailand | Navigli bei Tag | Wiederholung Nr. 14 | offen |
+| 24 | `Milan,_Italy_-_December_2025_-_245(1).jpg` | Mailand | Innenraum mit technischen Anlagen | Wiederholung Nr. 15 | offen |
+| 25 | `Milan,_Italy_Tram_25_February_2013(1).jpg` | Mailand | Historische weiße Straßenbahn | Wiederholung Nr. 16 | offen |
+| 26 | `Milano_Centrale_Frecciabianca(1).jpg` | Mailand | Zug unter Bahnhofsdach | Wiederholung Nr. 17 | offen |
+| 27 | `Milano_Centrale_railway_station_by_Tanweer.jpg` | Mailand | Züge und Reisende unter Hallendach | Neu | offen |
+| 28 | `Panorama_from_the_cathedral,_Milan,_Italy_LOC_4711357943.jpg` | Mailand | Historische kolorierte Panoramaaufnahme | Neu | offen |
+
+**Zwischenstand:** 28 hochgeladene Dateien, voraussichtlich 21 verschiedene Motive (Dubletten nur visuell/namensbasiert erkannt). Bilddateien verbleiben im Chat; dieses Register enthält Metadaten und Dateinamen. Keine Rechtefreigabe allein aus Dateinamen ableiten.
