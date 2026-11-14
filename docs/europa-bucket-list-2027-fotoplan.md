@@ -12,7 +12,7 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 | Bratislava–Wien–Wachau | 4 (lokal) | Twin City Liner, Wiener Parlament, UNO City (Außenansicht), Wachau-Schiff, Bratislava Burg |
 | Preveza & Lefkada | 6 (Commons) | Nikopolis antike Ruinen (Museum bereits bebildert), Nidri Bootsausflug (Hafen bereits bebildert), Lefkada-Stadt, Preveza Altstadt |
 | Bodensee Unlimited | 5 (4 lokal + 1 Commons) | Rheinfall eingebunden; weitere Motive Mainau, Reichenau, Stein am Rhein, Lindau, Bregenz/Pfänder |
-| Hydra Unlimited | 3 (Commons) | Autofreie Gassen, Wassertaxis, Buchten/Badestellen, optional Poros/Spetses (klar als Ausflug) |
+| Hydra Unlimited | 3 (Commons); Wassertaxis und Vlychos für Import vorgemerkt | Autofreie Gassen, Spetses-Hafen/Altstadt, optional Poros-Hafen; Spetses und Poros ausdrücklich als mögliche Ausflugsziele kennzeichnen |
 
 ## Bildredaktion
 - Ziel: pro Reise **8–12 unterschiedliche, aussagekräftige Fotos**, kein starres Mindestmaß auf Kosten der Qualität.
@@ -41,3 +41,11 @@ Stand: 13.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 ## Letzter bestätigter Import
 
 - **Bodensee / Rheinfall:** `Rhine Falls in Switzerland.jpg` → `rheinfall-schaffhausen`; GitHub Actions Lauf 15 erfolgreich, Bild mit Lizenznachweis in `credits.json`, Galerie auf fünf Fotos erweitert und Playwright-Erwartung aktualisiert. Browserbasierte Testausführung steht weiterhin aus.
+
+## Hydra Unlimited – Ausflugsziele fotografisch berücksichtigen
+
+- **Hydra (Hauptziel):** Hafen, autofreie Gassen, Wassertaxis, Vlychos-Strand und weitere Buchten.
+- **Spetses (optionaler Ausflug):** Hafen/Dapia, historische Gassen und Küstenmotiv. In der Galerie mit „Ausflugsidee: Spetses“ kennzeichnen; nicht als Hydra-Motiv ausgeben.
+- **Poros (optionaler Ausflug):** Hafenansicht oder Altstadt, ebenfalls als eigenständiges mögliches Ausflugsziel kennzeichnen.
+- **Redaktionelle Auswahl:** etwa 6–8 Hydra-Motive und 2–3 Ausflugsmotive, abhängig von verifizierbaren Dateien, Reiseverbindungen und verfügbarer Zeit. Keine konkrete Fährverbindung oder Tagesausflugsdauer ohne Prüfung behaupten.
+- **Status:** Für Spetses und Poros sind noch keine konkreten lizenzierten Fotos importiert. Vor Eintrag in das Importskript Dateiname, Ort, Urheber und Lizenz prüfen.
