@@ -49,6 +49,7 @@ export default function HydraMagazinePreview() {
           { href: "#fotos", label: "Reisefotos" },
           { href: "#besonderes", label: "Besondere Erlebnisse" },
           { href: "#inselroute", label: "Inselkombinationen" },
+          { href: "#unterkuenfte", label: "Besonders übernachten" },
           { href: "#reiseplanung", label: "Fähren & Tipps" }
         ].map(item => <a key={item.href} href={item.href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 text-[#26312f] transition-colors hover:bg-[#eae4d8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#92734e]">{item.label}</a>)}
       </div>
@@ -112,6 +113,30 @@ export default function HydraMagazinePreview() {
         <div className="border border-stone-300 bg-white/70 p-7"><p className="text-xs uppercase tracking-widest text-[#92734e]">Variante B · Inselhopping</p><h3 className="mt-3 font-serif text-3xl">Hydra + Spetses + Poros</h3><p className="mt-4 leading-relaxed text-stone-600">Mehrere Übernachtungsorte statt riskanter Tagesrückfahrten. Die konkrete Reihenfolge, Gepäcklogistik und Aufenthaltsdauer erst anhand der Fahrpläne für den gewünschten Reisezeitraum festlegen.</p></div>
       </div>
       <p className="mt-7 text-sm text-stone-600">Quellen: <a className="underline underline-offset-2" href="https://www.gtp.gr/ferries/hydraport/spetsesport" target="_blank" rel="noopener noreferrer">Hydra–Spetses Fahrpläne</a> · <a className="underline underline-offset-2" href="https://www.gtp.gr/ferries/spetsesport/porosislandport" target="_blank" rel="noopener noreferrer">Spetses–Poros Fahrpläne</a> · <a className="underline underline-offset-2" href="https://www.cotommatae.gr/hotel/" target="_blank" rel="noopener noreferrer">Cotommatae 1810: Unterkunft und Erlebnisse</a>. Die angezeigten Fahrpläne decken bislang nicht die gesamte Saison 2027 ab.</p>
+    </section>
+    <section id="unterkuenfte" className="scroll-mt-24 bg-[#eee8dd] px-5 py-20 sm:px-10">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Übernachten mit Geschichte</p>
+        <h2 className="mt-4 max-w-4xl font-serif text-4xl sm:text-6xl">Nicht irgendein Zimmer. Ein Stück Hydra.</h2>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Drei ungewöhnliche Unterkünfte aus unserer Recherche. Kein Hotelranking und keine Buchungsempfehlung ohne Preisvergleich: Hier zählt zuerst, was den Aufenthalt besonders machen könnte.</p>
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {[
+            { title: "Cotommatae Hydra 1810", label: "Historisches Kapitänshaus", description: "Ein restauriertes Haus aus dem 19. Jahrhundert mit traditioneller Inselarchitektur. Besonders interessant: Neben der Übernachtung können Gäste nach privaten Bootsausflügen fragen.", audience: "Für Reisende, die Geschichte und individuelle Ausflüge verbinden möchten.", url: "https://www.cotommatae.gr/", source: "Website der Unterkunft", status: "Zimmer, Bootstouren und Preise 2027 anfragen" },
+            { title: "Orloff Boutique Hotel", label: "Historisches Boutiquehotel", description: "Ein Hotel mit historischem Charakter und Innenhof. Die Angaben zu Baugeschichte und Ausstattung stammen zunächst aus der externen Recherche und müssen anhand der Unterkunft selbst bestätigt werden.", audience: "Für Reisende, die ein kleines Haus mit besonderer Atmosphäre suchen.", url: "https://www.orloff.gr/", source: "Anbieter-Website (Erreichbarkeit prüfen)", status: "Historie, Verfügbarkeit und Preise prüfen" },
+            { title: "Economou Mansion", label: "Kapitänshaus für eine Gruppe?", description: "Ein in der Recherche genanntes historisches Haus mit Aussicht. Die behauptete Kapazität von bis zu acht Gästen und die Buchbarkeit für 2027 sind noch nicht unabhängig bestätigt.", audience: "Als mögliche Alternative für eine kleine Reisegruppe statt mehrerer Hotelzimmer.", url: "https://www.santorinisecrets.com/hotels/economou-mansion/", source: "Unterkunftsverzeichnis (nicht Direktanbieter)", status: "Existenz, Anbieter, Kapazität und Preis verifizieren" }
+          ].map(item => <article key={item.title} className="flex flex-col border border-stone-300 bg-[#faf8f3] p-6 sm:p-7">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#92734e]">{item.label}</p>
+            <h3 className="mt-4 font-serif text-3xl leading-tight">{item.title}</h3>
+            <p className="mt-5 leading-relaxed text-stone-700">{item.description}</p>
+            <p className="mt-4 text-sm text-stone-600"><strong>Besonders geeignet:</strong> {item.audience}</p>
+            <div className="mt-auto pt-7">
+              <p className="border-t border-stone-300 pt-4 text-xs text-stone-600"><strong>Prüfstatus:</strong> {item.status}</p>
+              <a className="mt-4 inline-block font-semibold underline underline-offset-4" href={item.url} target="_blank" rel="noopener noreferrer">{item.source} ↗</a>
+            </div>
+          </article>)}
+        </div>
+        <p className="mt-8 text-sm leading-relaxed text-stone-600">Redaktioneller Stand November 2026. Diese Unterkünfte sind Recherchekandidaten, keine geprüften Buchungsangebote. Wir zeigen bewusst keine fremden Hotelfotos ohne geklärte Bildrechte. Vor der Buchung Betreiber, Ausstattung, Stornierungsbedingungen und 2027-Preise prüfen.</p>
+      </div>
     </section>
     <section id="reiseplanung" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-20 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">05 · Gut vorbereitet, entspannt unterwegs</p>
