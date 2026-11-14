@@ -1,4 +1,4 @@
-const photos = [
+type Photo = { id: number; place: string; file: string; title: string; verified: boolean };\nconst photos: Photo[] = [
   {
     "id": 1,
     "place": "Lugano",
@@ -275,8 +275,8 @@ export default function MilanPhotoLibrary() {
    <p className="mt-12 text-xs uppercase tracking-[0.2em]">Europa Bucket List 2027 · Bildredaktion</p>
    <h1 className="mt-3 font-serif text-5xl md:text-7xl">Mailand-Fotothek</h1>
    <p className="mt-5 max-w-3xl text-lg">38 Bildvorschläge aus deinen Uploads. Große Vorschaubilder, nach Reiseziel geordnet. Die Urheber- und Lizenzprüfung ist noch nicht abgeschlossen; keine Freigabe zur Veröffentlichung.</p>
-   <nav className="my-10 flex flex-wrap gap-3"><a href="#alle" className="rounded-full border px-4 py-2">Alle</a>{places.map(place=><a key={place} href={"#"+place.replaceAll(" ","-")} className="rounded-full border px-4 py-2">{place}</a>)}</nav>
-   <div id="alle">{places.map(place=><section key={place} id={place.replaceAll(" ","-")} className="mb-20 scroll-mt-8"><h2 className="mb-7 border-b pb-3 font-serif text-4xl">{place}</h2><div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">{photos.filter(p=>p.place===place).map(p=><article key={p.id}><a href={sourceUrl(p.file)} target="_blank" rel="noopener noreferrer" className="block overflow-hidden bg-[#e2ddd2]"><img src={photoUrl(p.file)} alt={p.title} loading="lazy" className="aspect-[4/3] w-full object-cover" /></a><div className="mt-3 flex items-start justify-between gap-3"><div><p className="text-xs opacity-60">#{p.id} · Lizenzprüfung offen</p><h3 className="mt-1 font-serif text-xl">{p.title}</h3></div><a className="shrink-0 text-sm underline" href={sourceUrl(p.file)} target="_blank" rel="noopener noreferrer">Original ↗</a></div></article>)}</div></section>)}</div>
+   <nav className="my-10 flex flex-wrap gap-3"><a href="#alle" className="rounded-full border px-4 py-2">Alle</a>{places.map(place=><a key={place} href={"#"+place.replace(/ /g,"-")} className="rounded-full border px-4 py-2">{place}</a>)}</nav>
+   <div id="alle">{places.map(place=><section key={place} id={place.replace(/ /g,"-")} className="mb-20 scroll-mt-8"><h2 className="mb-7 border-b pb-3 font-serif text-4xl">{place}</h2><div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">{photos.filter(p=>p.place===place).map(p=><article key={p.id}><a href={sourceUrl(p.file)} target="_blank" rel="noopener noreferrer" className="block overflow-hidden bg-[#e2ddd2]"><img src={photoUrl(p.file)} alt={p.title} loading="lazy" className="aspect-[4/3] w-full object-cover" /></a><div className="mt-3 flex items-start justify-between gap-3"><div><p className="text-xs opacity-60">#{p.id} · Lizenzprüfung offen</p><h3 className="mt-1 font-serif text-xl">{p.title}</h3></div><a className="shrink-0 text-sm underline" href={sourceUrl(p.file)} target="_blank" rel="noopener noreferrer">Original ↗</a></div></article>)}</div></section>)}</div>
   </div>
  </main>;
 }
