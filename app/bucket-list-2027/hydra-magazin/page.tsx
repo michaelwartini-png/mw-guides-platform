@@ -50,6 +50,7 @@ export default function HydraMagazinePreview() {
           { href: "#besonderes", label: "Besondere Erlebnisse" },
           { href: "#inselroute", label: "Inselkombinationen" },
           { href: "#unterkuenfte", label: "Besonders übernachten" },
+          { href: "#wochenidee", label: "7-Tage-Idee" },
           { href: "#reiseplanung", label: "Fähren & Tipps" }
         ].map(item => <a key={item.href} href={item.href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 text-[#26312f] transition-colors hover:bg-[#eae4d8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#92734e]">{item.label}</a>)}
       </div>
@@ -136,6 +137,29 @@ export default function HydraMagazinePreview() {
           </article>)}
         </div>
         <p className="mt-8 text-sm leading-relaxed text-stone-600">Redaktioneller Stand November 2026. Cotommatae und Orloff wurden anhand ihrer eigenen Websites geprüft; Economou Mansion bleibt ein nicht unabhängig bestätigter Recherchekandidat. Keine der Unterkünfte wurde auf konkrete Verfügbarkeit 2027 geprüft. Wir zeigen bewusst keine fremden Hotelfotos ohne geklärte Bildrechte. Vor der Buchung Betreiber, Ausstattung, Stornierungsbedingungen und 2027-Preise prüfen.</p>
+      </div>
+    </section>
+    <section id="wochenidee" className="scroll-mt-24 bg-[#263b3a] px-5 py-20 text-[#f7f4ec] sm:px-10">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">Eine Woche, viele Möglichkeiten</p>
+        <h2 className="mt-4 max-w-4xl font-serif text-4xl sm:text-6xl">Sieben Tage. Kein Pflichtprogramm.</h2>
+        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-white/75">Ein flexibler Reiseentwurf mit Hydra als festem Standort. Die Erlebnisse sind Vorschläge, keine bereits buchbaren Termine. Schlechtes Wetter, Fährpläne und persönliche Vorlieben dürfen den Plan jederzeit verändern.</p>
+        <ol className="mt-10 grid gap-4 md:grid-cols-2">
+          {[
+            { day: "Tag 1", name: "Ankommen, ohne Eile", detail: "Fähre ab Piräus, einchecken, den Hafen zu Fuß erkunden und den ersten Abend am Wasser verbringen." },
+            { day: "Tag 2", name: "Hydra vom Wasser aus", detail: "Wassertaxi und Badestopp an einer geeigneten Bucht. Für Zourva unbedingt Hin- und Rückfahrt vorab absprechen." },
+            { day: "Tag 3", name: "Geschichten hinter den Fassaden", detail: "Historische Gassen, Kapitänshaus-Architektur und ein Spaziergang Richtung Kamini. Zeit für spontane Entdeckungen lassen." },
+            { day: "Tag 4", name: "Ein außergewöhnlicher Bootstag", detail: "Bei passendem Wetter eine Inselrundfahrt anfragen. Der erwähnte Höhlenstopp ist nicht garantiert." },
+            { day: "Tag 5", name: "Wandern oder einfach bleiben", detail: "Einen passenden Weg bei Hydra Trails auswählen – oder bewusst einen freien Strand- und Hafentag einlegen." },
+            { day: "Tag 6", name: "Optionale Nachbarinsel", detail: "Spetses oder Poros nur dann als Tagesausflug einplanen, wenn eine passende Rückfahrt bestätigt ist. Sonst Hydra genießen." },
+            { day: "Tag 7", name: "Abschied mit Puffer", detail: "Rückreise zum Festland; ausreichend Zeit zwischen Fähre und eventueller Weiterreise einplanen." }
+          ].map(item => <li key={item.day} className="border border-white/20 bg-white/5 p-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4bb91]">{item.day}</p>
+            <h3 className="mt-3 font-serif text-2xl">{item.name}</h3>
+            <p className="mt-3 leading-relaxed text-white/75">{item.detail}</p>
+          </li>)}
+        </ol>
+        <div className="mt-8 border-l-2 border-[#d4bb91] pl-5 text-sm leading-relaxed text-white/75"><strong className="text-white">Wenn das Miaoulia-Festival stattfindet:</strong> Den Festabend bewusst freihalten und das Programm erst nach Veröffentlichung der offiziellen Termine einbauen. Keine festen Daten für 2027 voraussetzen.</div>
       </div>
     </section>
     <section id="reiseplanung" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-20 sm:px-10">
