@@ -81,7 +81,7 @@ export default function HydraMagazinePreview() {
       <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl sm:text-6xl">Und irgendwann wird aus einem Tag eine Erinnerung.</h2>
       <p className="mx-auto mt-6 max-w-2xl text-stone-600">Das ausgewählte Sonnenuntergangsfoto bei Kamini wird hier ergänzt, sobald die Originaldatei erfolgreich und lizenzgeprüft importiert ist. Bis dahin zeigen wir bewusst kein Ersatzbild.</p>
     </section>
-    <section id="besonderes" className="scroll-mt-24 ="bg-[#243d3c] px-5 py-20 text-[#f7f4ec] sm:px-10">
+    <section id="besonderes" className="scroll-mt-24 bg-[#243d3c] px-5 py-20 text-[#f7f4ec] sm:px-10">
       <div className="mx-auto max-w-6xl">
         <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">04 · Das Besondere entdecken</p>
         <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Nicht die üblichen Top 10. Sondern Geschichten, die bleiben.</h2>
@@ -103,7 +103,7 @@ export default function HydraMagazinePreview() {
         <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/65">Redaktioneller Recherche-Stand: November 2026. Wassertaxi-Tarif, G&G-Rundfahrt und Miaoulia-Tradition wurden anhand von Hydra Direct bzw. Visit Greece gegengeprüft; die übrigen Ideen sind weiterhin Recherchekandidaten. Preise, Termine, Fahrpläne und Verfügbarkeit für 2027 müssen beim Anbieter bestätigt werden.</p>
       </div>
     </section>
-    <section id="inselroute" className="scroll-mt-24 ="mx-auto max-w-6xl px-5 py-16 sm:px-10">
+    <section id="inselroute" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-16 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die clevere Kombination</p>
       <h2 className="mt-4 max-w-4xl font-serif text-4xl sm:text-5xl">Hydra als Basis – oder drei Inseln in einer Woche?</h2>
       <p className="mt-5 max-w-3xl leading-relaxed text-stone-600">Zwei unterschiedliche Reiseideen, keine starre Route: Bleibe auf Hydra und plane nur bei passenden Rückfahrten Ausflüge. Oder kombiniere mehrere Übernachtungsorte, um Spetses und Poros ohne Zeitdruck zu erleben.</p>
@@ -113,7 +113,7 @@ export default function HydraMagazinePreview() {
       </div>
       <p className="mt-7 text-sm text-stone-600">Quellen: <a className="underline underline-offset-2" href="https://www.gtp.gr/ferries/hydraport/spetsesport" target="_blank" rel="noopener noreferrer">Hydra–Spetses Fahrpläne</a> · <a className="underline underline-offset-2" href="https://www.gtp.gr/ferries/spetsesport/porosislandport" target="_blank" rel="noopener noreferrer">Spetses–Poros Fahrpläne</a> · <a className="underline underline-offset-2" href="https://www.cotommatae.gr/hotel/" target="_blank" rel="noopener noreferrer">Cotommatae 1810: Unterkunft und Erlebnisse</a>. Die angezeigten Fahrpläne decken bislang nicht die gesamte Saison 2027 ab.</p>
     </section>
-    <section id="reiseplanung" className="scroll-mt-24 ="mx-auto max-w-6xl px-5 py-20 sm:px-10">
+    <section id="reiseplanung" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-20 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">05 · Gut vorbereitet, entspannt unterwegs</p>
       <h2 className="mt-3 max-w-4xl font-serif text-4xl sm:text-6xl">Alles Wichtige. An einem Ort.</h2>
       <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Die schönsten Reiseideen sind nur der Anfang. Hier findest du die nützlichen Originalquellen für Fähren, Inselinformationen, Wege und Angebote – mit einer kurzen Erklärung, wann sich welcher Link lohnt.</p>
