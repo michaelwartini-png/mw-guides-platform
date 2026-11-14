@@ -26,6 +26,26 @@ Stand: 14.11.2026. Dies ist eine **Motiv- und Beschaffungsliste**, keine Liste b
 - **Hydra/Spetses/Poros:** warmes Hafenlicht, Badebuchten, autofreie Gassen, Wassertaxis und Pferdekutschen bevorzugen; Spetses und Poros als eigenständige optionale Ausflugsziele ausweisen.
 - **Qualitätskontrolle:** vorhandene Fotos bei Gelegenheit nach emotionaler Wirkung neu bewerten; Import allein ist noch keine finale Bildauswahl.
 
+## Rückwirkender Bild-Audit – alle neun Reisen
+
+**Verbindlich:** Die emotionale Bildstrategie gilt ausnahmslos für alle bereits eingebundenen Bilder, einschließlich Hero-Motiven, lokalen Dateien und Commons-Fotos. Die folgenden Punkte sind eine **redaktionelle Vorprüfung anhand von Motiven und Galeriebeschreibungen**, keine abgeschlossene visuelle Einzelbewertung der tatsächlichen Bilddateien. Entscheidungen erst nach Sichtung in voller Größe und Prüfung auf Desktop/Mobil treffen.
+
+| Reise | Vorläufige emotionale Stärken | Gezielt auf Schwächen prüfen / Wunschmotive |
+|---|---|---|
+| Mailand Unlimited | Stresa und Lago Maggiore als Sehnsuchtsraum | Die fünf lokalen Bilder auf Licht/Stimmung prüfen; Borromäische Inseln, Navigli am Abend, Bologna unter Arkaden, kulinarisches Detail ergänzen |
+| Skandinavien Unlimited | Nyhavn und die Nachtfähre als Erlebnisanker | Dom-/Altstadtbilder nicht allein dominieren lassen; Schärenfahrt, Fährdeck bei Abendlicht, Kopenhagen vom Wasser |
+| Norwegen & Lofoten | Reine, Rorbuer und Küstenschiff | Reine/Hamnøya auf Dopplung prüfen; Fjordpanorama, Lichtstimmung und erlebbares Schiffsmotiv priorisieren |
+| Rotterdam Unlimited | Erasmusbrücke, Kubushäuser und Kinderdijk | Zu viele statische Architekturansichten vermeiden; Hafenfahrt, Scheveningen bei Abendlicht, Straßenszene |
+| Portugal Unlimited | Tramlinie 1 und Douro-Boot als konkrete Erlebnisse | Porto-Panoramen auf Wiederholung prüfen; goldenes Douro-Licht, Aussichtsterrasse in Lissabon, lebendige Straßenszene |
+| Bratislava–Wien–Wachau | Donau als verbindendes Reiseerlebnis | Lokale Bilder auf emotionale Qualität prüfen; Twin City Liner, Wachau vom Schiff, Wien am Abend |
+| Preveza & Lefkada | Porto Katsiki, Egremni und Küstenlandschaft | Ähnliche Strandansichten reduzieren; Bootsfahrt ab Nidri, Altstadtgasse/Taverne, antike Ruinen statt nur Museum |
+| Bodensee Unlimited | Mainau, Rheinfall und Zeppelin als Erlebnisanker | Vier lokale Bilder sichten; Abendstimmung am See, Seeterrasse, Aussicht vom Pfänder, Schifffahrt mit Menschenbezug |
+| Hydra Unlimited | Wassertaxi, Vlychos, Spetses-Pferdekutsche und Strand | Hafen-/Ortsbilder auf Wiederholung prüfen; warme Abendstimmung, blühende Gassen, ruhige Badebucht; Spetses/Poros korrekt kennzeichnen |
+
+**Audit je Bild:** 1. emotionaler Ersteindruck (1–5), 2. konkrete Reisesehnsucht (1–5), 3. Unverwechselbarkeit (1–5), 4. redaktionelle Funktion (Hero/Erlebnis/Atmosphäre/Detail), 5. Motivdoppelung, 6. Echtheit und Bildrechte, 7. Entscheidung Behalten / Ersetzen / Ergänzen. Nicht allein aufgrund einer Punktezahl austauschen: Ein sachliches Orientierungsbild kann als Ergänzung sinnvoll bleiben.
+
+**Priorität:** zuerst neun Titelbilder, dann Hydra und Preveza/Lefkada, anschließend die restlichen Galerien. Bis zur tatsächlichen Bildsichtung keine Fotos pauschal als „emotional stark“ oder „schwach“ deklarieren.
+
 ## Bildredaktion
 - Ziel: pro Reise **8–12 unterschiedliche, aussagekräftige Fotos**, kein starres Mindestmaß auf Kosten der Qualität.
 - Mischung: etwa 1 Hero, 2–3 Landschafts-/Stadtpanoramen, 2–3 konkrete Erlebnisse/Verkehrsmittel, 2–3 Details/Kultur.
