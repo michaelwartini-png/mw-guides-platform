@@ -155,9 +155,6 @@ export default function MilanMagazinePreview() {
             <div className="ml-12 mt-5 max-w-xl"><p className="leading-relaxed text-stone-600">{item.copy}</p><p className="mt-4 text-xs text-stone-500">{item.detail}</p><a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-semibold underline decoration-[#92734e] underline-offset-4">{item.link} ↗</a></div>
           </details>)}
         </div>
-            <div className="mx-7 mb-7 mt-8 border-t border-stone-300 pt-5 sm:mx-9 sm:mb-9"><p className="text-xs text-stone-500">{item.detail}</p><a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-semibold underline decoration-[#92734e] underline-offset-4 hover:text-[#92734e]">{item.link} ↗</a></div>
-          </article>)}
-        </div>
         <p className="mt-8 max-w-4xl text-sm leading-relaxed text-stone-600">Redaktioneller Prüfstand: Die genannten Erlebnisse sind Rechercheoptionen, keine für 2027 bestätigten Buchungen. Für mehrere Sonderführungen, Fahrpläne und Preise liegen noch keine verbindlichen Angaben vor. Die Bildredaktion ergänzt nach Rechteprüfung echte Fotos dieser Orte.</p>
       </div>
     </section>

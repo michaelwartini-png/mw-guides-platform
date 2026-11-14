@@ -1,4 +1,5 @@
-type Photo = { id: number; place: string; file: string; title: string; verified: boolean };\nconst photos: Photo[] = [
+type Photo = { id: number; place: string; file: string; title: string; verified: boolean };
+const photos: Photo[] = [
   {
     "id": 1,
     "place": "Lugano",
