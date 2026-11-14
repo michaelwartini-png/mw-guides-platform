@@ -70,6 +70,41 @@ export default function HydraMagazinePreview() {
       <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl sm:text-6xl">Und irgendwann wird aus einem Tag eine Erinnerung.</h2>
       <p className="mx-auto mt-6 max-w-2xl text-stone-600">Das ausgewählte Sonnenuntergangsfoto bei Kamini wird hier ergänzt, sobald die Originaldatei erfolgreich und lizenzgeprüft importiert ist. Bis dahin zeigen wir bewusst kein Ersatzbild.</p>
     </section>
+    <section id="reiseplanung" className="mx-auto max-w-6xl px-5 py-20 sm:px-10">
+      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">04 · Gut vorbereitet, entspannt unterwegs</p>
+      <h2 className="mt-3 max-w-4xl font-serif text-4xl sm:text-6xl">Alles Wichtige. An einem Ort.</h2>
+      <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Die schönsten Reiseideen sind nur der Anfang. Hier findest du die nützlichen Originalquellen für Fähren, Inselinformationen, Wege und Angebote – mit einer kurzen Erklärung, wann sich welcher Link lohnt.</p>
+      <div className="mt-12 grid gap-8 md:grid-cols-2">
+        {[
+          { title: "Fähren & Inselhopping", links: [
+            { name: "Hellenic Seaways · Hydra", url: "https://www.hellenicseaways.gr/en-gb/destinations/hydra-the-lady-of-the-saronic-gulf", desc: "Reederei für die Anreise ab Piräus; konkrete Abfahrten und Tickets direkt prüfen." },
+            { name: "Ferryhopper · Hydra", url: "https://www.ferryhopper.com/en/destinations/greece/hydra", desc: "Verbindungen und Reisedauer vergleichen; auch für Spetses und Poros." },
+            { name: "Ferries.gr · Saronische Inseln", url: "https://www.ferries.gr/en/ferry-companies/hellenic-seaways/route/piraeus-aegina-poros-hydra/", desc: "Routenübersicht Piräus–Poros–Hydra–Spetses. Fahrpläne vor der Buchung erneut prüfen." }
+          ]},
+          { title: "Offizielle Inselinformationen", links: [
+            { name: "Visit Greece · Hydra", url: "https://www.visitgreece.gr/en/mainland/saronic-islands/hydra", desc: "Offizielle touristische Einführung mit Sehenswürdigkeiten und Reisetipps." },
+            { name: "Hydra Trails", url: "https://hydratrails.gr/", desc: "Offizielles Wegenetz mit Wanderungen, Karten und praktischen Informationen." },
+            { name: "Gemeinde Spetses · Besucherportal", url: "https://spetses.gov.gr/en/visitor", desc: "Sehenswürdigkeiten, Strände und Verkehrsinfos für einen optionalen Ausflug." },
+            { name: "Visit Poros · Praktische Infos", url: "https://visitporos.com/useful.html", desc: "Anreise, Verkehr auf Poros und lokale Ansprechpartner." }
+          ]},
+          { title: "Reiseideen & Geheimtipps", links: [
+            { name: "Discover Greece · Hydra (Deutsch)", url: "https://www.discovergreece.com/de/attica/hydra", desc: "Deutschsprachige Inspiration zu Orten, Erlebnissen und Reisezeit." },
+            { name: "Ferryhopper · Hydra-Reiseführer", url: "https://www.ferryhopper.com/en/destinations/greece/hydra", desc: "Neben Fährinfos auch Strände, Fortbewegung und Inselhopping-Ideen." }
+          ]},
+          { title: "Angebote & Preisideen", links: [
+            { name: "Urlaubsguru · Griechenland", url: "https://www.urlaubsguru.de/urlaubsziele/griechenland-urlaub/", desc: "Griechenland-Angebote und Inspiration vergleichen; kein speziell bestätigtes Hydra-Angebot." },
+            { name: "Urlaubspiraten", url: "https://www.urlaubspiraten.de/", desc: "Reisedeals und mögliche Flug- oder Hotelangebote recherchieren; Verfügbarkeit und Hydra-Bezug selbst prüfen." }
+          ]}
+        ].map(group => <div key={group.title} className="border-t border-stone-300 pt-6">
+          <h3 className="font-serif text-2xl sm:text-3xl">{group.title}</h3>
+          <ul className="mt-5 space-y-6">{group.links.map(link => <li key={link.url + link.name}>
+            <a href={link.url} target="_blank" rel="noopener noreferrer" className="font-semibold underline decoration-[#a48965] underline-offset-4 hover:text-[#7b5e38]">{link.name} ↗</a>
+            <p className="mt-1 text-sm leading-relaxed text-stone-600">{link.desc}</p>
+          </li>)}</ul>
+        </div>)}
+      </div>
+      <p className="mt-10 border-t border-stone-300 pt-5 text-sm text-stone-600">Hinweis: Fahrpläne, Preise, saisonale Verbindungen und Angebote ändern sich. Spetses und Poros sind optionale Ziele; passende Hin- und Rückfahrten für deinen Reisetag vorab prüfen. Die Links sind redaktionelle Hinweise, keine bestätigten Buchungen.</p>
+    </section>
     <footer className="mx-auto flex max-w-6xl flex-wrap justify-between gap-4 px-6 py-10 text-sm text-stone-600"><span>Hydra Unlimited · eigenständiger Magazin-Entwurf</span><Link href="/bucket-list-2027?reise=hydra-unlimited" className="underline underline-offset-4">Zur bisherigen Reiseansicht</Link></footer>
   </main>;
 }
