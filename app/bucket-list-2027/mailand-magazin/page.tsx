@@ -8,6 +8,58 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false, nocache: true },
 };
 
+const galleryPhotos = [
+  {
+    "id": "como",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio_and_Lake_Como_from_Menaggio-Varenna_ferry.jpg?width=1280",
+    "source": "https://commons.wikimedia.org/wiki/File:Bellagio_and_Lake_Como_from_Menaggio-Varenna_ferry.jpg",
+    "author": "Daniel Case",
+    "license": "CC BY-SA 3.0"
+  },
+  {
+    "id": "maggiore",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Isole_dei_Pescatori.jpg?width=1280",
+    "source": "https://commons.wikimedia.org/wiki/File:Isole_dei_Pescatori.jpg",
+    "author": "Fawcett5",
+    "license": "Public Domain"
+  },
+  {
+    "id": "bergamo",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bergamo_Alta_Panoramic_View.jpg?width=1280",
+    "source": "https://commons.wikimedia.org/wiki/File:Bergamo_Alta_Panoramic_View.jpg",
+    "author": "Walkabout 88",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "id": "bologna",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Finestrella_di_Via_Piella.jpg?width=1280",
+    "source": "https://commons.wikimedia.org/wiki/File:Finestrella_di_Via_Piella.jpg",
+    "author": "Donatella Bajo",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "id": "parma",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Teatro_Farnese_Interno.jpg?width=1280",
+    "source": "https://commons.wikimedia.org/wiki/File:Teatro_Farnese_Interno.jpg",
+    "author": "Maurizio Moro5153",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "id": "verona",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Panoramic_photograph_of_Verona_from_Castel_San_Pietro.jpg?width=1280",
+    "source": "https://commons.wikimedia.org/wiki/File:Panoramic_photograph_of_Verona_from_Castel_San_Pietro.jpg",
+    "author": "Espt123",
+    "license": "CC BY-SA 3.0"
+  },
+  {
+    "id": "lugano",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lugano_Funicolare_Monte_Bre.jpeg?width=1280",
+    "source": "https://commons.wikimedia.org/wiki/File:Lugano_Funicolare_Monte_Bre.jpeg",
+    "author": "Robot8A",
+    "license": "CC BY-SA 4.0"
+  }
+] as const;
+
 export default function MilanMagazinePreview() {
   return <main className="min-h-screen bg-[#f7f4ec] text-[#26312f]">
     <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-6 text-xs uppercase tracking-[0.18em] text-stone-600 sm:px-10">
@@ -41,38 +93,28 @@ export default function MilanMagazinePreview() {
         {[["#bildstrecke","Fotoreportage"],["#ausfluege","Reiseziele"],["#entdeckungen","Geheimtipps"],["#wochenidee","7 Tage"],["#reisepraxis","Reisepraxis"]].map(([href,label])=><a key={href} href={href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 hover:bg-[#eae4d8]">{label}</a>)}
       </div>
     </nav>
-    <section id="bildstrecke" aria-label="Norditalien in großen Bildern" className="mx-auto max-w-6xl px-5 pb-24 sm:px-10">
-      <div className="grid gap-8 md:grid-cols-12 md:items-end">
-        <div className="md:col-span-8">
-          <figure>
-            <div className="overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-como.jpg" alt="Comer See – Ausflugsziel von Mailand" loading="lazy" className="aspect-[5/4] w-full object-cover" /></div>
-            <figcaption className="mt-4 font-serif text-2xl italic leading-snug sm:text-3xl">Morgens Mailand. Mittags ein Schiff auf dem Comer See.</figcaption>
-          </figure>
-        </div>
-        <div className="md:col-span-4 md:pb-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">01 · Der See ruft</p>
-          <h3 className="mt-4 font-serif text-4xl leading-tight">Vom Großstadtmorgen zum Seeufer.</h3>
-          <p className="mt-5 leading-relaxed text-stone-600">Ein Schiff zieht zwischen den Uferorten hindurch, dahinter steigen die Berge auf. Wir steigen dort aus, wo es uns gefällt.</p>
-          <p className="mt-4 text-sm text-stone-500">Bahn und Schiff · Verbindung und Saisonfahrplan prüfen</p>
-        </div>
+    <section id="bildstrecke" aria-label="Norditalien in sieben Originalfotografien" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-24 pt-16 sm:px-10">
+      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Die Fotoreportage · sieben Reiseziele</p>
+      <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Einmal aufbrechen. Siebenmal staunen.</h2>
+      <p className="mt-5 max-w-3xl text-lg leading-relaxed text-stone-600">Vom Schiff auf dem Comer See über die Gassen Bolognas bis zu den Bergen über Lugano: Norditalien zeigt jeden Tag ein anderes Gesicht.</p>
+      <div className="mt-12 grid gap-x-8 gap-y-16 md:grid-cols-12">
+        {[
+          {id:"como",name:"Comer See",title:"Die Berge kommen näher. Wir bleiben auf dem Wasser.",span:"md:col-span-8",ratio:"aspect-[5/4]"},
+          {id:"maggiore",name:"Lago Maggiore",title:"Eine Insel, die ihren eigenen Rhythmus hat.",span:"md:col-span-4",ratio:"aspect-[4/5]"},
+          {id:"bologna",name:"Bologna",title:"Ein Fenster. Ein Kanal. Eine andere Stadt.",span:"md:col-span-5",ratio:"aspect-[4/5]"},
+          {id:"parma",name:"Parma",title:"Ein Theater, das die Zeit vergessen lässt.",span:"md:col-span-7",ratio:"aspect-[5/4]"},
+          {id:"verona",name:"Verona",title:"Von oben ist die Stadt eine neue Geschichte.",span:"md:col-span-8",ratio:"aspect-[5/4]"},
+          {id:"lugano",name:"Lugano",title:"Mit der Bergbahn Richtung Himmel.",span:"md:col-span-4",ratio:"aspect-[4/5]"},
+          {id:"bergamo",name:"Bergamo",title:"Eine Stadt über der Stadt. Und Zeit für einen italienischen Abend.",span:"md:col-span-12",ratio:"aspect-[3/1]"}
+        ].map(item=>{
+          const photo=galleryPhotos.find(p=>p.id===item.id)!;
+          return <figure key={item.id} className={item.span}>
+            <div className="overflow-hidden bg-stone-200"><img src={photo.src} alt={item.name + " – authentische Wikimedia-Commons-Fotografie"} loading="lazy" className={item.ratio+" w-full object-cover"} /></div>
+            <figcaption className="mt-4"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">{item.name}</span><p className="mt-2 font-serif text-2xl italic leading-snug sm:text-3xl">{item.title}</p><p className="mt-3 text-xs text-stone-500">Foto: {photo.author} · {photo.license} · <a href={photo.source} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Original & Lizenz</a></p></figcaption>
+          </figure>;
+        })}
       </div>
-      <div className="mt-24 grid gap-10 md:grid-cols-2 md:items-center">
-        <div className="md:order-2">
-          <figure><div className="overflow-hidden bg-stone-200"><img src="/images/explore-trips/mailand-bergamo.jpg" alt="Bergamo – historische Oberstadt" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div><figcaption className="mt-4 font-serif text-2xl italic">Ein Abend in Bergamo. Und plötzlich möchte man bleiben.</figcaption></figure>
-        </div>
-        <div className="max-w-md md:order-1 md:pl-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">02 · Ein italienischer Abend</p>
-          <h3 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Wenn die Altstadt zu leuchten beginnt.</h3>
-          <p className="mt-6 text-lg leading-relaxed text-stone-600">Die Standseilbahn bringt uns in die Città Alta. Dann geht es zu Fuß durch die Gassen bis zur Piazza Vecchia. Kein Pflichtprogramm – nur ein Abend, der länger dauern darf.</p>
-          <p className="mt-5 text-sm text-stone-500">Bahn + Standseilbahn · Betriebszeiten prüfen</p>
-        </div>
-      </div>
-      <div className="mt-24 bg-[#263b3a] px-6 py-12 text-[#f7f4ec] sm:px-12 sm:py-16">
-        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">03 · Unsere Freiheit beginnt in Mailand</p>
-        <h3 className="mt-5 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Sieben Tage. Kein Tag wie der andere.</h3>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">Vom Bahnhof aus liegen Seen, historische Städte und sogar die Schweiz in Reichweite. Aber manchmal bleiben wir einfach in Mailand – und das ist genauso richtig.</p>
-        <figure className="mt-9"><div className="overflow-hidden bg-stone-700"><img src="/images/explore-trips/mailand-centrale.jpg" alt="Milano Centrale – Ausgangspunkt zahlreicher Zugausflüge" loading="lazy" className="aspect-[16/9] w-full object-cover" /></div><figcaption className="mt-3 text-sm italic text-white/70">Milano Centrale · Ausgangspunkt unserer Tagesausflüge</figcaption></figure>
-      </div>
+      <p className="mt-8 text-xs text-stone-500">Bildquellen: Wikimedia Commons. Für diese private Vorschau werden verkleinerte Originaldateien direkt über Commons eingebunden; Rechteangaben vor einer öffentlichen Veröffentlichung nochmals prüfen.</p>
     </section>
     <section id="ausfluege" className="scroll-mt-24 mx-auto max-w-6xl px-5 pb-20 sm:px-10">
       <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Acht Welten · auf einen Blick</p>
@@ -88,7 +130,7 @@ export default function MilanMagazinePreview() {
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {[
             {num:"01",place:"Lago Maggiore · Stresa",title:"Die Insel, auf der das Leben weitergeht",copy:"Zwischen den prachtvollen Palästen liegt die Isola dei Pescatori: enge Gassen, Stege und der Blick zurück über das Wasser. Als Tagesausflug mit Bahn und Schiff.",detail:"Schiffssaison und Rückfahrt ab Stresa prüfen",href:"https://www.navigazionelaghi.it/en/tickets-and-timetables-lake-maggiore/",link:"Offizielle Schifffahrt"},
-            {num:"02",place:"Bergamo Alta",image:"/images/explore-trips/mailand-bergamo.jpg",title:"Ein italienischer Abend über den Dächern",copy:"Mit der Standseilbahn in die Città Alta, durch verwinkelte Gassen zur Piazza Vecchia – und bleiben, bis die Fassaden im Abendlicht leuchten. Ein Ausflug, der nicht nach einer Checkliste verlangt.",detail:"Für einen langen Abend Rückfahrt und Standseilbahn prüfen",href:"https://www.visitbergamo.net/",link:"Visit Bergamo"},
+            {num:"02",place:"Bergamo Alta",title:"Ein italienischer Abend über den Dächern",copy:"Mit der Standseilbahn in die Città Alta, durch verwinkelte Gassen zur Piazza Vecchia – und bleiben, bis die Fassaden im Abendlicht leuchten. Ein Ausflug, der nicht nach einer Checkliste verlangt.",detail:"Für einen langen Abend Rückfahrt und Standseilbahn prüfen",href:"https://www.visitbergamo.net/",link:"Visit Bergamo"},
             {num:"03",place:"Bologna",title:"Die Stadt mit dem verborgenen Wasser",copy:"Nicht nur Arkaden und Türme: Historische Kanäle und Wasserwege haben Bologna geprägt. Die Untergrundführungen sind selten; der Spaziergang auf den Spuren der Kanäle bleibt die Alternative.",detail:"Untergrundtour nur bei bestätigtem Angebot",href:"https://www.bolognawelcome.com/en/events/miscellaneous/bologna-underground",link:"Bologna Welcome"},
             {num:"04",place:"Parma",title:"Ein Theater wie eine Zeitmaschine",copy:"Im Teatro Farnese wird barocke Architektur zur Bühne. Ein außergewöhnlicher Raum, den wir mit einem entspannten Altstadttag verbinden können.",detail:"Öffnungszeiten des Complesso della Pilotta prüfen",href:"https://complessopilotta.it/",link:"Complesso della Pilotta"},
             {num:"05",place:"Verona",title:"Über den Dächern statt vor dem Balkon",copy:"Die Standseilbahn zum Castel San Pietro führt zu einem anderen Verona: Dächer, Fluss und Stadtlandschaft statt der üblichen Fotostopps.",detail:"Betriebszeiten der Funicolare prüfen",href:"https://www.tourism.verona.it/castel-san-pietro",link:"Verona Tourismus"},
