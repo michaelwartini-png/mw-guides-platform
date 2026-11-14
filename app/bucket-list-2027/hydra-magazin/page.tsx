@@ -51,6 +51,7 @@ export default function HydraMagazinePreview() {
           { href: "#inselroute", label: "Inselkombinationen" },
           { href: "#unterkuenfte", label: "Besonders übernachten" },
           { href: "#wochenidee", label: "7-Tage-Idee" },
+          { href: "#buchungsfahrplan", label: "Buchungsfahrplan" },
           { href: "#reiseplanung", label: "Fähren & Tipps" }
         ].map(item => <a key={item.href} href={item.href} className="shrink-0 rounded-full border border-stone-300 px-4 py-2 text-[#26312f] transition-colors hover:bg-[#eae4d8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#92734e]">{item.label}</a>)}
       </div>
@@ -160,6 +161,33 @@ export default function HydraMagazinePreview() {
           </li>)}
         </ol>
         <div className="mt-8 border-l-2 border-[#d4bb91] pl-5 text-sm leading-relaxed text-white/75"><strong className="text-white">Wenn das Miaoulia-Festival stattfindet:</strong> Den Festabend bewusst freihalten und das Programm erst nach Veröffentlichung der offiziellen Termine einbauen. Keine festen Daten für 2027 voraussetzen.</div>
+      </div>
+    </section>
+    <section id="buchungsfahrplan" className="scroll-mt-24 border-y border-stone-300 bg-[#faf8f3] px-5 py-20 sm:px-10">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">Von der Sehnsucht zur Reise</p>
+        <h2 className="mt-4 max-w-4xl font-serif text-4xl sm:text-6xl">Was zuerst buchen? Und was besser noch nicht?</h2>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Eine praktische Reihenfolge für Hydra 2027 – ohne erfundene Angebote. Erst den Reisezeitraum und die Anreise klären, dann Unterkünfte vergleichen und erst danach wetterabhängige Erlebnisse festlegen.</p>
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
+          {[
+            { n: "01", title: "Reisezeit und besonderen Anlass wählen", desc: "Soll das Miaoulia-Festival ein Höhepunkt werden? Dann auf die offiziellen Termine warten, bevor nicht stornierbare Buchungen erfolgen. Andernfalls die Woche flexibel wählen.", action: "Noch offen: offizielles Festivaldatum 2027" },
+            { n: "02", title: "Anreise bis Hydra als Kette prüfen", desc: "Flug oder andere Anreise nach Athen, Transfer zum Hafen Piräus und Fähre nach Hydra gemeinsam planen. Bei getrennten Tickets genügend Puffer vorsehen; nicht mit einem unbestätigten Anschluss rechnen.", action: "Noch offen: individuelle Reisezeit und 2027-Fahrplan" },
+            { n: "03", title: "Historische Unterkünfte direkt anfragen", desc: "Cotommatae und Orloff nach Verfügbarkeit, Zimmerkategorie, Gesamtpreis inklusive Abgaben, Stornierungsregeln und Gepäcktransport ab Hafen fragen. Economou erst nach Klärung des tatsächlichen Anbieters berücksichtigen.", action: "Noch offen: konkrete Angebote und Stornobedingungen" },
+            { n: "04", title: "Bootserlebnisse mit Plan B vormerken", desc: "Wassertaxi nach Zourva oder G&G-Rundfahrt mit Höhlenstopp direkt beim Betreiber anfragen. Wichtig: Rückfahrt, Mindestteilnehmerzahl, Wetterregelung, Storno und endgültiger Preis.", action: "Noch offen: Termine, Preis und Durchführbarkeit" },
+            { n: "05", title: "Spetses oder Poros bewusst auswählen", desc: "Nur bei geeigneter Hin- und Rückfahrt als Tagesausflug. Wer beide Inseln intensiv erleben möchte, prüft besser eine Route mit mehreren Übernachtungsorten.", action: "Noch offen: passende Fahrten im gewählten Reisezeitraum" },
+            { n: "06", title: "Gesamtpreis statt Einzel-Schnäppchen vergleichen", desc: "Anreise, Transfers, Fähren, Übernachtungen, Bootsausflüge und Stornierungsbedingungen gemeinsam betrachten. Ein günstiger Flug hilft wenig, wenn ein zusätzlicher Übernachtungstag nötig wird.", action: "Noch offen: vergleichbare Gesamtangebote" }
+          ].map(item => <article key={item.n} className="border border-stone-300 bg-white p-6">
+            <p className="font-serif text-3xl text-[#92734e]">{item.n}</p>
+            <h3 className="mt-4 font-serif text-2xl">{item.title}</h3>
+            <p className="mt-4 leading-relaxed text-stone-600">{item.desc}</p>
+            <p className="mt-5 border-t border-stone-200 pt-4 text-sm font-medium text-[#765b3b]">{item.action}</p>
+          </article>)}
+        </div>
+        <div className="mt-9 border-l-4 border-[#92734e] bg-[#eee8dd] p-6">
+          <h3 className="font-serif text-2xl">Eine Anfrage, die wirklich weiterhilft</h3>
+          <p className="mt-3 max-w-4xl leading-relaxed text-stone-700">Für Unterkünfte immer dieselben Angaben anfragen: gewünschter Zeitraum und Nächte, Personenzahl, Zimmerart, Gesamtpreis inklusive aller Zuschläge, Stornofrist, Frühstück, Anreise vom Hafen und optional organisierte Bootsausflüge. Erst dann sind Angebote sinnvoll vergleichbar.</p>
+        </div>
+        <p className="mt-6 text-sm leading-relaxed text-stone-600">Stand November 2026: Dies ist eine Planungshilfe, keine Buchungsbestätigung. Verfügbarkeit und Preise für 2027 sind nicht geprüft. Originalanbieter und Fahrplanquellen stehen im Abschnitt „Fähren & Tipps“.</p>
       </div>
     </section>
     <section id="reiseplanung" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-20 sm:px-10">
