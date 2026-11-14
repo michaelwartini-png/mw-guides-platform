@@ -24,13 +24,6 @@ const galleryPhotos = [
     "license": "Public Domain"
   },
   {
-    "id": "bergamo",
-    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bergamo_Alta_Panoramic_View.jpg?width=1280",
-    "source": "https://commons.wikimedia.org/wiki/File:Bergamo_Alta_Panoramic_View.jpg",
-    "author": "Walkabout 88",
-    "license": "CC BY-SA 4.0"
-  },
-  {
     "id": "bologna",
     "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Finestrella_di_Via_Piella.jpg?width=1280",
     "source": "https://commons.wikimedia.org/wiki/File:Finestrella_di_Via_Piella.jpg",
@@ -133,8 +126,7 @@ export default function MilanMagazinePreview() {
           {id:"bologna",name:"Bologna",title:"Ein Fenster. Ein Kanal. Eine andere Stadt.",span:"md:col-span-5",ratio:"aspect-[4/5]"},
           {id:"parma",name:"Parma",title:"Ein Theater, das die Zeit vergessen lässt.",span:"md:col-span-7",ratio:"aspect-[5/4]"},
           {id:"verona",name:"Verona",title:"Von oben ist die Stadt eine neue Geschichte.",span:"md:col-span-8",ratio:"aspect-[5/4]"},
-          {id:"lugano",name:"Lugano",title:"Mit der Bergbahn Richtung Himmel.",span:"md:col-span-4",ratio:"aspect-[4/5]"},
-          {id:"bergamo",name:"Bergamo",title:"Eine Stadt über der Stadt. Und Zeit für einen italienischen Abend.",span:"md:col-span-12",ratio:"aspect-[3/1]"}
+          {id:"lugano",name:"Lugano",title:"Mit der Bergbahn Richtung Himmel.",span:"md:col-span-4",ratio:"aspect-[4/5]"}
         ].map(item=>{
           const photo=galleryPhotos.find(p=>p.id===item.id)!;
           return <figure key={item.id} className={item.span}>
