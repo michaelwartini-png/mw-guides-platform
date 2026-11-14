@@ -139,7 +139,7 @@ export default function MilanMagazinePreview() {
             {num:"08",place:"Pavia",title:"Die große Stille vor Mailands Haustür",copy:"Die Certosa di Pavia bietet einen überraschenden Kontrast zur Großstadt: Kreuzgänge, kunstvolle Architektur und ein langsameres Tempo.",detail:"Zugang und Öffnungszeiten vorab prüfen",href:"https://museilombardia.cultura.gov.it/",link:"Musei Lombardia"}
           ].map((item,i)=><article key={item.num} className={`flex flex-col justify-between overflow-hidden border border-stone-300 bg-[#f7f4ec] ${i===0||i===3?"md:min-h-[390px]":""}`}>
             <div>
-              {"image" in item && item.image && <img src={item.image} alt="Bergamo Alta – vorhandenes Ortsfoto" loading="lazy" className="aspect-[16/9] w-full object-cover" />}
+              {"image" in item && typeof item.image === "string" && <img src={item.image} alt="Bergamo Alta – vorhandenes Ortsfoto" loading="lazy" className="aspect-[16/9] w-full object-cover" />}
               <div className="px-7 pt-7 sm:px-9 sm:pt-9"><div className="flex items-center justify-between gap-3"><span className="text-xs uppercase tracking-[0.2em] text-[#92734e]">{item.place}</span><span className="font-serif text-3xl italic text-stone-300">{item.num}</span></div>
               <h3 className="mt-7 max-w-lg font-serif text-3xl leading-tight sm:text-4xl">{item.title}</h3>
               <p className="mt-5 leading-relaxed text-stone-600">{item.copy}</p></div>
