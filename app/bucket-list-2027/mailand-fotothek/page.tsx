@@ -1,7 +1,3 @@
-"use client";
-
-import { useMemo, useState } from "react";
-
 const photos = [
   {
     "id": 1,
@@ -270,31 +266,17 @@ const photos = [
     "verified": false
   }
 ];
-const places = ["Alle","Mailand","Comer See","Lago Maggiore","Bergamo","Bologna","Verona","Lugano","Turin"];
-function commonsUrl(file: string) { return "https://commons.wikimedia.org/wiki/Special:Redirect/file/" + encodeURIComponent(file) + "?width=960"; }
+const places = ["Mailand","Comer See","Lago Maggiore","Bergamo","Bologna","Verona","Lugano","Turin"];
 function sourceUrl(file: string) { return "https://commons.wikimedia.org/wiki/File:" + encodeURIComponent(file); }
+function photoUrl(file: string) { return "https://commons.wikimedia.org/wiki/Special:Redirect/file/" + encodeURIComponent(file) + "?width=960"; }
 export default function MilanPhotoLibrary() {
-  const [place,setPlace] = useState("Alle");
-  const [selected,setSelected] = useState<number | null>(null);
-  const [favorites,setFavorites] = useState<number[]>([]);
-  const [failed,setFailed] = useState<number[]>([]);
-  const visible = useMemo(()=>photos.filter(p=>place==="Alle"||p.place===place),[place]);
-  const active = photos.find(p=>p.id===selected);
-  const toggle = (id:number) => setFavorites(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]);
-  return <main className="min-h-screen bg-[#f5f1e9] text-[#283330] pb-24">
-    <header className="mx-auto max-w-7xl px-5 pt-16 pb-9 md:px-10">
-      <a href="/bucket-list-2027/mailand-magazin" className="text-xs uppercase tracking-[0.2em] text-[#806a4f] underline underline-offset-4">← Mailand Unlimited</a>
-      <p className="mt-9 text-xs uppercase tracking-[0.25em] text-[#947b55]">Europa Bucket List · Bildredaktion</p>
-      <h1 className="mt-3 font-serif text-5xl md:text-7xl">Die Mailand-Fotothek.</h1>
-      <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[#59615d]">Alle Motive auf einen Blick – nach Reiseziel sortiert, groß zu betrachten und für die spätere Bildauswahl vormerkbar.</p>
-      <p className="mt-3 max-w-3xl text-sm text-[#765d48]">Private Arbeitsvorschau: Vorschaubilder werden direkt von Wikimedia Commons geladen. Es sind keine in GitHub gespeicherten Upload-Dateien. Bildidentität und Rechte müssen vor einer Veröffentlichung geprüft werden; zwei Original-Lizenzseiten wurden bisher recherchiert.</p>
-      <div className="mt-8 flex flex-wrap gap-2">{places.map(x=><button key={x} onClick={()=>setPlace(x)} className={`rounded-full border px-4 py-2 text-sm transition ${place===x?"border-[#283330] bg-[#283330] text-white":"border-[#c9c1b3] bg-white/60 hover:bg-white"}`}>{x}{x!=="Alle"&&<span className="ml-1 opacity-60">{photos.filter(p=>p.place===x).length}</span>}</button>)}</div>
-      <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[#58615d]"><span>{visible.length} Motive sichtbar</span><span>{favorites.length} vorgemerkt</span><button className="underline underline-offset-4" onClick={()=>{const text=favorites.map(id=>{const p=photos.find(x=>x.id===id)!;return `#${p.id} – ${p.place}: ${p.title} (${p.file})`}).join("\n");void navigator.clipboard?.writeText(text);}}>Auswahlliste kopieren</button></div>
-    </header>
-    <section className="mx-auto grid max-w-7xl grid-cols-1 gap-x-6 gap-y-12 px-5 pb-16 sm:grid-cols-2 lg:grid-cols-3 md:px-10">
-      {visible.map(p=><article key={p.id} className="group min-w-0"><button onClick={()=>setSelected(p.id)} className="relative block aspect-[4/3] w-full overflow-hidden bg-[#e2ddd2] text-left" aria-label={`Foto ${p.id} groß ansehen`}>{failed.includes(p.id)?<span className="flex h-full items-center justify-center p-6 text-center text-sm text-[#665d51]">Vorschau nicht verfügbar – Originalquelle öffnen</span>:<img src={commonsUrl(p.file)} alt={p.title} loading="lazy" onError={()=>setFailed(old=>[...old,p.id])} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"/>}<span className="absolute left-3 top-3 bg-[#f5f1e9]/95 px-2 py-1 text-xs">#{p.id}</span></button><div className="pt-4"><p className="text-[11px] uppercase tracking-[0.18em] text-[#947b55]">{p.place}</p><h2 className="mt-1 font-serif text-2xl">{p.title}</h2><p className="mt-2 text-xs text-[#77756e]">{p.verified?"Commons-Lizenzquelle recherchiert · Dateiidentität offen":"Lizenzprüfung offen"}</p><div className="mt-4 flex flex-wrap items-center gap-3 text-sm"><button className={`rounded-full border px-4 py-2 ${favorites.includes(p.id)?"bg-[#283330] text-white":"border-[#bfb5a5]"}`} onClick={()=>toggle(p.id)}>{favorites.includes(p.id)?"✓ Vorgemerkt":"+ Vormerken"}</button><a href={sourceUrl(p.file)} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Original & Lizenz ↗</a></div></div></article>)}
-    </section>
-    <footer className="mx-auto max-w-7xl border-t border-[#d4cbbd] px-5 py-8 text-sm text-[#716d65] md:px-10">38 unterschiedliche Dateinamen aus 46 Uploads; acht bekannte Wiederholungen ausgelassen. Eine Auswahl wird nur im geöffneten Browser gehalten und kann als Text kopiert werden. Kein Bild wird dadurch zur Veröffentlichung freigegeben.</footer>
-    {active&&<div role="dialog" aria-modal="true" aria-label={active.title} className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4" onClick={()=>setSelected(null)}><div className="relative flex max-h-full w-full max-w-6xl flex-col items-center" onClick={e=>e.stopPropagation()}><button onClick={()=>setSelected(null)} className="absolute right-0 top-0 z-10 rounded-full bg-white px-4 py-2 text-black">Schließen ×</button><img src={commonsUrl(active.file)} alt={active.title} className="max-h-[72vh] max-w-full object-contain" /><div className="mt-4 text-center text-white"><p className="font-serif text-2xl">{active.title}</p><p className="mt-1 text-sm opacity-75">{active.place} · #{active.id}</p><div className="mt-4 flex justify-center gap-5"><button onClick={()=>toggle(active.id)} className="underline underline-offset-4">{favorites.includes(active.id)?"✓ Vorgemerkt":"+ Vormerken"}</button><a href={sourceUrl(active.file)} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Originalseite ↗</a></div></div></div></div>}
-  </main>;
+ return <main className="min-h-screen bg-[#f5f1e9] px-5 py-12 text-[#283330] md:px-12">
+  <div className="mx-auto max-w-7xl"><a className="text-sm underline" href="/bucket-list-2027/mailand-magazin">← Mailand Unlimited</a>
+   <p className="mt-12 text-xs uppercase tracking-[0.2em]">Europa Bucket List 2027 · Bildredaktion</p>
+   <h1 className="mt-3 font-serif text-5xl md:text-7xl">Mailand-Fotothek</h1>
+   <p className="mt-5 max-w-3xl text-lg">38 Bildvorschläge aus deinen Uploads. Große Vorschaubilder, nach Reiseziel geordnet. Die Urheber- und Lizenzprüfung ist noch nicht abgeschlossen; keine Freigabe zur Veröffentlichung.</p>
+   <nav className="my-10 flex flex-wrap gap-3"><a href="#alle" className="rounded-full border px-4 py-2">Alle</a>{places.map(place=><a key={place} href={"#"+place.replaceAll(" ","-")} className="rounded-full border px-4 py-2">{place}</a>)}</nav>
+   <div id="alle">{places.map(place=><section key={place} id={place.replaceAll(" ","-")} className="mb-20 scroll-mt-8"><h2 className="mb-7 border-b pb-3 font-serif text-4xl">{place}</h2><div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">{photos.filter(p=>p.place===place).map(p=><article key={p.id}><a href={sourceUrl(p.file)} target="_blank" rel="noopener noreferrer" className="block overflow-hidden bg-[#e2ddd2]"><img src={photoUrl(p.file)} alt={p.title} loading="lazy" className="aspect-[4/3] w-full object-cover" /></a><div className="mt-3 flex items-start justify-between gap-3"><div><p className="text-xs opacity-60">#{p.id} · Lizenzprüfung offen</p><h3 className="mt-1 font-serif text-xl">{p.title}</h3></div><a className="shrink-0 text-sm underline" href={sourceUrl(p.file)} target="_blank" rel="noopener noreferrer">Original ↗</a></div></article>)}</div></section>)}</div>
+  </div>
+ </main>;
 }
