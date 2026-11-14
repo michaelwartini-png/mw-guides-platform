@@ -39,6 +39,7 @@ const entries = [
   { trip: "hydra-unlimited", file: "20190512 232 spetses.jpg", slug: "ausflug-spetses-pferdekutsche" },
   { trip: "hydra-unlimited", file: "Spetses 9.JPG", slug: "ausflug-spetses-strand" },
   { trip: "hydra-unlimited", file: "20190512 291 spetses.jpg", slug: "ausflug-spetses-inselpanorama" },
+  { trip: "hydra-unlimited", file: "Hydra island , Greece , Sunset.jpg", slug: "hydra-kamini-sonnenuntergang" },
   { trip: "bodensee-unlimited", file: "Rhine Falls in Switzerland.jpg", slug: "rheinfall-schaffhausen" },
   { trip: "bodensee-unlimited", file: "Mainau-4.jpg", slug: "mainau-tulpenfeld" },
   { trip: "bodensee-unlimited", file: "Stein am Rhein. Les maisons peintes du centre-ville.jpg", slug: "stein-am-rhein-bemalte-haeuser" },
