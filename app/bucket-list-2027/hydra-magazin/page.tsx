@@ -70,8 +70,30 @@ export default function HydraMagazinePreview() {
       <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl sm:text-6xl">Und irgendwann wird aus einem Tag eine Erinnerung.</h2>
       <p className="mx-auto mt-6 max-w-2xl text-stone-600">Das ausgewählte Sonnenuntergangsfoto bei Kamini wird hier ergänzt, sobald die Originaldatei erfolgreich und lizenzgeprüft importiert ist. Bis dahin zeigen wir bewusst kein Ersatzbild.</p>
     </section>
+    <section id="besonderes" className="bg-[#243d3c] px-5 py-20 text-[#f7f4ec] sm:px-10">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#d4bb91]">04 · Das Besondere entdecken</p>
+        <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-6xl">Nicht die üblichen Top 10. Sondern Geschichten, die bleiben.</h2>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/75">Fünf ungewöhnliche Reiseideen aus unserer Quellenrecherche. Manche sind saisonal, manche nur bei passendem Wetter möglich. Für 2027 sind Preise, Termine und Verfügbarkeit noch nicht abschließend bestätigt.</p>
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
+          {[
+            { number: "01", title: "Mit dem Wassertaxi an Hydras abgelegene Ostküste", text: "Die Region um Zourva und den Leuchtturm zeigt eine ganz andere Seite der Insel. Perplexity nennt einen älteren Richtwert von rund 100 € für die Fahrt; aktuellen Preis, Rückfahrt und Wetterbedingungen unbedingt beim Betreiber klären.", link: "https://www.hydradirect.com/travel-information/transport-on-hydra/taxis", label: "Wassertaxis und lokale Informationen", status: "2027-Preis & Route offen" },
+            { number: "02", title: "Die Küste vom Wasser aus entdecken", text: "Eine lokale Rundfahrt mit möglichen Badestopps an ungewöhnlichen Küstenstellen, darunter eine in der Recherche erwähnte Meereshöhle. Ob genau dieser Halt angeboten wird, muss beim Veranstalter bestätigt werden.", link: "https://www.hydradirect.com/Gnghydracruises", label: "G&G Hydra Cruises recherchieren", status: "Tour & Höhlenstopp prüfen" },
+            { number: "03", title: "Miaoulia: ein Hafenabend mit Geschichte", text: "Das traditionsreiche Fest erinnert an die maritime Geschichte Hydras und ist für seine eindrucksvollen Feiern bekannt. Die in der Recherche genannten Daten 25.–27. Juni 2027 sind noch nicht amtlich bestätigt.", link: "https://www.hydra.gr/", label: "Gemeinde Hydra – offizielle Informationen", status: "Termin 2027 unbestätigt" },
+            { number: "04", title: "Übernachten wie in einem historischen Kapitänshaus", text: "Statt eines austauschbaren Hotels: historische Architektur und die Atmosphäre eines Inselhauses. Cotommatae Hydra 1810 ist ein konkreter Ausgangspunkt für die Unterkunftsrecherche; Zimmer und Preise für 2027 prüfen.", link: "https://www.cotommatae.gr/", label: "Cotommatae Hydra 1810", status: "Verfügbarkeit 2027 offen" },
+            { number: "05", title: "Drei Inseln, drei völlig verschiedene Stimmungen", text: "Hydra als Basis, Spetses und Poros als mögliche Ergänzungen. Ob Tagesausflüge oder eine mehrtägige Route besser funktionieren, hängt von passenden Hin- und Rückfahrten ab. Keine garantierte direkte Tagesverbindung.", link: "https://www.ferryhopper.com/en/destinations/greece/hydra", label: "Fährverbindungen vergleichen", status: "Konkrete Fahrten 2027 prüfen" }
+          ].map(item => <article key={item.number} className="border border-white/20 bg-white/5 p-6 sm:p-8">
+            <div className="flex items-center justify-between gap-4"><span className="font-serif text-3xl text-[#d4bb91]">{item.number}</span><span className="text-right text-xs text-[#e5d2af]">{item.status}</span></div>
+            <h3 className="mt-6 font-serif text-2xl leading-snug sm:text-3xl">{item.title}</h3>
+            <p className="mt-4 leading-relaxed text-white/75">{item.text}</p>
+            <a className="mt-6 inline-block text-sm font-semibold text-[#f4d9a8] underline underline-offset-4" href={item.link} target="_blank" rel="noopener noreferrer">{item.label} ↗</a>
+          </article>)}
+        </div>
+        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/65">Redaktioneller Recherche-Stand: November 2026. Die Vorschläge stammen aus einer externen Perplexity-Recherche und sind noch keine unabhängig verifizierten Buchungsangebote. Vor Reiseplanung Originalquelle, Fahrplan und Veranstalter prüfen.</p>
+      </div>
+    </section>
     <section id="reiseplanung" className="mx-auto max-w-6xl px-5 py-20 sm:px-10">
-      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">04 · Gut vorbereitet, entspannt unterwegs</p>
+      <p className="text-xs uppercase tracking-[0.3em] text-[#92734e]">05 · Gut vorbereitet, entspannt unterwegs</p>
       <h2 className="mt-3 max-w-4xl font-serif text-4xl sm:text-6xl">Alles Wichtige. An einem Ort.</h2>
       <p className="mt-6 max-w-3xl text-lg leading-relaxed text-stone-600">Die schönsten Reiseideen sind nur der Anfang. Hier findest du die nützlichen Originalquellen für Fähren, Inselinformationen, Wege und Angebote – mit einer kurzen Erklärung, wann sich welcher Link lohnt.</p>
       <div className="mt-12 grid gap-8 md:grid-cols-2">
