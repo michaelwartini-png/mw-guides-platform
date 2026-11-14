@@ -32,3 +32,13 @@ Die Freigabe bezieht sich auf diese sechs **exakten Commons-Dateien**, nicht auf
 - Nutzer: „Noch keine Website-Bilder ändern.“
 - Die sechs Freigaben sind **keine** Erlaubnis, jetzt Bilder zu importieren, bestehende Bilder zu ersetzen oder Layout/Website zu ändern.
 - Bei Weiterverarbeitung Autor, Lizenz, Link, Bearbeitung dokumentieren; CC BY-SA-Bedingungen beachten.
+
+
+## Nachrecherche Bergamo – freies Original gefunden (14.11.2026)
+
+**Neuer Kandidat, noch keine Nutzerfreigabe:** `Fontana del Lantro.JPG` von Ago76, Wikimedia Commons, Public Domain (Urheberfreigabe), Original 3.456 × 2.592 Pixel.
+- Original: https://commons.wikimedia.org/wiki/File:Fontana_del_Lantro.JPG
+- Zwei weitere Aufnahmen desselben Urhebers: https://commons.wikimedia.org/wiki/File:Fontana_del_Lantro_(4a).JPG (1.728 × 1.296) und https://commons.wikimedia.org/wiki/File:Fontana_del_Lantro_(8a).JPG (1.296 × 1.728), ebenfalls Public Domain.
+- Offizielle Beschreibung bestätigt Fontana del Lantro als unterirdische Zisterne der Tour Bergamo sotterranea: https://www.visitbergamo.net/de/oggetto/bergamo-sotterranea/
+- **Vor Freigabe:** Visuell prüfen, ob die konkrete Originalaufnahme tatsächlich die Zisterne von innen zeigt und den gewünschten Wow-Effekt besitzt. Die Commons-Beschreibung nennt nur „Fontana del Lantro“, nicht explizit die Bildperspektive.
+- Nicht mit der urheberrechtlich ungeklärten Fotografie in der städtischen Broschüre verwechseln. Keine Website-Bildänderung.
